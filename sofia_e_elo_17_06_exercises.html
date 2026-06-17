@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Exercícios de Sofia E Eloá 🌟</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ffff00;background-image:radial-gradient(#000 2px,transparent 2px);background-size:20px 20px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#ff1493;border-top:6px solid #000;border-bottom:6px solid #000;text-align:center;padding:28px 20px 22px;position:relative}
+.hs{background:repeating-linear-gradient(90deg,#000 0,#000 4px,transparent 4px,transparent 20px);height:8px;background-color:#ff1493}
+.hi{padding:0}
+.sr{font-size:11px;letter-spacing:4px;color:#fff;text-shadow:2px 2px 0 #000;margin-bottom:4px;text-transform:uppercase}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:clamp(40px,10vw,88px);color:#fff;text-shadow:4px 4px 0 #000,8px 8px 0 #ffff00;line-height:0.95;margin-bottom:8px;letter-spacing:3px}
+.hsub{display:inline-block;background:#ffff00;color:#000;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:clamp(14px,3vw,22px);padding:6px 20px;border:4px solid #000;box-shadow:4px 4px 0 #000;margin-top:8px;letter-spacing:2px}
+.hd{font-size:20px;margin-top:10px;letter-spacing:6px;color:#fff;text-shadow:2px 2px 0 #000}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:5px solid #000;box-shadow:8px 8px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:4px solid #000}
+.sn{width:38px;height:38px;border:4px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:20px;flex-shrink:0;box-shadow:3px 3px 0 #000;color:#000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:26px;letter-spacing:2px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#333;margin-bottom:18px;padding:8px 14px;border:3px solid #000;background:#ffff00;font-weight:700;box-shadow:3px 3px 0 #000}
+.s1 .sh{background:#ff1493}.s1 .sn{background:#ffff00}.s1 .st{color:#fff}
+.s2 .sh{background:#00bfff}.s2 .sn{background:#ffff00}.s2 .st{color:#fff}
+.s3 .sh{background:#39ff14}.s3 .sn{background:#ffff00}.s3 .st{color:#000}
+.s4 .sh{background:#ff6600}.s4 .sn{background:#ffff00}.s4 .st{color:#fff}
+.s5 .sh{background:#bf00ff}.s5 .sn{background:#ffff00}.s5 .st{color:#fff}
+.mc-btn{padding:10px 14px;border:3px solid #000;background:#fff;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:#ffff00;transform:translate(-2px,-2px);box-shadow:5px 5px 0 #000}
+.mc-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
+.cbtn{margin-top:16px;padding:10px 28px;background:#ff1493;color:#fff;border:4px solid #000;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:20px;cursor:pointer;box-shadow:5px 5px 0 #000;letter-spacing:2px;transition:transform .1s}
+.cbtn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 #000}
+.ak-btn{width:100%;padding:14px 20px;background:#ffff00;color:#000;border:4px solid #000;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:22px;letter-spacing:2px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 #000}
+.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:20px;color:#ff1493;margin-bottom:8px;letter-spacing:2px;text-shadow:1px 1px 0 #000}
+.fi-inp{border:none;border-bottom:4px solid #000;background:transparent;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-size:15px;font-weight:700;padding:2px 6px;outline:none;color:#000}
+.tr-card{background:#f0faff;border:3px solid #000;margin-bottom:10px;padding:12px 14px;box-shadow:3px 3px 0 #000}
+.tr-inp{width:100%;border:3px solid #000;padding:8px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-size:14px;font-weight:700;background:#fff;outline:none}
+.oq-ta{width:100%;border:3px solid #000;padding:10px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-size:14px;font-weight:700;min-height:72px;resize:vertical;outline:none;background:#fff;box-shadow:3px 3px 0 #000}
+.dlg-spk{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:14px;min-width:76px;padding:4px 8px;border:3px solid #000;text-align:center;flex-shrink:0;margin-top:2px;letter-spacing:1px;box-shadow:2px 2px 0 #000}
+.spk-t{background:#00bfff;color:#fff}
+.spk-s{background:#ff1493;color:#fff}
+.dlg-inp{flex:1;border:3px solid #000;padding:7px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-size:14px;font-weight:700;outline:none;background:#fff;box-shadow:2px 2px 0 #000}
+.show-btn{margin-top:6px;background:#39ff14;border:3px solid #000;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:16px;color:#000;padding:3px 14px;box-shadow:2px 2px 0 #000;letter-spacing:1px}
+.ak-body{background:#fff;border:4px solid #000;border-top:none;padding:20px;box-shadow:5px 5px 0 #000}
+.ak-ans{color:#ff1493;font-weight:700}
+.wig{text-align:center;font-size:22px;letter-spacing:6px;padding:8px 0}
+
+/* ── SHARED STYLES ── */
+/* GLOBAL: garantir contraste em todos os elementos interativos */
+.mc-btn{background:#fff!important;color:#111!important;font-weight:600!important}
+.mc-btn:hover{background:#f0f0f0!important;color:#111!important}
+.fi-inp{color:#111!important}
+.tr-inp{color:#111!important;background:#fff!important}
+.oq-ta{color:#111!important;background:#fff!important}
+.dlg-inp{color:#111!important;background:#fff!important}
+.tr-src{color:#222!important}
+.fi-row{color:#111!important}
+.oq-q{color:#111!important}
+:root{--hp:#ff2d8f;--eb:#0055ff;--lime:#aaff00;--yel:#ffe600;--ora:#ff7a00;--pur:#8b00ff;--cya:#00e5ff;--bk:#000;--wh:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:8px;font-size:13px;font-weight:700}
+.feedback.err{background:#fff176;border-color:#ff7a00;color:#5a2d00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp.ok{border-bottom-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.fi-inp.no{border-bottom-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff176;border:3px solid #ff7a00;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a2d00}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.tr-inp.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#d4edda;border:2px solid #1a7340;border-radius:8px;font-size:13px;color:#0d3d1f}
+.dlg-scenario{font-style:italic;font-weight:700;color:#555;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed #ff7a00;border-radius:8px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.score{display:none;margin-left:14px;font-size:15px;font-weight:700}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none}
+.ak-sec{margin-bottom:18px}.ak-sec:last-child{margin-bottom:0}
+.ak-item{padding:6px 0;border-bottom:1px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:#006633;background-image:radial-gradient(circle,#ffe600 1px,transparent 1px),radial-gradient(circle,#00e5ff 1px,transparent 1px);background-size:30px 30px,60px 60px;background-position:0 0,15px 15px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#00e5ff;border-bottom:5px solid #000;text-align:center;overflow:hidden}
+.hs{background:repeating-linear-gradient(45deg,#ff2d8f,#ff2d8f 10px,#00e5ff 10px,#00e5ff 20px);height:14px;border-bottom:3px solid #000}
+.hi{padding:24px 20px 20px}
+.sr{font-size:22px;letter-spacing:6px;margin-bottom:4px}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(32px,8vw,64px);color:#000;text-shadow:4px 4px 0 #0055ff,7px 7px 0 #ff2d8f;line-height:1.1;margin-bottom:6px}
+.hsub{display:inline-block;background:#ff2d8f;color:#fff;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(13px,3vw,18px);padding:6px 20px;border:3px solid #000;border-radius:50px;box-shadow:3px 3px 0 #000;margin-top:6px}
+.hd{font-size:26px;margin-top:10px;letter-spacing:4px}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:4px solid #000;border-radius:16px;box-shadow:7px 7px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:4px solid #000}
+.sn{width:36px;height:36px;border-radius:50%;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:22px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#444;margin-bottom:18px;padding:8px 14px;border:2px dashed #000;border-radius:8px;background:#fffde7}
+.s1 .sh{background:#ff2d8f}.s1 .sn{background:var(--yel)}.s1 .st{color:#fff}
+.s2 .sh{background:#0055ff}.s2 .sn{background:var(--cya)}.s2 .st{color:#fff}
+.s3 .sh{background:#aaff00}.s3 .sn{background:var(--yel)}
+.s4 .sh{background:#ff7a00}.s4 .sn{background:var(--yel)}.s4 .st{color:#fff}
+.s5 .sh{background:#8b00ff}.s5 .sn{background:var(--cya)}.s5 .st{color:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn{padding:10px 14px;border:3px solid #000;border-radius:10px;background:#f0f0f0;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:var(--yel);transform:translate(-1px,-1px)}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:10px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 #000}
+.feedback.err{background:#fff3cd;border-color:#d68910;color:#5a3e00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp{border:none;border-bottom:4px solid #000;background:var(--yel);font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:15px;font-weight:900;padding:2px 6px;outline:none;border-radius:4px 4px 0 0;transition:all .2s}
+.fi-inp.ok{border-bottom-color:#009900;background:#ccff99;color:#004400}
+.fi-inp.no{border-bottom-color:#c00;background:#ffcccc;color:#600}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff3cd;border:2px solid #d68910;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a3e00}
+.tr-card{margin-bottom:12px;padding:12px 14px;background:#f3f3ff;border:3px solid #000;border-radius:10px;box-shadow:3px 3px 0 #000}.tr-card:last-child{margin-bottom:0}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp{width:100%;border:3px solid #000;border-radius:8px;padding:8px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;background:#fff;outline:none}
+.tr-inp.ok{border-color:#009900;background:#ccff99;color:#004400}
+.tr-inp.no{border-color:#c00;background:#ffcccc;color:#600}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-ta{width:100%;border:3px solid #000;border-radius:10px;padding:10px 13px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;min-height:72px;resize:vertical;outline:none;background:#fff;box-shadow:3px 3px 0 #000}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#ccff99;border:3px solid #009900;border-radius:10px;font-size:13px;font-weight:700;color:#004400;box-shadow:3px 3px 0 #009900}
+.show-btn{margin-top:6px;background:var(--yel);border:3px solid #000;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:13px;font-weight:900;padding:4px 14px;border-radius:20px;box-shadow:2px 2px 0 #000}
+.show-btn:hover{background:var(--lime)}
+.dlg-scenario{font-style:italic;font-weight:700;color:#333;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed var(--ora);border-radius:10px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-spk{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:13px;min-width:82px;padding:5px 8px;border:3px solid #000;border-radius:20px;text-align:center;flex-shrink:0;margin-top:2px;box-shadow:2px 2px 0 #000}
+.spk-t{background:var(--eb);color:#fff}.spk-s{background:var(--hp);color:#fff}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.dlg-inp{flex:1;border:3px solid #000;border-radius:10px;padding:7px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;outline:none;background:#fff;box-shadow:2px 2px 0 #000}
+.dlg-inp:focus{border-color:var(--hp);background:#fff0f8}
+.cbtn{margin-top:16px;padding:11px 28px;background:var(--hp);color:#fff;border:4px solid #000;border-radius:50px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 #000;transition:transform .1s}
+.cbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.score{display:none;margin-left:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-btn{width:100%;padding:16px 22px;background:#ffe600;color:#000;border:4px solid #000;border-radius:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none;background:#fff;border:4px solid #000;border-top:none;border-radius:0 0 14px 14px;padding:22px;box-shadow:5px 5px 0 #000}
+.ak-sec{margin-bottom:18px}.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;color:var(--hp);margin-bottom:8px}
+.ak-item{padding:6px 0;border-bottom:2px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+.ak-ans{color:#009900;font-weight:900}
+.wig{text-align:center;font-size:20px;letter-spacing:4px;padding:6px 0}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+</style></head><body>
+<header>
+<div class="hs"></div>
+<div class="hi">
+<div class="sr">💥 ★ 💥 ★ 💥</div>
+<h1>Exercícios<br>de Sofia E Eloá!</h1>
+<div class="hsub">
+  <div style="font-size:11px;letter-spacing:2px;opacity:0.8;margin-bottom:6px">📅 17/06 &nbsp;·&nbsp; Tópicos de estudo</div>
+  <div style="font-size:13px;line-height:1.8">· Modal Verb Should (You should study more, She shouldn't smoke)</div><div style="font-size:13px;line-height:1.8">· Vocabulário temático (rehearsal, lake, national team, jersey)</div><div style="font-size:13px;line-height:1.8">· Expressões de opinião (I think so, I don't think so)</div>
+</div>
+<div class="hd">POW! ZAP! BAM!</div>
+</div>
+<div class="hs"></div>
+</header>
+<main>
+<div class="sec s1"><div class="sh"><div class="sn">1</div><div class="st">Múltipla Escolha</div><div class="se">🎯</div></div>
+<div class="sb"><div class="si">👇 Escolha a alternativa correta e clique para descobrir!</div><div class="mc-q" data-answer="C" data-explain="'Rehearsal' significa 'ensaio' — como o ensaio antes de uma peça de teatro ou show musical."><div class="mc-text">1. What is the correct translation for 'rehearsal'?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Relaxamento</button><button class="mc-btn" onclick="pickMC(this)">B) Apresentação</button><button class="mc-btn" onclick="pickMC(this)">C) Ensaio</button><button class="mc-btn" onclick="pickMC(this)">D) Aula</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="D" data-explain="Após 'should', usamos o verbo no infinitivo SEM 'to' e sem adicionar -s. A forma correta é: should + verbo base."><div class="mc-text">2. Which sentence uses 'should' correctly?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) You should to eat more vegetables.</button><button class="mc-btn" onclick="pickMC(this)">B) She should eats a salad every day.</button><button class="mc-btn" onclick="pickMC(this)">C) He should tells the truth.</button><button class="mc-btn" onclick="pickMC(this)">D) They should drink more water.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="B" data-explain="'I think so' = 'Eu acho que sim'. Como o céu está nublado, a resposta afirmativa faz sentido. 'I don't think so' seria 'Eu acho que não'."><div class="mc-text">3. Sofia asks: 'Do you think it will rain today?' Her friend looks at the cloudy sky and answers: '___. Let's bring an umbrella.'</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) I don't think so</button><button class="mc-btn" onclick="pickMC(this)">B) I think so</button><button class="mc-btn" onclick="pickMC(this)">C) I think not</button><button class="mc-btn" onclick="pickMC(this)">D) I don't know so</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="D" data-explain="'Jersey' = camisa de time e 'national team' = seleção. Portanto, 'national team jersey' = camisa da seleção."><div class="mc-text">4. What does 'national team jersey' mean in Portuguese?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Bola da seleção</button><button class="mc-btn" onclick="pickMC(this)">B) Técnico da seleção</button><button class="mc-btn" onclick="pickMC(this)">C) Estádio nacional</button><button class="mc-btn" onclick="pickMC(this)">D) Camisa da seleção</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="D" data-explain="'Shouldn't' (should + not) é usado para recomendar que alguém NÃO faça algo. As opções A, B e C usam 'should' afirmativo, que recomenda fazer algo."><div class="mc-text">5. Which sentence gives a recommendation NOT to do something?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) He should tell the truth.</button><button class="mc-btn" onclick="pickMC(this)">B) We should visit grandma this weekend.</button><button class="mc-btn" onclick="pickMC(this)">C) You should buy that jacket.</button><button class="mc-btn" onclick="pickMC(this)">D) She shouldn't go to bed so late during the week.</button></div><div class="feedback"></div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s2"><div class="sh"><div class="sn">2</div><div class="st">Complete as Frases</div><div class="se">✏️</div></div>
+<div class="sb"><div class="si">📝 Preencha os espaços e clique em "Verificar"!</div><div class="fi-item"><div class="fi-row">1. You <input class="fi-inp" data-ans="shouldn't" data-explain="'Shouldn't' é a contração de 'should not', usada para recomendar que alguém não faça algo." style="width:108px" placeholder="___"> eat so much candy. It's bad for your teeth!</div><div class="fi-hint">Use a forma negativa de should. Dica: *SHOULDN'T* = não deveria</div></div><div class="fi-item"><div class="fi-row">2. She has a high fever. She <input class="fi-inp" data-ans="should see" data-explain="Em inglês dizemos 'see a doctor' (não 'go to the doctor'). 'Should' indica uma recomendação positiva." style="width:120px" placeholder="___"> a doctor right away.</div><div class="fi-hint">Em inglês, 'ir ao médico' usa o verbo *SEE*. Use should + see.</div></div><div class="fi-item"><div class="fi-row">3. The players were proud to wear their <input class="fi-inp" data-ans="jerseys" data-explain="'Jersey' é a camisa usada por jogadores de times esportivos. No plural acrescenta-se 's'." style="width:84px" placeholder="___"> during the national team game.</div><div class="fi-hint">Camisa de time em inglês é *JERSEY*. No plural, adicione -s.</div></div><div class="fi-item"><div class="fi-row">4. I <input class="fi-inp" data-ans="shouldn't" data-explain="Usamos 'shouldn't' para dar um conselho negativo — inclusive a nós mesmos." style="width:108px" placeholder="___"> eat fast food every day. It's not healthy at all.</div><div class="fi-hint">Forma negativa de recomendação. Dica: *SHOULDN'T* = não deveria</div></div><div class="fi-item"><div class="fi-row">5. The band has a big <input class="fi-inp" data-ans="rehearsal" data-explain="'Rehearsal' é o ensaio que acontece antes de uma apresentação de música, teatro, etc." style="width:108px" placeholder="___"> tomorrow before their concert on Saturday.</div><div class="fi-hint">A palavra que significa 'ensaio' em inglês é *REHEARSAL*.</div></div><div class="fi-item"><div class="fi-row">6. He <input class="fi-inp" data-ans="should apologize" data-explain="'Should apologize' = 'deveria se desculpar'. Lembre: should + verbo base, sem 'to'." style="width:192px" placeholder="___"> to her. It was clearly his mistake.</div><div class="fi-hint">Use 'should' + o verbo *APOLOGIZE* (pedir desculpas).</div></div>
+<div id="ff" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkFill()">✅ Verificar</button><span id="fs" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s3"><div class="sh"><div class="sn">3</div><div class="st">Tradução</div><div class="se">🌎</div></div>
+<div class="sb"><div class="si">🔁 Traduza as frases! Atenção na direção.</div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Você deveria beber mais água todos os dias.</div><input class="tr-inp" data-ans="you should drink more water every day." data-explain="'Deveria' = should. Lembre: should + verbo base (drink), sem 'to'." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; They shouldn't watch too much TV.</div><input class="tr-inp" data-ans="eles não deveriam assistir televisão demais." data-explain="'Shouldn't' = não deveria. 'Too much' = demais / em excesso." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Meu primo joga na seleção nacional.</div><input class="tr-inp" data-ans="my cousin plays on the national team." data-explain="'Cousin' = primo ou prima. 'National team' = seleção nacional. Usa-se a preposição 'on' com 'plays'." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; We should visit grandma this weekend.</div><input class="tr-inp" data-ans="nós deveríamos visitar a vovó neste fim de semana." data-explain="'Should' = deveria / deveríamos. 'This weekend' = neste fim de semana." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Acho que sim. O ensaio começa às oito.</div><input class="tr-inp" data-ans="i think so. the rehearsal starts at eight." data-explain="'I think so' = Eu acho que sim. É uma expressão fixa — não se traduz palavra por palavra. 'Rehearsal' = ensaio." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; He shouldn't smoke. It's very bad for his health.</div><input class="tr-inp" data-ans="ele não deveria fumar. é muito ruim para a saúde dele." data-explain="'Shouldn't' = não deveria. 'His health' = a saúde dele." placeholder="Digite em português..."></div>
+<div id="tf" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkTr()">✅ Verificar</button><span id="ts" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s4"><div class="sh"><div class="sn">4</div><div class="st">Perguntas Abertas</div><div class="se">💬</div></div>
+<div class="sb"><div class="si">🖊️ Responda em inglês! Clique em "Ver modelo" para se inspirar.</div><div class="oq-item"><div class="oq-q">1. What are two things you think a good student should do every day?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">I think a good student should pay attention in class and should study for at least one hour every day. They shouldn't use their phone during the lesson.</div></div><div class="oq-item"><div class="oq-q">2. Your cousin wants to join the national soccer team. What should he or she do to achieve that goal?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">My cousin should practice every day and eat healthy food. She shouldn't stay up late, and she should always pay attention to the coach's instructions during rehearsals.</div></div><div class="oq-item"><div class="oq-q">3. Is there something you think you shouldn't do but sometimes do anyway? What is it and why?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">I think I shouldn't eat so much candy, but sometimes I do it anyway because it's really delicious! I know I should eat more fruit instead.</div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s5"><div class="sh"><div class="sn">5</div><div class="st">Diálogo &amp; Roleplay</div><div class="se">🎭</div></div>
+<div class="sb"><div class="si">🗣️ Complete as falas em inglês usando o vocabulário da aula!</div><div class="dlg-scenario">📍 Sofia está conversando com sua professora sobre os hábitos pouco saudáveis de uma amiga chamada Ana.</div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Hey Sofia! I heard your friend Ana hasn't been feeling well lately. Do you think she should see a doctor?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Sofia E Eloá</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">That makes sense. What about her daily habits? Does she sleep enough or does she go to bed very late?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Sofia E Eloá</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">She really shouldn't go to bed so late during the week. It's bad for her health. Does she eat well too?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Sofia E Eloá</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">She shouldn't eat so much fast food. She should drink more water and pay attention to what she eats.</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Sofia E Eloá</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div></div></div>
+<div class="ak-wrap">
+<button class="ak-btn" onclick="toggleAK()"><span>🏆 Gabarito Completo</span><span class="ak-arr" id="ak-arr">▼</span></button>
+<div class="ak-body" id="ak-body">
+<div class="ak-sec"><h4>🎯 Múltipla Escolha</h4><div class="ak-item">1. <span class="ak-ans">C) Ensaio</span></div><div class="ak-item">2. <span class="ak-ans">D) They should drink more water.</span></div><div class="ak-item">3. <span class="ak-ans">B) I think so</span></div><div class="ak-item">4. <span class="ak-ans">D) Camisa da seleção</span></div><div class="ak-item">5. <span class="ak-ans">D) She shouldn't go to bed so late during the week.</span></div></div>
+<div class="ak-sec"><h4>✏️ Complete as Frases</h4><div class="ak-item">1. <span class="ak-ans">shouldn't</span></div><div class="ak-item">2. <span class="ak-ans">should see</span></div><div class="ak-item">3. <span class="ak-ans">jerseys</span></div><div class="ak-item">4. <span class="ak-ans">shouldn't</span></div><div class="ak-item">5. <span class="ak-ans">rehearsal</span></div><div class="ak-item">6. <span class="ak-ans">should apologize</span></div></div>
+<div class="ak-sec"><h4>🌎 Tradução</h4><div class="ak-item">1. <span class="ak-ans">You should drink more water every day.</span></div><div class="ak-item">2. <span class="ak-ans">Eles não deveriam assistir televisão demais.</span></div><div class="ak-item">3. <span class="ak-ans">My cousin plays on the national team.</span></div><div class="ak-item">4. <span class="ak-ans">Nós deveríamos visitar a vovó neste fim de semana.</span></div><div class="ak-item">5. <span class="ak-ans">I think so. The rehearsal starts at eight.</span></div><div class="ak-item">6. <span class="ak-ans">Ele não deveria fumar. É muito ruim para a saúde dele.</span></div></div>
+</div></div>
+</main>
+
+<!-- BOTÃO ENVIAR RESPOSTAS -->
+<div style="max-width:820px;margin:28px auto 0;padding:0 14px">
+  <div id="send-box" style="background:#fff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.08)">
+    <div style="font-size:15px;font-weight:600;margin-bottom:8px;color:#333">📬 Quando terminar, envie suas respostas para seu teacher favorito! 🍎</div>
+    <div style="font-size:13px;color:#888;margin-bottom:16px">Suas respostas serão salvas para revisão na próxima aula.</div>
+    <input id="student-name-input" type="text" placeholder="Digite seu nome antes de enviar..." 
+      style="width:100%;max-width:320px;border:2px solid #ddd;border-radius:8px;padding:10px 14px;font-size:15px;margin-bottom:12px;outline:none;display:block;margin-left:auto;margin-right:auto">
+    <button onclick="sendAnswers()" 
+      style="padding:12px 32px;background:#4a86e8;color:#fff;border:none;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(74,134,232,0.4);transition:all .2s">
+      📤 Enviar respostas
+    </button>
+    <div id="send-status" style="margin-top:12px;font-size:14px;display:none"></div>
+  </div>
+</div>
+
+<script>
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyjFqJGGsSfBgttYPMZapn6vLM4GsE57RMb5khimbqkzGhhINqu9AO4X6uBqOoT6rrThg/exec";
+const STUDENT_NAME = "Sofia E Eloá";
+const LESSON_DATE = "17/06";
+
+function collectAnswers() {
+  const respostas = [];
+  const now = new Date();
+
+  // Múltipla escolha
+  document.querySelectorAll('.mc-q').forEach((item, idx) => {
+    const selected = item.querySelector('.mc-btn.ok, .mc-btn.no');
+    if (selected) {
+      respostas.push({
+        secao: "Múltipla Escolha",
+        numero: idx + 1,
+        pergunta: item.querySelector('.mc-text')?.textContent?.trim() || "",
+        resposta: selected.textContent.trim(),
+        correto: selected.classList.contains('ok')
+      });
+    }
+  });
+
+  // Fill in the blanks
+  document.querySelectorAll('.fi-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Complete as Frases",
+        numero: idx + 1,
+        pergunta: inp.closest('.fi-row')?.textContent?.replace(inp.value, '___').trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Tradução
+  document.querySelectorAll('.tr-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Tradução",
+        numero: idx + 1,
+        pergunta: inp.closest('.tr-card')?.querySelector('.tr-src')?.textContent?.trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Perguntas abertas
+  document.querySelectorAll('.oq-ta').forEach((ta, idx) => {
+    if (ta.value.trim()) {
+      respostas.push({
+        secao: "Pergunta Aberta",
+        numero: idx + 1,
+        pergunta: ta.closest('.oq-item')?.querySelector('.oq-q')?.textContent?.trim() || "",
+        resposta: ta.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  // Diálogo
+  document.querySelectorAll('.dlg-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Diálogo",
+        numero: idx + 1,
+        pergunta: "Fala " + (idx + 1),
+        resposta: inp.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  return respostas;
+}
+
+async function sendAnswers() {
+  const nameInput = document.getElementById('student-name-input');
+  const status = document.getElementById('send-status');
+  const btn = event.target;
+
+  const name = nameInput.value.trim() || STUDENT_NAME;
+  const respostas = collectAnswers();
+
+  if (respostas.length === 0) {
+    status.style.display = 'block';
+    status.style.color = '#e67e22';
+    status.textContent = '⚠️ Responda pelo menos um exercício antes de enviar!';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Enviando...';
+  status.style.display = 'none';
+
+  const now = new Date();
+  const payload = {
+    aluno: name,
+    aula: LESSON_DATE,
+    data: now.toLocaleDateString('pt-BR'),
+    hora: now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'}),
+    respostas: respostas
+  };
+
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+
+    btn.textContent = '✅ Enviado!';
+    btn.style.background = '#27ae60';
+    status.style.display = 'block';
+    status.style.color = '#27ae60';
+    status.innerHTML = '🎉 Respostas enviadas! Seu professor já pode ver tudo na planilha.';
+
+  } catch(err) {
+    btn.disabled = false;
+    btn.textContent = '📤 Enviar respostas';
+    status.style.display = 'block';
+    status.style.color = '#e74c3c';
+    status.textContent = '❌ Erro ao enviar. Tente novamente.';
+  }
+}
+
+function pickMC(btn){const item=btn.closest('.mc-q');if(item.dataset.done)return;item.dataset.done='1';const ans=item.dataset.answer,fb=item.querySelector('.feedback');item.querySelectorAll('.mc-btn').forEach(b=>{if(b.textContent.trim().startsWith(ans))b.classList.add('show-ok')});if(btn.textContent.trim().startsWith(ans)){btn.classList.add('ok');fb.className='feedback ok-msg';fb.innerHTML='🎉 Correto! Arrasou!';}else{btn.classList.add('no');fb.className='feedback err';fb.innerHTML='❌ Não foi dessa vez!<br>💡 <strong>Entenda:</strong> '+item.dataset.explain;}fb.style.display='block';saveAnswers();}
+function checkFill(){const inps=document.querySelectorAll('.fi-inp');let r=0,err=[];const normf=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=normf(i.value)===normf(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Frase '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong>. 💡 '+i.dataset.explain+'</div>');});document.getElementById('ff').innerHTML=err.join('');const s=document.getElementById('fs');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function checkTr(){const inps=document.querySelectorAll('.tr-inp');let r=0,err=[];const norm=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=norm(i.value)===norm(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Tradução '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong><br>💡 '+i.dataset.explain+'</div>');});document.getElementById('tf').innerHTML=err.join('');const s=document.getElementById('ts');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function toggleSample(btn){const s=btn.nextElementSibling;const o=s.style.display==='block';s.style.display=o?'none':'block';btn.textContent=o?'💡 Ver resposta modelo':'🙈 Esconder modelo';}
+function showMyAnswers(){
+  const respostas=collectAnswers();
+  const modal=document.getElementById('answers-modal');
+  const cont=document.getElementById('answers-content');
+  if(respostas.length===0){
+    cont.innerHTML='<div style="text-align:center;padding:40px;color:#888;font-size:15px">⚠️ Você ainda não respondeu nenhum exercício.</div>';
+  }else{
+    const secs={};
+    respostas.forEach(r=>{if(!secs[r.secao])secs[r.secao]=[];secs[r.secao].push(r);});
+    const icons={'Múltipla Escolha':'🎯','Complete as Frases':'✏️','Tradução':'🌎','Pergunta Aberta':'💬','Diálogo':'🎭'};
+    let html='';
+    Object.entries(secs).forEach(([secao,items])=>{
+      html+=`<div style="margin-bottom:24px"><div style="font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;color:#4a86e8;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #e8f0fe">${icons[secao]||'📝'} ${secao}</div>`;
+      items.forEach(r=>{
+        const bg=r.correto===true?'#edfce8':r.correto===false?'#fff0f5':'#f8f9ff';
+        const bdr=r.correto===true?'#7ac870':r.correto===false?'#ff80a8':'#c8d8ff';
+        const ic=r.correto===true?'✅':r.correto===false?'❌':'📝';
+        const pq=r.pergunta?r.pergunta.substring(0,80)+(r.pergunta.length>80?'...':''):'';
+        html+=`<div style="margin-bottom:10px;padding:12px 14px;background:${bg};border-left:4px solid ${bdr};border-radius:0 10px 10px 0"><div style="font-size:12px;color:#888;margin-bottom:4px">${ic} Questão ${r.numero}</div>${pq?'<div style="font-size:13px;color:#555;margin-bottom:6px;font-style:italic">'+pq+'</div>':''}<div style="font-size:15px;font-weight:700;color:#333">Sua resposta: ${r.resposta}</div></div>`;
+      });
+      html+='</div>';
+    });
+    const total=respostas.filter(r=>r.correto!==null).length;
+    const certas=respostas.filter(r=>r.correto===true).length;
+    if(total>0){
+      const pct=Math.round(certas/total*100);
+      const cor=pct>=70?'#7ac870':pct>=50?'#ffa060':'#ff80a8';
+      html='<div style="text-align:center;padding:16px;margin-bottom:20px;background:linear-gradient(135deg,#f8f9ff,#e8f0fe);border-radius:12px"><div style="font-size:36px;font-weight:900;color:'+cor+'">'+pct+'%</div><div style="font-size:14px;color:#666">'+certas+' de '+total+' corretas nos exercícios verificados</div></div>'+html;
+    }
+    cont.innerHTML=html;
+  }
+  modal.style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('answers-modal').style.display='none';
+  document.body.style.overflow='';
+}
+
+function toggleAK(){const b=document.getElementById('ak-body'),a=document.getElementById('ak-arr'),o=b.style.display==='block';b.style.display=o?'none':'block';a.style.transform=o?'':'rotate(180deg)';}
+
+// ── LOCAL STORAGE — salva e carrega respostas ──
+const STORAGE_KEY = ('exercicios_Sofia E Eloá_17/06').split('/').join('-');
+
+function saveAnswers(){
+  const data={};
+  document.querySelectorAll('.fi-inp').forEach((el,i)=>{data['fi_'+i]=el.value;});
+  document.querySelectorAll('.tr-inp').forEach((el,i)=>{data['tr_'+i]=el.value;});
+  document.querySelectorAll('.oq-ta').forEach((el,i)=>{data['oq_'+i]=el.value;});
+  document.querySelectorAll('.dlg-inp').forEach((el,i)=>{data['dlg_'+i]=el.value;});
+  document.querySelectorAll('.mc-q').forEach((el,i)=>{
+    const sel=el.querySelector('.mc-btn.ok,.mc-btn.no');
+    if(sel){
+      data['mc_'+i+'_txt']=sel.textContent.trim();
+      data['mc_'+i+'_ok']=sel.classList.contains('ok');
+    }
+  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function loadAnswers(){
+  const raw=localStorage.getItem(STORAGE_KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    // Restore text fields
+    document.querySelectorAll('.fi-inp').forEach((el,i)=>{if(data['fi_'+i]!==undefined)el.value=data['fi_'+i];});
+    document.querySelectorAll('.tr-inp').forEach((el,i)=>{if(data['tr_'+i]!==undefined)el.value=data['tr_'+i];});
+    document.querySelectorAll('.oq-ta').forEach((el,i)=>{if(data['oq_'+i]!==undefined)el.value=data['oq_'+i];});
+    document.querySelectorAll('.dlg-inp').forEach((el,i)=>{if(data['dlg_'+i]!==undefined)el.value=data['dlg_'+i];});
+    // Restore MC buttons visually
+    document.querySelectorAll('.mc-q').forEach((el,i)=>{
+      const savedTxt=data['mc_'+i+'_txt'];
+      const savedOk=data['mc_'+i+'_ok'];
+      if(savedTxt!==undefined){
+        el.dataset.done='1';
+        const ans=el.dataset.answer;
+        el.querySelectorAll('.mc-btn').forEach(b=>{
+          if(b.textContent.trim()===savedTxt){
+            b.classList.add(savedOk?'ok':'no');
+          }
+          if(b.textContent.trim().startsWith(ans)){
+            b.classList.add('show-ok');
+          }
+        });
+        const fb=el.querySelector('.feedback');
+        if(fb){
+          fb.className='feedback '+(savedOk?'ok-msg':'err');
+          fb.innerHTML=savedOk?'🎉 Correto! Arrasou!':'❌ Não foi dessa vez! 💡 '+el.dataset.explain;
+          fb.style.display='block';
+        }
+      }
+    });
+    if(Object.keys(data).length>0){
+      const bar=document.getElementById('save-bar');
+      if(bar)bar.style.display='flex';
+    }
+  }catch(e){}
+}
+
+function clearSaved(){
+  if(confirm('Apagar todas as respostas salvas?')){
+    localStorage.removeItem(STORAGE_KEY);
+    document.querySelectorAll('.fi-inp,.tr-inp,.oq-ta,.dlg-inp').forEach(el=>el.value='');
+    const bar=document.getElementById('save-bar');
+    if(bar)bar.style.display='none';
+  }
+}
+
+// Auto-save ao digitar
+document.addEventListener('input', e=>{
+  if(e.target.matches('.fi-inp,.tr-inp,.oq-ta,.dlg-inp'))saveAnswers();
+});
+
+// Carrega ao abrir a página
+window.addEventListener('load', loadAnswers);
+</script>
+
+<!-- BARRA DE RESPOSTAS SALVAS -->
+<div id="save-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:10px 20px;font-size:13px;align-items:center;justify-content:space-between;gap:12px;z-index:999;box-shadow:0 -3px 12px rgba(0,0,0,0.3)">
+  <span>💾 Você tem respostas salvas neste dispositivo.</span>
+  <button onclick="clearSaved()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:5px 14px;border-radius:20px;cursor:pointer;font-size:12px;white-space:nowrap">🗑️ Apagar tudo</button>
+</div>
+
+</body></html>
