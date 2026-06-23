@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Exercícios de Amendoa 🌟</title>
+
+<style>
+
+:root{--hp:#ff2d8f;--eb:#0055ff;--lime:#aaff00;--yel:#ffe600;--ora:#ff7a00;--pur:#8b00ff;--cya:#00e5ff;--bk:#000;--wh:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:#9900cc;background-image:radial-gradient(circle,#ffe600 1px,transparent 1px),radial-gradient(circle,#00e5ff 1px,transparent 1px);background-size:30px 30px,60px 60px;background-position:0 0,15px 15px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#ffe600;border-bottom:5px solid #000;text-align:center;overflow:hidden}
+.hs{background:repeating-linear-gradient(45deg,#ff2d8f,#ff2d8f 10px,#ffe600 10px,#ffe600 20px);height:14px;border-bottom:3px solid #000}
+.hi{padding:24px 20px 20px}
+.sr{font-size:22px;letter-spacing:6px;margin-bottom:4px}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:clamp(32px,8vw,64px);color:#000;text-shadow:4px 4px 0 #ff2d8f,7px 7px 0 #0055ff;line-height:1.1;margin-bottom:6px}
+.hsub{display:inline-block;background:#ff2d8f;color:#fff;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:clamp(13px,3vw,18px);padding:6px 20px;border:3px solid #000;border-radius:50px;box-shadow:3px 3px 0 #000;margin-top:6px}
+.hd{font-size:26px;margin-top:10px;letter-spacing:4px}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:4px solid #000;border-radius:16px;box-shadow:7px 7px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:4px solid #000}
+.sn{width:36px;height:36px;border-radius:50%;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:18px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:22px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#444;margin-bottom:18px;padding:8px 14px;border:2px dashed #000;border-radius:8px;background:#fffde7}
+.s1 .sh{background:#ff2d8f}.s1 .sn{background:#ffe600}.s1 .st{color:#fff}
+.s2 .sh{background:#0055ff}.s2 .sn{background:#00e5ff}.s2 .st{color:#fff}
+.s3 .sh{background:#aaff00}.s3 .sn{background:#ffe600}
+.s4 .sh{background:#ff7a00}.s4 .sn{background:#ffe600}.s4 .st{color:#fff}
+.s5 .sh{background:#8b00ff}.s5 .sn{background:#00e5ff}.s5 .st{color:#fff}
+.mc-btn{padding:10px 14px;border:3px solid #000;border-radius:10px;background:#f0f0f0;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:#ffe600;transform:translate(-1px,-1px)}
+.cbtn{margin-top:16px;padding:11px 28px;background:#ff2d8f;color:#fff;border:4px solid #000;border-radius:50px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 #000;transition:transform .1s}
+.cbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.ak-btn{width:100%;padding:16px 22px;background:#ffe600;color:#000;border:4px solid #000;border-radius:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}
+.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:16px;color:#ff2d8f;margin-bottom:8px}
+.wig{text-align:center;font-size:20px;letter-spacing:4px;padding:6px 0}
+
+/* ── SHARED STYLES ── */
+/* GLOBAL: garantir contraste em todos os elementos interativos */
+.mc-btn{background:#fff!important;color:#111!important;font-weight:600!important}
+.mc-btn:hover{background:#f0f0f0!important;color:#111!important}
+.fi-inp{color:#111!important}
+.tr-inp{color:#111!important;background:#fff!important}
+.oq-ta{color:#111!important;background:#fff!important}
+.dlg-inp{color:#111!important;background:#fff!important}
+.tr-src{color:#222!important}
+.fi-row{color:#111!important}
+.oq-q{color:#111!important}
+:root{--hp:#ff2d8f;--eb:#0055ff;--lime:#aaff00;--yel:#ffe600;--ora:#ff7a00;--pur:#8b00ff;--cya:#00e5ff;--bk:#000;--wh:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:8px;font-size:13px;font-weight:700}
+.feedback.err{background:#fff176;border-color:#ff7a00;color:#5a2d00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp.ok{border-bottom-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.fi-inp.no{border-bottom-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff176;border:3px solid #ff7a00;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a2d00}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.tr-inp.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#d4edda;border:2px solid #1a7340;border-radius:8px;font-size:13px;color:#0d3d1f}
+.dlg-scenario{font-style:italic;font-weight:700;color:#555;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed #ff7a00;border-radius:8px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.score{display:none;margin-left:14px;font-size:15px;font-weight:700}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none}
+.ak-sec{margin-bottom:18px}.ak-sec:last-child{margin-bottom:0}
+.ak-item{padding:6px 0;border-bottom:1px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:#9900cc;background-image:radial-gradient(circle,#ffe600 1px,transparent 1px),radial-gradient(circle,#00e5ff 1px,transparent 1px);background-size:30px 30px,60px 60px;background-position:0 0,15px 15px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#ffe600;border-bottom:5px solid #000;text-align:center;overflow:hidden}
+.hs{background:repeating-linear-gradient(45deg,#ff2d8f,#ff2d8f 10px,#ffe600 10px,#ffe600 20px);height:14px;border-bottom:3px solid #000}
+.hi{padding:24px 20px 20px}
+.sr{font-size:22px;letter-spacing:6px;margin-bottom:4px}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(32px,8vw,64px);color:#000;text-shadow:4px 4px 0 #ff2d8f,7px 7px 0 #0055ff;line-height:1.1;margin-bottom:6px}
+.hsub{display:inline-block;background:#ff2d8f;color:#fff;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(13px,3vw,18px);padding:6px 20px;border:3px solid #000;border-radius:50px;box-shadow:3px 3px 0 #000;margin-top:6px}
+.hd{font-size:26px;margin-top:10px;letter-spacing:4px}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:4px solid #000;border-radius:16px;box-shadow:7px 7px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:4px solid #000}
+.sn{width:36px;height:36px;border-radius:50%;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:22px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#444;margin-bottom:18px;padding:8px 14px;border:2px dashed #000;border-radius:8px;background:#fffde7}
+.s1 .sh{background:#ff2d8f}.s1 .sn{background:var(--yel)}.s1 .st{color:#fff}
+.s2 .sh{background:#0055ff}.s2 .sn{background:var(--cya)}.s2 .st{color:#fff}
+.s3 .sh{background:#aaff00}.s3 .sn{background:var(--yel)}
+.s4 .sh{background:#ff7a00}.s4 .sn{background:var(--yel)}.s4 .st{color:#fff}
+.s5 .sh{background:#8b00ff}.s5 .sn{background:var(--cya)}.s5 .st{color:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn{padding:10px 14px;border:3px solid #000;border-radius:10px;background:#f0f0f0;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:var(--yel);transform:translate(-1px,-1px)}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:10px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 #000}
+.feedback.err{background:#fff3cd;border-color:#d68910;color:#5a3e00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp{border:none;border-bottom:4px solid #000;background:var(--yel);font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:15px;font-weight:900;padding:2px 6px;outline:none;border-radius:4px 4px 0 0;transition:all .2s}
+.fi-inp.ok{border-bottom-color:#009900;background:#ccff99;color:#004400}
+.fi-inp.no{border-bottom-color:#c00;background:#ffcccc;color:#600}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff3cd;border:2px solid #d68910;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a3e00}
+.tr-card{margin-bottom:12px;padding:12px 14px;background:#f3f3ff;border:3px solid #000;border-radius:10px;box-shadow:3px 3px 0 #000}.tr-card:last-child{margin-bottom:0}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp{width:100%;border:3px solid #000;border-radius:8px;padding:8px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;background:#fff;outline:none}
+.tr-inp.ok{border-color:#009900;background:#ccff99;color:#004400}
+.tr-inp.no{border-color:#c00;background:#ffcccc;color:#600}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-ta{width:100%;border:3px solid #000;border-radius:10px;padding:10px 13px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;min-height:72px;resize:vertical;outline:none;background:#fff;box-shadow:3px 3px 0 #000}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#ccff99;border:3px solid #009900;border-radius:10px;font-size:13px;font-weight:700;color:#004400;box-shadow:3px 3px 0 #009900}
+.show-btn{margin-top:6px;background:var(--yel);border:3px solid #000;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:13px;font-weight:900;padding:4px 14px;border-radius:20px;box-shadow:2px 2px 0 #000}
+.show-btn:hover{background:var(--lime)}
+.dlg-scenario{font-style:italic;font-weight:700;color:#333;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed var(--ora);border-radius:10px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-spk{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:13px;min-width:82px;padding:5px 8px;border:3px solid #000;border-radius:20px;text-align:center;flex-shrink:0;margin-top:2px;box-shadow:2px 2px 0 #000}
+.spk-t{background:var(--eb);color:#fff}.spk-s{background:var(--hp);color:#fff}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.dlg-inp{flex:1;border:3px solid #000;border-radius:10px;padding:7px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;outline:none;background:#fff;box-shadow:2px 2px 0 #000}
+.dlg-inp:focus{border-color:var(--hp);background:#fff0f8}
+.cbtn{margin-top:16px;padding:11px 28px;background:var(--hp);color:#fff;border:4px solid #000;border-radius:50px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 #000;transition:transform .1s}
+.cbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.score{display:none;margin-left:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-btn{width:100%;padding:16px 22px;background:#ffe600;color:#000;border:4px solid #000;border-radius:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none;background:#fff;border:4px solid #000;border-top:none;border-radius:0 0 14px 14px;padding:22px;box-shadow:5px 5px 0 #000}
+.ak-sec{margin-bottom:18px}.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;color:var(--hp);margin-bottom:8px}
+.ak-item{padding:6px 0;border-bottom:2px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+.ak-ans{color:#009900;font-weight:900}
+.wig{text-align:center;font-size:20px;letter-spacing:4px;padding:6px 0}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+</style></head><body>
+<header>
+<div class="hs"></div>
+<div class="hi">
+<div class="sr">⭐ 🌈 ⭐ 🌈 ⭐</div>
+<h1>Exercícios<br>de Amendoa!</h1>
+<div class="hsub">
+  <div style="font-size:11px;letter-spacing:2px;opacity:0.8;margin-bottom:6px">📅 23/06 &nbsp;·&nbsp; Tópicos de estudo</div>
+  <div style="font-size:13px;line-height:1.8">· Estações do ano (Summer, Fall, Winter, Spring)</div><div style="font-size:13px;line-height:1.8">· Vocabulário temático (rent, hang out, sunny, away, enough)</div><div style="font-size:13px;line-height:1.8">· Want to / Wants to e forma informal Wanna</div><div style="font-size:13px;line-height:1.8">· Futuro com Will e Going to</div>
+</div>
+<div class="hd">✏️ 📚 🎉 🗣️ 🏆</div>
+</div>
+<div class="hs"></div>
+</header>
+<main>
+<div class="sec s1"><div class="sh"><div class="sn">1</div><div class="st">Múltipla Escolha</div><div class="se">🎯</div></div>
+<div class="sb"><div class="si">👇 Escolha a alternativa correta e clique para descobrir!</div><div class="mc-q" data-answer="B" data-explain="Com a terceira pessoa do singular (she/he/it), usamos 'wants to', não 'want to'. O 's' é obrigatório no Present Simple."><div class="mc-text">1. Which sentence is grammatically correct?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) She want to rent an apartment.</button><button class="mc-btn" onclick="pickMC(this)">B) She wants to rent an apartment.</button><button class="mc-btn" onclick="pickMC(this)">C) She wantsto rent an apartment.</button><button class="mc-btn" onclick="pickMC(this)">D) She wanting to rent an apartment.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="'To hang out' significa sair para curtir, passear ou se divertir com amigos de forma casual."><div class="mc-text">2. What does 'to hang out' mean?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Trabalhar muito</button><button class="mc-btn" onclick="pickMC(this)">B) Ir dormir cedo</button><button class="mc-btn" onclick="pickMC(this)">C) Sair e curtir com amigos</button><button class="mc-btn" onclick="pickMC(this)">D) Alugar uma casa</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="Nos EUA, a ordem das estações é: Spring (Primavera) → Summer (Verão) → Fall/Autumn (Outono) → Winter (Inverno)."><div class="mc-text">3. Which season comes after Summer in the United States?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Spring</button><button class="mc-btn" onclick="pickMC(this)">B) Winter</button><button class="mc-btn" onclick="pickMC(this)">C) Fall</button><button class="mc-btn" onclick="pickMC(this)">D) Sunny</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="'Wanna' é a forma informal e contraída de 'want to'. A estrutura permanece igual: sujeito + wanna + verbo base."><div class="mc-text">4. Choose the correct informal version of 'I want to go to the park.'</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) I wants go to the park.</button><button class="mc-btn" onclick="pickMC(this)">B) I wanna going to the park.</button><button class="mc-btn" onclick="pickMC(this)">C) I wanna go to the park.</button><button class="mc-btn" onclick="pickMC(this)">D) I gonna go to the park.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="B" data-explain="A estrutura correta com 'going to' é: sujeito + verbo 'to be' conjugado + going to + verbo base. Ex: 'They ARE going to rent'."><div class="mc-text">5. Which sentence correctly uses 'going to' for future plans?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) They going to rent a house next month.</button><button class="mc-btn" onclick="pickMC(this)">B) They are going to rent a house next month.</button><button class="mc-btn" onclick="pickMC(this)">C) They are going rent a house next month.</button><button class="mc-btn" onclick="pickMC(this)">D) They is going to rent a house next month.</button></div><div class="feedback"></div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s2"><div class="sh"><div class="sn">2</div><div class="st">Complete as Frases</div><div class="se">✏️</div></div>
+<div class="sb"><div class="si">📝 Preencha os espaços e clique em "Verificar"!</div><div class="fi-item"><div class="fi-row">1. It's hot and <input class="fi-inp" data-ans="sunny" data-explain="'Sunny' significa ensolarado. É um adjetivo muito usado para descrever o tempo no verão." style="width:80px" placeholder="___"> today. I love Summer!</div><div class="fi-hint">O dia está ensolarado — use o adjetivo *SUNNY*</div></div><div class="fi-item"><div class="fi-row">2. Amanda and Johnny want to <input class="fi-inp" data-ans="rent" data-explain="'To rent' significa alugar. No contexto de 'want to', usamos o verbo no infinitivo sem 'to'." style="width:80px" placeholder="___"> a nice apartment downtown.</div><div class="fi-hint">Eles querem alugar — use o verbo *RENT*</div></div><div class="fi-item"><div class="fi-row">3. I don't have <input class="fi-inp" data-ans="enough" data-explain="'Enough' significa suficiente. Vem antes do substantivo: 'enough money', 'enough time'." style="width:80px" placeholder="___"> money to go on vacation this Summer.</div><div class="fi-hint">Não tenho dinheiro suficiente — use a palavra *ENOUGH*</div></div><div class="fi-item"><div class="fi-row">4. My family lives far <input class="fi-inp" data-ans="away" data-explain="'Away' significa longe ou distante. 'Far away' reforça a ideia de grande distância." style="width:80px" placeholder="___"> from here. I miss them a lot.</div><div class="fi-hint">Minha família mora longe daqui — use a palavra *AWAY*</div></div><div class="fi-item"><div class="fi-row">5. I <input class="fi-inp" data-ans="wanna" data-explain="'Wanna' é a contração informal de 'want to', muito usada no inglês americano falado. A frase fica: 'I wanna go to the beach'." style="width:80px" placeholder="___"> go to the beach with my friends this Summer!</div><div class="fi-hint">Forma informal de 'want to' — use *WANNA*</div></div><div class="fi-item"><div class="fi-row">6. At the <input class="fi-inp" data-ans="end" data-explain="'End' significa fim. 'At the end of Spring' = no fim da primavera." style="width:80px" placeholder="___"> of Spring, the weather starts to get warmer.</div><div class="fi-hint">No fim da primavera — use a palavra *END*</div></div>
+<div id="ff" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkFill()">✅ Verificar</button><span id="fs" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s3"><div class="sh"><div class="sn">3</div><div class="st">Tradução</div><div class="se">🌎</div></div>
+<div class="sb"><div class="si">🔁 Traduza as frases! Atenção na direção.</div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Eu quero curtir com meus amigos no verão.</div><input class="tr-inp" data-ans="i want to hang out with my friends in the summer." data-explain="'Curtir com amigos' se traduz como 'hang out with friends'. Lembre-se: 'I want to' + verbo base." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; She wants to rent an apartment near the park.</div><input class="tr-inp" data-ans="ela quer alugar um apartamento perto do parque." data-explain="'Wants to rent' = quer alugar. Com she/he/it, o verbo 'want' recebe 's' → 'wants to'." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Vai estar ensolarado no fim de semana. Vamos sair curtir!</div><input class="tr-inp" data-ans="it's going to be sunny this weekend. let's hang out!" data-explain="Use 'going to' para previsões baseadas em evidências. 'Hang out' aqui é um convite casual para sair." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; Amanda and Johnny wanna find an apartment close to downtown.</div><input class="tr-inp" data-ans="amanda e johnny querem (informalmente) encontrar um apartamento perto do centro." data-explain="'Wanna' é a forma informal de 'want to'. Muito usada na fala casual em inglês americano." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; O inverno vai acabar em breve. Eu mal posso esperar pela primavera!</div><input class="tr-inp" data-ans="winter will end soon. i can't wait for spring!" data-explain="'Will' é usado para previsões e fatos futuros. 'Can't wait for' = mal posso esperar por." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; I don't have enough time to hang out this Fall.</div><input class="tr-inp" data-ans="eu não tenho tempo suficiente para sair curtir neste outono." data-explain="'Enough time' = tempo suficiente. 'This Fall' = neste outono. 'Hang out' = sair e curtir." placeholder="Digite em português..."></div>
+<div id="tf" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkTr()">✅ Verificar</button><span id="ts" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s4"><div class="sh"><div class="sn">4</div><div class="st">Perguntas Abertas</div><div class="se">💬</div></div>
+<div class="sb"><div class="si">🖊️ Responda em inglês! Clique em "Ver modelo" para se inspirar.</div><div class="oq-item"><div class="oq-q">1. What do you want to do this Summer? Do you want to travel or stay home?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">I want to travel this Summer. I wanna go to the beach and hang out with my friends every day. I don't want to stay away from home for too long, though.</div></div><div class="oq-item"><div class="oq-q">2. Which season do you like the most and why? What do you usually do during that season?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">I like Summer the most because it's always sunny and warm. I usually hang out with my friends at the pool. I also want to rent a house near the beach someday.</div></div><div class="oq-item"><div class="oq-q">3. What are your plans for the future? Use 'will' or 'going to' in your answer.</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">I am going to study English every day because I want to be fluent. I will also try to hang out with English speakers to practice. Next year, I'm going to rent a bigger apartment.</div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s5"><div class="sh"><div class="sn">5</div><div class="st">Diálogo &amp; Roleplay</div><div class="se">🎭</div></div>
+<div class="sb"><div class="si">🗣️ Complete as falas em inglês usando o vocabulário da aula!</div><div class="dlg-scenario">📍 Amendoa e o professor estão conversando sobre planos para as férias de verão.</div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Hey Amendoa! Summer is almost here. What do you wanna do during your vacation?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Amendoa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">That sounds awesome! Are you going to travel far away or stay close to home?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Amendoa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Nice! Do you have enough money saved up for your plans?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Amendoa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">I understand! And who are you gonna hang out with this Summer — friends or family?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Amendoa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div></div></div>
+<div class="ak-wrap">
+<button class="ak-btn" onclick="toggleAK()"><span>🏆 Gabarito Completo</span><span class="ak-arr" id="ak-arr">▼</span></button>
+<div class="ak-body" id="ak-body">
+<div class="ak-sec"><h4>🎯 Múltipla Escolha</h4><div class="ak-item">1. <span class="ak-ans">B) She wants to rent an apartment.</span></div><div class="ak-item">2. <span class="ak-ans">C) Sair e curtir com amigos</span></div><div class="ak-item">3. <span class="ak-ans">C) Fall</span></div><div class="ak-item">4. <span class="ak-ans">C) I wanna go to the park.</span></div><div class="ak-item">5. <span class="ak-ans">B) They are going to rent a house next month.</span></div></div>
+<div class="ak-sec"><h4>✏️ Complete as Frases</h4><div class="ak-item">1. <span class="ak-ans">sunny</span></div><div class="ak-item">2. <span class="ak-ans">rent</span></div><div class="ak-item">3. <span class="ak-ans">enough</span></div><div class="ak-item">4. <span class="ak-ans">away</span></div><div class="ak-item">5. <span class="ak-ans">wanna</span></div><div class="ak-item">6. <span class="ak-ans">end</span></div></div>
+<div class="ak-sec"><h4>🌎 Tradução</h4><div class="ak-item">1. <span class="ak-ans">I want to hang out with my friends in the Summer.</span></div><div class="ak-item">2. <span class="ak-ans">Ela quer alugar um apartamento perto do parque.</span></div><div class="ak-item">3. <span class="ak-ans">It's going to be sunny this weekend. Let's hang out!</span></div><div class="ak-item">4. <span class="ak-ans">Amanda e Johnny querem (informalmente) encontrar um apartamento perto do centro.</span></div><div class="ak-item">5. <span class="ak-ans">Winter will end soon. I can't wait for Spring!</span></div><div class="ak-item">6. <span class="ak-ans">Eu não tenho tempo suficiente para sair curtir neste outono.</span></div></div>
+</div></div>
+</main>
+
+<!-- BOTÃO ENVIAR RESPOSTAS -->
+<div style="max-width:820px;margin:28px auto 0;padding:0 14px">
+  <div id="send-box" style="background:#fff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.08)">
+    <div style="font-size:15px;font-weight:600;margin-bottom:8px;color:#333">📬 Quando terminar, envie suas respostas para seu teacher favorito! 🍎</div>
+    <div style="font-size:13px;color:#888;margin-bottom:16px">Suas respostas serão salvas para revisão na próxima aula.</div>
+    <input id="student-name-input" type="text" placeholder="Digite seu nome antes de enviar..." 
+      style="width:100%;max-width:320px;border:2px solid #ddd;border-radius:8px;padding:10px 14px;font-size:15px;margin-bottom:12px;outline:none;display:block;margin-left:auto;margin-right:auto">
+    <button onclick="sendAnswers()" 
+      style="padding:12px 32px;background:#4a86e8;color:#fff;border:none;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(74,134,232,0.4);transition:all .2s">
+      📤 Enviar respostas
+    </button>
+    <div id="send-status" style="margin-top:12px;font-size:14px;display:none"></div>
+  </div>
+</div>
+
+<script>
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyjFqJGGsSfBgttYPMZapn6vLM4GsE57RMb5khimbqkzGhhINqu9AO4X6uBqOoT6rrThg/exec";
+const STUDENT_NAME = "Amendoa";
+const LESSON_DATE = "23/06";
+
+function collectAnswers() {
+  const respostas = [];
+  const now = new Date();
+
+  // Múltipla escolha
+  document.querySelectorAll('.mc-q').forEach((item, idx) => {
+    const selected = item.querySelector('.mc-btn.ok, .mc-btn.no');
+    if (selected) {
+      respostas.push({
+        secao: "Múltipla Escolha",
+        numero: idx + 1,
+        pergunta: item.querySelector('.mc-text')?.textContent?.trim() || "",
+        resposta: selected.textContent.trim(),
+        correto: selected.classList.contains('ok')
+      });
+    }
+  });
+
+  // Fill in the blanks
+  document.querySelectorAll('.fi-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Complete as Frases",
+        numero: idx + 1,
+        pergunta: inp.closest('.fi-row')?.textContent?.replace(inp.value, '___').trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Tradução
+  document.querySelectorAll('.tr-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Tradução",
+        numero: idx + 1,
+        pergunta: inp.closest('.tr-card')?.querySelector('.tr-src')?.textContent?.trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Perguntas abertas
+  document.querySelectorAll('.oq-ta').forEach((ta, idx) => {
+    if (ta.value.trim()) {
+      respostas.push({
+        secao: "Pergunta Aberta",
+        numero: idx + 1,
+        pergunta: ta.closest('.oq-item')?.querySelector('.oq-q')?.textContent?.trim() || "",
+        resposta: ta.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  // Diálogo
+  document.querySelectorAll('.dlg-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Diálogo",
+        numero: idx + 1,
+        pergunta: "Fala " + (idx + 1),
+        resposta: inp.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  return respostas;
+}
+
+async function sendAnswers() {
+  const nameInput = document.getElementById('student-name-input');
+  const status = document.getElementById('send-status');
+  const btn = event.target;
+
+  const name = nameInput.value.trim() || STUDENT_NAME;
+  const respostas = collectAnswers();
+
+  if (respostas.length === 0) {
+    status.style.display = 'block';
+    status.style.color = '#e67e22';
+    status.textContent = '⚠️ Responda pelo menos um exercício antes de enviar!';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Enviando...';
+  status.style.display = 'none';
+
+  const now = new Date();
+  const payload = {
+    aluno: name,
+    aula: LESSON_DATE,
+    data: now.toLocaleDateString('pt-BR'),
+    hora: now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'}),
+    respostas: respostas
+  };
+
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+
+    btn.textContent = '✅ Enviado!';
+    btn.style.background = '#27ae60';
+    status.style.display = 'block';
+    status.style.color = '#27ae60';
+    status.innerHTML = '🎉 Respostas enviadas! Seu professor já pode ver tudo na planilha.';
+
+  } catch(err) {
+    btn.disabled = false;
+    btn.textContent = '📤 Enviar respostas';
+    status.style.display = 'block';
+    status.style.color = '#e74c3c';
+    status.textContent = '❌ Erro ao enviar. Tente novamente.';
+  }
+}
+
+function pickMC(btn){const item=btn.closest('.mc-q');if(item.dataset.done)return;item.dataset.done='1';const ans=item.dataset.answer,fb=item.querySelector('.feedback');item.querySelectorAll('.mc-btn').forEach(b=>{if(b.textContent.trim().startsWith(ans))b.classList.add('show-ok')});if(btn.textContent.trim().startsWith(ans)){btn.classList.add('ok');fb.className='feedback ok-msg';fb.innerHTML='🎉 Correto! Arrasou!';}else{btn.classList.add('no');fb.className='feedback err';fb.innerHTML='❌ Não foi dessa vez!<br>💡 <strong>Entenda:</strong> '+item.dataset.explain;}fb.style.display='block';saveAnswers();}
+function checkFill(){const inps=document.querySelectorAll('.fi-inp');let r=0,err=[];const normf=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=normf(i.value)===normf(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Frase '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong>. 💡 '+i.dataset.explain+'</div>');});document.getElementById('ff').innerHTML=err.join('');const s=document.getElementById('fs');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function checkTr(){const inps=document.querySelectorAll('.tr-inp');let r=0,err=[];const norm=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=norm(i.value)===norm(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Tradução '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong><br>💡 '+i.dataset.explain+'</div>');});document.getElementById('tf').innerHTML=err.join('');const s=document.getElementById('ts');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function toggleSample(btn){const s=btn.nextElementSibling;const o=s.style.display==='block';s.style.display=o?'none':'block';btn.textContent=o?'💡 Ver resposta modelo':'🙈 Esconder modelo';}
+function showMyAnswers(){
+  const respostas=collectAnswers();
+  const modal=document.getElementById('answers-modal');
+  const cont=document.getElementById('answers-content');
+  if(respostas.length===0){
+    cont.innerHTML='<div style="text-align:center;padding:40px;color:#888;font-size:15px">⚠️ Você ainda não respondeu nenhum exercício.</div>';
+  }else{
+    const secs={};
+    respostas.forEach(r=>{if(!secs[r.secao])secs[r.secao]=[];secs[r.secao].push(r);});
+    const icons={'Múltipla Escolha':'🎯','Complete as Frases':'✏️','Tradução':'🌎','Pergunta Aberta':'💬','Diálogo':'🎭'};
+    let html='';
+    Object.entries(secs).forEach(([secao,items])=>{
+      html+=`<div style="margin-bottom:24px"><div style="font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;color:#4a86e8;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #e8f0fe">${icons[secao]||'📝'} ${secao}</div>`;
+      items.forEach(r=>{
+        const bg=r.correto===true?'#edfce8':r.correto===false?'#fff0f5':'#f8f9ff';
+        const bdr=r.correto===true?'#7ac870':r.correto===false?'#ff80a8':'#c8d8ff';
+        const ic=r.correto===true?'✅':r.correto===false?'❌':'📝';
+        const pq=r.pergunta?r.pergunta.substring(0,80)+(r.pergunta.length>80?'...':''):'';
+        html+=`<div style="margin-bottom:10px;padding:12px 14px;background:${bg};border-left:4px solid ${bdr};border-radius:0 10px 10px 0"><div style="font-size:12px;color:#888;margin-bottom:4px">${ic} Questão ${r.numero}</div>${pq?'<div style="font-size:13px;color:#555;margin-bottom:6px;font-style:italic">'+pq+'</div>':''}<div style="font-size:15px;font-weight:700;color:#333">Sua resposta: ${r.resposta}</div></div>`;
+      });
+      html+='</div>';
+    });
+    const total=respostas.filter(r=>r.correto!==null).length;
+    const certas=respostas.filter(r=>r.correto===true).length;
+    if(total>0){
+      const pct=Math.round(certas/total*100);
+      const cor=pct>=70?'#7ac870':pct>=50?'#ffa060':'#ff80a8';
+      html='<div style="text-align:center;padding:16px;margin-bottom:20px;background:linear-gradient(135deg,#f8f9ff,#e8f0fe);border-radius:12px"><div style="font-size:36px;font-weight:900;color:'+cor+'">'+pct+'%</div><div style="font-size:14px;color:#666">'+certas+' de '+total+' corretas nos exercícios verificados</div></div>'+html;
+    }
+    cont.innerHTML=html;
+  }
+  modal.style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('answers-modal').style.display='none';
+  document.body.style.overflow='';
+}
+
+function toggleAK(){const b=document.getElementById('ak-body'),a=document.getElementById('ak-arr'),o=b.style.display==='block';b.style.display=o?'none':'block';a.style.transform=o?'':'rotate(180deg)';}
+
+// ── LOCAL STORAGE — salva e carrega respostas ──
+const STORAGE_KEY = ('exercicios_Amendoa_23/06').split('/').join('-');
+
+function saveAnswers(){
+  const data={};
+  document.querySelectorAll('.fi-inp').forEach((el,i)=>{data['fi_'+i]=el.value;});
+  document.querySelectorAll('.tr-inp').forEach((el,i)=>{data['tr_'+i]=el.value;});
+  document.querySelectorAll('.oq-ta').forEach((el,i)=>{data['oq_'+i]=el.value;});
+  document.querySelectorAll('.dlg-inp').forEach((el,i)=>{data['dlg_'+i]=el.value;});
+  document.querySelectorAll('.mc-q').forEach((el,i)=>{
+    const sel=el.querySelector('.mc-btn.ok,.mc-btn.no');
+    if(sel){
+      data['mc_'+i+'_txt']=sel.textContent.trim();
+      data['mc_'+i+'_ok']=sel.classList.contains('ok');
+    }
+  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function loadAnswers(){
+  const raw=localStorage.getItem(STORAGE_KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    // Restore text fields
+    document.querySelectorAll('.fi-inp').forEach((el,i)=>{if(data['fi_'+i]!==undefined)el.value=data['fi_'+i];});
+    document.querySelectorAll('.tr-inp').forEach((el,i)=>{if(data['tr_'+i]!==undefined)el.value=data['tr_'+i];});
+    document.querySelectorAll('.oq-ta').forEach((el,i)=>{if(data['oq_'+i]!==undefined)el.value=data['oq_'+i];});
+    document.querySelectorAll('.dlg-inp').forEach((el,i)=>{if(data['dlg_'+i]!==undefined)el.value=data['dlg_'+i];});
+    // Restore MC buttons visually
+    document.querySelectorAll('.mc-q').forEach((el,i)=>{
+      const savedTxt=data['mc_'+i+'_txt'];
+      const savedOk=data['mc_'+i+'_ok'];
+      if(savedTxt!==undefined){
+        el.dataset.done='1';
+        const ans=el.dataset.answer;
+        el.querySelectorAll('.mc-btn').forEach(b=>{
+          if(b.textContent.trim()===savedTxt){
+            b.classList.add(savedOk?'ok':'no');
+          }
+          if(b.textContent.trim().startsWith(ans)){
+            b.classList.add('show-ok');
+          }
+        });
+        const fb=el.querySelector('.feedback');
+        if(fb){
+          fb.className='feedback '+(savedOk?'ok-msg':'err');
+          fb.innerHTML=savedOk?'🎉 Correto! Arrasou!':'❌ Não foi dessa vez! 💡 '+el.dataset.explain;
+          fb.style.display='block';
+        }
+      }
+    });
+    if(Object.keys(data).length>0){
+      const bar=document.getElementById('save-bar');
+      if(bar)bar.style.display='flex';
+    }
+  }catch(e){}
+}
+
+function clearSaved(){
+  if(confirm('Apagar todas as respostas salvas?')){
+    localStorage.removeItem(STORAGE_KEY);
+    document.querySelectorAll('.fi-inp,.tr-inp,.oq-ta,.dlg-inp').forEach(el=>el.value='');
+    const bar=document.getElementById('save-bar');
+    if(bar)bar.style.display='none';
+  }
+}
+
+// Auto-save ao digitar
+document.addEventListener('input', e=>{
+  if(e.target.matches('.fi-inp,.tr-inp,.oq-ta,.dlg-inp'))saveAnswers();
+});
+
+// Carrega ao abrir a página
+window.addEventListener('load', loadAnswers);
+</script>
+
+<!-- BARRA DE RESPOSTAS SALVAS -->
+<div id="save-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:10px 20px;font-size:13px;align-items:center;justify-content:space-between;gap:12px;z-index:999;box-shadow:0 -3px 12px rgba(0,0,0,0.3)">
+  <span>💾 Você tem respostas salvas neste dispositivo.</span>
+  <button onclick="clearSaved()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:5px 14px;border-radius:20px;cursor:pointer;font-size:12px;white-space:nowrap">🗑️ Apagar tudo</button>
+</div>
+
+</body></html>
