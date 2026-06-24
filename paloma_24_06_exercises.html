@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Exercícios de Paloma 🌟</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0;image-rendering:pixelated}
+body{background:#000;font-family:'Courier New', Courier, monospace;font-size:11px;padding-bottom:80px;line-height:1.8}
+header{background:#000;text-align:center;padding:32px 16px 24px;border-bottom:4px solid #00ff00}
+.hs{display:none}
+.hi{padding:0}
+.sr{font-size:9px;letter-spacing:4px;color:#00ff00;margin-bottom:8px;text-shadow:0 0 8px #00ff00}
+h1{font-family:'Courier New', Courier, monospace;font-size:clamp(16px,4vw,32px);color:#00ff00;text-shadow:0 0 10px #00ff00,0 0 20px #00ff00,3px 3px 0 #006600;line-height:1.4;margin-bottom:10px}
+.hsub{display:inline-block;background:#000;color:#ffff00;font-family:'Courier New', Courier, monospace;font-size:clamp(7px,1.5vw,10px);padding:6px 16px;border:2px solid #ffff00;box-shadow:0 0 10px #ffff00;margin-top:8px;line-height:1.8}
+.hd{font-size:12px;margin-top:12px;letter-spacing:4px;color:#ff00ff;text-shadow:0 0 8px #ff00ff}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:20px;background:#0a0a0a;border:3px solid #00ff00;overflow:hidden;box-shadow:0 0 15px rgba(0,255,0,0.2)}
+.sh{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:2px solid #00ff00;background:#001100}
+.sn{width:32px;height:32px;border:2px solid #00ff00;display:flex;align-items:center;justify-content:center;font-family:'Courier New', Courier, monospace;font-size:13px;flex-shrink:0;color:#00ff00;box-shadow:0 0 6px #00ff00}
+.st{font-family:'Courier New', Courier, monospace;font-size:11px;color:#00ff00;text-shadow:0 0 6px #00ff00}.se{font-size:16px;margin-left:auto}
+.sb{padding:16px}
+.si{font-size:9px;color:#888;margin-bottom:16px;padding:8px 12px;border:1px solid #333;background:#050505;line-height:1.9;color:#aaa}
+.s1 .sh{border-color:#ff0000;background:#110000}.s1 .sn{border-color:#ff0000;color:#ff0000;box-shadow:0 0 6px #ff0000}.s1 .st{color:#ff0000;text-shadow:0 0 6px #ff0000}
+.s2 .sh{border-color:#00ffff;background:#001111}.s2 .sn{border-color:#00ffff;color:#00ffff;box-shadow:0 0 6px #00ffff}.s2 .st{color:#00ffff;text-shadow:0 0 6px #00ffff}
+.s3 .sh{border-color:#00ff00;background:#001100}.s3 .sn{border-color:#00ff00;color:#00ff00}.s3 .st{color:#00ff00}
+.s4 .sh{border-color:#ffff00;background:#111100}.s4 .sn{border-color:#ffff00;color:#ffff00;box-shadow:0 0 6px #ffff00}.s4 .st{color:#ffff00;text-shadow:0 0 6px #ffff00}
+.s5 .sh{border-color:#ff00ff;background:#110011}.s5 .sn{border-color:#ff00ff;color:#ff00ff;box-shadow:0 0 6px #ff00ff}.s5 .st{color:#ff00ff;text-shadow:0 0 6px #ff00ff}
+.mc-btn{padding:8px 12px;border:2px solid #333;background:#0a0a0a;cursor:pointer;font-family:'Courier New', Courier, monospace;font-size:9px;text-align:left;color:#ccc;line-height:1.8;transition:all .1s}
+.mc-btn:hover{border-color:#00ff00;color:#00ff00;background:#001100;box-shadow:0 0 8px rgba(0,255,0,0.3)}
+.cbtn{margin-top:14px;padding:10px 20px;background:#001100;color:#00ff00;border:2px solid #00ff00;font-family:'Courier New', Courier, monospace;font-size:10px;cursor:pointer;box-shadow:0 0 10px rgba(0,255,0,0.3);transition:all .15s}
+.cbtn:hover{background:#002200;box-shadow:0 0 20px rgba(0,255,0,0.6)}
+.ak-btn{width:100%;padding:12px 18px;background:#001100;color:#00ff00;border:2px solid #00ff00;font-family:'Courier New', Courier, monospace;font-size:11px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:0 0 10px rgba(0,255,0,0.2);transition:all .15s}
+.ak-btn:hover{background:#002200;box-shadow:0 0 20px rgba(0,255,0,0.5)}
+.ak-sec h4{font-family:'Courier New', Courier, monospace;font-size:10px;color:#00ff00;margin-bottom:8px;text-shadow:0 0 4px #00ff00}
+.fi-inp{border:none;border-bottom:2px solid #00ff00;background:transparent;font-family:'Courier New', Courier, monospace;font-size:10px;padding:2px 4px;outline:none;color:#00ff00}
+.tr-card{background:#050505;border:1px solid #333;margin-bottom:10px;padding:10px 12px}
+.tr-inp{width:100%;border:2px solid #333;padding:7px 10px;font-family:'Courier New', Courier, monospace;font-size:9px;background:#0a0a0a;outline:none;color:#ccc;line-height:1.8}
+.tr-inp:focus{border-color:#00ff00;color:#00ff00}
+.oq-ta{width:100%;border:2px solid #333;padding:8px 10px;font-family:'Courier New', Courier, monospace;font-size:9px;min-height:80px;resize:vertical;outline:none;background:#0a0a0a;color:#ccc;line-height:1.9}
+.dlg-spk{font-family:'Courier New', Courier, monospace;font-size:8px;min-width:68px;padding:4px 6px;border:2px solid currentColor;text-align:center;flex-shrink:0;margin-top:4px;line-height:1.4}
+.spk-t{color:#00ffff;border-color:#00ffff}
+.spk-s{color:#ff00ff;border-color:#ff00ff}
+.dlg-inp{flex:1;border:2px solid #333;padding:6px 10px;font-family:'Courier New', Courier, monospace;font-size:9px;outline:none;background:#0a0a0a;color:#ccc;line-height:1.8}
+.dlg-inp:focus{border-color:#ff00ff;color:#ff00ff}
+.show-btn{margin-top:6px;background:none;border:none;cursor:pointer;font-family:'Courier New', Courier, monospace;font-size:8px;color:#ffff00;text-shadow:0 0 4px #ffff00}
+.ak-body{background:#050505;border:2px solid #333;border-top:none;padding:16px}
+.ak-ans{color:#00ff00;font-weight:700;text-shadow:0 0 4px #00ff00}
+.wig{text-align:center;font-size:12px;letter-spacing:6px;padding:8px 0;color:#333}
+
+/* ── SHARED STYLES ── */
+/* GLOBAL: garantir contraste em todos os elementos interativos */
+.mc-btn{background:#fff!important;color:#111!important;font-weight:600!important}
+.mc-btn:hover{background:#f0f0f0!important;color:#111!important}
+.fi-inp{color:#111!important}
+.tr-inp{color:#111!important;background:#fff!important}
+.oq-ta{color:#111!important;background:#fff!important}
+.dlg-inp{color:#111!important;background:#fff!important}
+.tr-src{color:#222!important}
+.fi-row{color:#111!important}
+.oq-q{color:#111!important}
+:root{--hp:#ff2d8f;--eb:#0055ff;--lime:#aaff00;--yel:#ffe600;--ora:#ff7a00;--pur:#8b00ff;--cya:#00e5ff;--bk:#000;--wh:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:8px;font-size:13px;font-weight:700}
+.feedback.err{background:#fff176;border-color:#ff7a00;color:#5a2d00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp.ok{border-bottom-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.fi-inp.no{border-bottom-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff176;border:3px solid #ff7a00;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a2d00}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.tr-inp.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#d4edda;border:2px solid #1a7340;border-radius:8px;font-size:13px;color:#0d3d1f}
+.dlg-scenario{font-style:italic;font-weight:700;color:#555;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed #ff7a00;border-radius:8px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.score{display:none;margin-left:14px;font-size:15px;font-weight:700}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none}
+.ak-sec{margin-bottom:18px}.ak-sec:last-child{margin-bottom:0}
+.ak-item{padding:6px 0;border-bottom:1px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:#006633;background-image:radial-gradient(circle,#ffe600 1px,transparent 1px),radial-gradient(circle,#00e5ff 1px,transparent 1px);background-size:30px 30px,60px 60px;background-position:0 0,15px 15px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#00e5ff;border-bottom:5px solid #000;text-align:center;overflow:hidden}
+.hs{background:repeating-linear-gradient(45deg,#ff2d8f,#ff2d8f 10px,#00e5ff 10px,#00e5ff 20px);height:14px;border-bottom:3px solid #000}
+.hi{padding:24px 20px 20px}
+.sr{font-size:22px;letter-spacing:6px;margin-bottom:4px}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(32px,8vw,64px);color:#000;text-shadow:4px 4px 0 #0055ff,7px 7px 0 #ff2d8f;line-height:1.1;margin-bottom:6px}
+.hsub{display:inline-block;background:#ff2d8f;color:#fff;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(13px,3vw,18px);padding:6px 20px;border:3px solid #000;border-radius:50px;box-shadow:3px 3px 0 #000;margin-top:6px}
+.hd{font-size:26px;margin-top:10px;letter-spacing:4px}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:4px solid #000;border-radius:16px;box-shadow:7px 7px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:4px solid #000}
+.sn{width:36px;height:36px;border-radius:50%;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:22px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#444;margin-bottom:18px;padding:8px 14px;border:2px dashed #000;border-radius:8px;background:#fffde7}
+.s1 .sh{background:#ff2d8f}.s1 .sn{background:var(--yel)}.s1 .st{color:#fff}
+.s2 .sh{background:#0055ff}.s2 .sn{background:var(--cya)}.s2 .st{color:#fff}
+.s3 .sh{background:#aaff00}.s3 .sn{background:var(--yel)}
+.s4 .sh{background:#ff7a00}.s4 .sn{background:var(--yel)}.s4 .st{color:#fff}
+.s5 .sh{background:#8b00ff}.s5 .sn{background:var(--cya)}.s5 .st{color:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn{padding:10px 14px;border:3px solid #000;border-radius:10px;background:#f0f0f0;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:var(--yel);transform:translate(-1px,-1px)}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:10px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 #000}
+.feedback.err{background:#fff3cd;border-color:#d68910;color:#5a3e00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp{border:none;border-bottom:4px solid #000;background:var(--yel);font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:15px;font-weight:900;padding:2px 6px;outline:none;border-radius:4px 4px 0 0;transition:all .2s}
+.fi-inp.ok{border-bottom-color:#009900;background:#ccff99;color:#004400}
+.fi-inp.no{border-bottom-color:#c00;background:#ffcccc;color:#600}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff3cd;border:2px solid #d68910;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a3e00}
+.tr-card{margin-bottom:12px;padding:12px 14px;background:#f3f3ff;border:3px solid #000;border-radius:10px;box-shadow:3px 3px 0 #000}.tr-card:last-child{margin-bottom:0}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp{width:100%;border:3px solid #000;border-radius:8px;padding:8px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;background:#fff;outline:none}
+.tr-inp.ok{border-color:#009900;background:#ccff99;color:#004400}
+.tr-inp.no{border-color:#c00;background:#ffcccc;color:#600}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-ta{width:100%;border:3px solid #000;border-radius:10px;padding:10px 13px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;min-height:72px;resize:vertical;outline:none;background:#fff;box-shadow:3px 3px 0 #000}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#ccff99;border:3px solid #009900;border-radius:10px;font-size:13px;font-weight:700;color:#004400;box-shadow:3px 3px 0 #009900}
+.show-btn{margin-top:6px;background:var(--yel);border:3px solid #000;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:13px;font-weight:900;padding:4px 14px;border-radius:20px;box-shadow:2px 2px 0 #000}
+.show-btn:hover{background:var(--lime)}
+.dlg-scenario{font-style:italic;font-weight:700;color:#333;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed var(--ora);border-radius:10px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-spk{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:13px;min-width:82px;padding:5px 8px;border:3px solid #000;border-radius:20px;text-align:center;flex-shrink:0;margin-top:2px;box-shadow:2px 2px 0 #000}
+.spk-t{background:var(--eb);color:#fff}.spk-s{background:var(--hp);color:#fff}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.dlg-inp{flex:1;border:3px solid #000;border-radius:10px;padding:7px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;outline:none;background:#fff;box-shadow:2px 2px 0 #000}
+.dlg-inp:focus{border-color:var(--hp);background:#fff0f8}
+.cbtn{margin-top:16px;padding:11px 28px;background:var(--hp);color:#fff;border:4px solid #000;border-radius:50px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 #000;transition:transform .1s}
+.cbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.score{display:none;margin-left:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-btn{width:100%;padding:16px 22px;background:#ffe600;color:#000;border:4px solid #000;border-radius:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none;background:#fff;border:4px solid #000;border-top:none;border-radius:0 0 14px 14px;padding:22px;box-shadow:5px 5px 0 #000}
+.ak-sec{margin-bottom:18px}.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;color:var(--hp);margin-bottom:8px}
+.ak-item{padding:6px 0;border-bottom:2px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+.ak-ans{color:#009900;font-weight:900}
+.wig{text-align:center;font-size:20px;letter-spacing:4px;padding:6px 0}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+</style></head><body>
+<header>
+
+<div class="hi">
+<div class="sr">█ ░ █ ░ █</div>
+<h1>Exercícios<br>de Paloma!</h1>
+<div class="hsub">
+  <div style="font-size:11px;letter-spacing:2px;opacity:0.8;margin-bottom:6px">📅 24/06 &nbsp;·&nbsp; Tópicos de estudo</div>
+  <div style="font-size:13px;line-height:1.8">· Vocabulário temático (hike, fool, liver, weight, engine, lack)</div><div style="font-size:13px;line-height:1.8">· Verbos e Phrasal Verbs (to scam, to intend, to pick up, to blink, to pack, to fool)</div><div style="font-size:13px;line-height:1.8">· Regras: MAKE na cozinha, START para motores</div><div style="font-size:13px;line-height:1.8">· Present Perfect negativo (haven't decided yet)</div>
+</div>
+<div class="hd">INSERT COIN ▶</div>
+</div>
+
+</header>
+<main>
+<div class="sec s1"><div class="sh"><div class="sn">1</div><div class="st">Múltipla Escolha</div><div class="se">🎯</div></div>
+<div class="sb"><div class="si">👇 Escolha a alternativa correta e clique para descobrir!</div><div class="mc-q" data-answer="B" data-explain="Com pronomes pessoais (him, her, them, me, us), o objeto SEMPRE vai entre 'pick' e 'up'. Nunca depois de 'up'."><div class="mc-text">1. What is the correct way to use 'pick up' with a pronoun?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) I picked up him at the station.</button><button class="mc-btn" onclick="pickMC(this)">B) I picked him up at the station.</button><button class="mc-btn" onclick="pickMC(this)">C) I him picked up at the station.</button><button class="mc-btn" onclick="pickMC(this)">D) I up picked him at the station.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="Na cozinha, sempre use MAKE: make breakfast, make lunch, make soup, make a cake. Nunca use DO para comida."><div class="mc-text">2. Which sentence is correct when talking about food in the kitchen?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) She did a delicious soup for dinner.</button><button class="mc-btn" onclick="pickMC(this)">B) She started a delicious soup for dinner.</button><button class="mc-btn" onclick="pickMC(this)">C) She made a delicious soup for dinner.</button><button class="mc-btn" onclick="pickMC(this)">D) She did the soup with vegetables.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="'Liver' = fígado. 'Thyroid' = tiroide, 'weight' = peso, 'engine' = motor."><div class="mc-text">3. Which word means 'fígado' in English?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) thyroid</button><button class="mc-btn" onclick="pickMC(this)">B) weight</button><button class="mc-btn" onclick="pickMC(this)">C) liver</button><button class="mc-btn" onclick="pickMC(this)">D) engine</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="D" data-explain="'To scam' = dar um golpe, enganar para tirar dinheiro ou vantagem. É o verbo correto para fraudes."><div class="mc-text">4. Someone sold you a fake phone and took your money. Which verb best describes what happened?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) He hiked you.</button><button class="mc-btn" onclick="pickMC(this)">B) He packed you.</button><button class="mc-btn" onclick="pickMC(this)">C) He blinked you.</button><button class="mc-btn" onclick="pickMC(this)">D) He scammed you.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="Para máquinas e motores no sentido de LIGAR, use sempre o verbo START. Evite 'do' ou 'make' nesse contexto."><div class="mc-text">5. Which sentence correctly uses the right verb to turn on a machine?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Can you do the engine? It won't move.</button><button class="mc-btn" onclick="pickMC(this)">B) Can you make the engine? It's cold.</button><button class="mc-btn" onclick="pickMC(this)">C) Can you start the engine? It's cold.</button><button class="mc-btn" onclick="pickMC(this)">D) Can you fool the engine? It's cold.</button></div><div class="feedback"></div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s2"><div class="sh"><div class="sn">2</div><div class="st">Complete as Frases</div><div class="se">✏️</div></div>
+<div class="sb"><div class="si">📝 Preencha os espaços e clique em "Verificar"!</div><div class="fi-item"><div class="fi-row">1. I picked <input class="fi-inp" data-ans="him" data-explain="Phrasal verb 'pick up' com pronome: o pronome fica no meio — 'I picked HIM up'. Nunca 'I picked up him'." style="width:80px" placeholder="___"> up at school this afternoon.</div><div class="fi-hint">Com pronomes, o objeto vai ENTRE 'pick' e 'up'. Use *HIM* para 'ele/o'.</div></div><div class="fi-item"><div class="fi-row">2. My mom always <input class="fi-inp" data-ans="makes" data-explain="Na cozinha usamos MAKE para qualquer preparação de comida: make polenta, make pasta, make coffee, make a cake." style="width:80px" placeholder="___"> polenta on cold days — it's a family tradition.</div><div class="fi-hint">Na cozinha, sempre use o verbo *MAKE* no lugar de 'do'.</div></div><div class="fi-item"><div class="fi-row">3. Can you <input class="fi-inp" data-ans="start" data-explain="'Start the car / engine' = ligar o carro / motor. Usamos START para máquinas, nunca 'do' ou 'make'." style="width:80px" placeholder="___"> the car? I think the engine is frozen.</div><div class="fi-hint">Para LIGAR motores ou máquinas, use o verbo *START*.</div></div><div class="fi-item"><div class="fi-row">4. We went on a beautiful <input class="fi-inp" data-ans="hike" data-explain="'Hike' = trilha. 'To go on a hike' = fazer uma trilha. O verbo é 'to hike': 'We hiked for two hours.'" style="width:80px" placeholder="___"> near the waterfall last Sunday.</div><div class="fi-hint">A palavra significa *TRILHA* em inglês.</div></div><div class="fi-item"><div class="fi-row">5. We <input class="fi-inp" data-ans="haven't decided" data-explain="'Haven't decided yet' = não decidimos ainda. É igual a 'have not decided yet'. O 'yet' fica sempre no final da frase." style="width:180px" placeholder="___"> where to travel for the holidays yet.</div><div class="fi-hint">Use o Present Perfect negativo com *HAVEN'T* + particípio passado.</div></div><div class="fi-item"><div class="fi-row">6. The doctor said there is a <input class="fi-inp" data-ans="lack" data-explain="'Lack' = falta, ausência. 'Lack of iron' = falta de ferro. 'Lack of sleep' = falta de sono. 'Lack of money' = falta de dinheiro." style="width:80px" placeholder="___"> of iron in your blood — you should eat more liver.</div><div class="fi-hint">A palavra significa *FALTA* de algo.</div></div>
+<div id="ff" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkFill()">✅ Verificar</button><span id="fs" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s3"><div class="sh"><div class="sn">3</div><div class="st">Tradução</div><div class="se">🌎</div></div>
+<div class="sb"><div class="si">🔁 Traduza as frases! Atenção na direção.</div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Eu não decidi ainda para onde vou nas férias.</div><input class="tr-inp" data-ans="i haven't decided yet where i'm going on vacation." data-explain="Use o Present Perfect negativo: 'I haven't decided yet'. O 'yet' fica no final ou antes da próxima cláusula." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; She was scammed by a stranger she met online.</div><input class="tr-inp" data-ans="ela foi enganada / levou um golpe de um estranho que conheceu online." data-explain="'Was scammed' é o passado passivo de 'to scam'. 'Stranger' = estranho, pessoa desconhecida." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Vou buscar minha irmã no aeroporto amanhã.</div><input class="tr-inp" data-ans="i'm going to pick my sister up at the airport tomorrow." data-explain="Com substantivos (não pronomes), o objeto pode ficar no meio ou depois: 'pick my sister up' OU 'pick up my sister'. As duas formas são corretas." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; He intends to lose weight before his wedding.</div><input class="tr-inp" data-ans="ele pretende perder peso antes do casamento." data-explain="'To intend' = pretender, ter a intenção de. 'To lose weight' = perder peso. 'Weight' = peso." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; O médico disse que tenho um problema na tiroide.</div><input class="tr-inp" data-ans="the doctor said i have a thyroid problem." data-explain="'Thyroid' = tiroide. A estrutura 'said I have' usa o reported speech informal, muito comum no inglês americano falado." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; Don't be a fool — always check the seller before you buy anything online.</div><input class="tr-inp" data-ans="não seja tolo — sempre verifique o vendedor antes de comprar qualquer coisa online." data-explain="'Fool' como substantivo = tolo. 'Don't be a fool' = não seja tolo. Como verbo: 'He tried to fool me' = ele tentou me enganar." placeholder="Digite em português..."></div>
+<div id="tf" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkTr()">✅ Verificar</button><span id="ts" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s4"><div class="sh"><div class="sn">4</div><div class="st">Perguntas Abertas</div><div class="se">💬</div></div>
+<div class="sb"><div class="si">🖊️ Responda em inglês! Clique em "Ver modelo" para se inspirar.</div><div class="oq-item"><div class="oq-q">1. Have you ever been on a hike? Where did you go, and how was the experience?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">Yes, I have! I went on a hike in the mountains last year. It was beautiful but tiring. We walked for about three hours through the forest and stopped by a waterfall.</div></div><div class="oq-item"><div class="oq-q">2. Have you ever been fooled or scammed? What happened, and what did you learn from it?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">Yes, once I almost got scammed online. Someone tried to sell me a fake concert ticket. Luckily, a friend warned me in time. I learned to always check the seller's profile and reviews before buying anything.</div></div><div class="oq-item"><div class="oq-q">3. What do you usually make for dinner? Do you enjoy cooking, or do you prefer eating out?</div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">I usually make pasta or rice with chicken for dinner. Sometimes I make polenta, which is a family comfort food. I enjoy cooking, but only when I'm not in a hurry.</div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s5"><div class="sh"><div class="sn">5</div><div class="st">Diálogo &amp; Roleplay</div><div class="se">🎭</div></div>
+<div class="sb"><div class="si">🗣️ Complete as falas em inglês usando o vocabulário da aula!</div><div class="dlg-scenario">📍 Paloma está conversando com seu professor sobre uma viagem que ela está planejando.</div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Paloma, I heard you're planning a trip! Have you decided where you're going yet?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Paloma</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Oh, that's a great choice! Are you planning to go on any hikes while you're there?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Paloma</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Smart! Don't forget to pack your bags early. When do you intend to leave?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Paloma</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Perfect. Just be careful with scammers at tourist spots — they often try to fool visitors. Who's going to pick you up at the airport when you get back?</div></div><div class="dlg-line"><div class="dlg-spk spk-s">Paloma</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div></div></div>
+<div class="ak-wrap">
+<button class="ak-btn" onclick="toggleAK()"><span>🏆 Gabarito Completo</span><span class="ak-arr" id="ak-arr">▼</span></button>
+<div class="ak-body" id="ak-body">
+<div class="ak-sec"><h4>🎯 Múltipla Escolha</h4><div class="ak-item">1. <span class="ak-ans">B) I picked him up at the station.</span></div><div class="ak-item">2. <span class="ak-ans">C) She made a delicious soup for dinner.</span></div><div class="ak-item">3. <span class="ak-ans">C) liver</span></div><div class="ak-item">4. <span class="ak-ans">D) He scammed you.</span></div><div class="ak-item">5. <span class="ak-ans">C) Can you start the engine? It's cold.</span></div></div>
+<div class="ak-sec"><h4>✏️ Complete as Frases</h4><div class="ak-item">1. <span class="ak-ans">him</span></div><div class="ak-item">2. <span class="ak-ans">makes</span></div><div class="ak-item">3. <span class="ak-ans">start</span></div><div class="ak-item">4. <span class="ak-ans">hike</span></div><div class="ak-item">5. <span class="ak-ans">haven't decided</span></div><div class="ak-item">6. <span class="ak-ans">lack</span></div></div>
+<div class="ak-sec"><h4>🌎 Tradução</h4><div class="ak-item">1. <span class="ak-ans">I haven't decided yet where I'm going on vacation.</span></div><div class="ak-item">2. <span class="ak-ans">Ela foi enganada / levou um golpe de um estranho que conheceu online.</span></div><div class="ak-item">3. <span class="ak-ans">I'm going to pick my sister up at the airport tomorrow.</span></div><div class="ak-item">4. <span class="ak-ans">Ele pretende perder peso antes do casamento.</span></div><div class="ak-item">5. <span class="ak-ans">The doctor said I have a thyroid problem.</span></div><div class="ak-item">6. <span class="ak-ans">Não seja tolo — sempre verifique o vendedor antes de comprar qualquer coisa online.</span></div></div>
+</div></div>
+</main>
+
+<!-- BOTÃO ENVIAR RESPOSTAS -->
+<div style="max-width:820px;margin:28px auto 0;padding:0 14px">
+  <div id="send-box" style="background:#fff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.08)">
+    <div style="font-size:15px;font-weight:600;margin-bottom:8px;color:#333">📬 Quando terminar, envie suas respostas para seu teacher favorito! 🍎</div>
+    <div style="font-size:13px;color:#888;margin-bottom:16px">Suas respostas serão salvas para revisão na próxima aula.</div>
+    <input id="student-name-input" type="text" placeholder="Digite seu nome antes de enviar..." 
+      style="width:100%;max-width:320px;border:2px solid #ddd;border-radius:8px;padding:10px 14px;font-size:15px;margin-bottom:12px;outline:none;display:block;margin-left:auto;margin-right:auto">
+    <button onclick="sendAnswers()" 
+      style="padding:12px 32px;background:#4a86e8;color:#fff;border:none;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(74,134,232,0.4);transition:all .2s">
+      📤 Enviar respostas
+    </button>
+    <div id="send-status" style="margin-top:12px;font-size:14px;display:none"></div>
+  </div>
+</div>
+
+<script>
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyjFqJGGsSfBgttYPMZapn6vLM4GsE57RMb5khimbqkzGhhINqu9AO4X6uBqOoT6rrThg/exec";
+const STUDENT_NAME = "Paloma";
+const LESSON_DATE = "24/06";
+
+function collectAnswers() {
+  const respostas = [];
+  const now = new Date();
+
+  // Múltipla escolha
+  document.querySelectorAll('.mc-q').forEach((item, idx) => {
+    const selected = item.querySelector('.mc-btn.ok, .mc-btn.no');
+    if (selected) {
+      respostas.push({
+        secao: "Múltipla Escolha",
+        numero: idx + 1,
+        pergunta: item.querySelector('.mc-text')?.textContent?.trim() || "",
+        resposta: selected.textContent.trim(),
+        correto: selected.classList.contains('ok')
+      });
+    }
+  });
+
+  // Fill in the blanks
+  document.querySelectorAll('.fi-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Complete as Frases",
+        numero: idx + 1,
+        pergunta: inp.closest('.fi-row')?.textContent?.replace(inp.value, '___').trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Tradução
+  document.querySelectorAll('.tr-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Tradução",
+        numero: idx + 1,
+        pergunta: inp.closest('.tr-card')?.querySelector('.tr-src')?.textContent?.trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Perguntas abertas
+  document.querySelectorAll('.oq-ta').forEach((ta, idx) => {
+    if (ta.value.trim()) {
+      respostas.push({
+        secao: "Pergunta Aberta",
+        numero: idx + 1,
+        pergunta: ta.closest('.oq-item')?.querySelector('.oq-q')?.textContent?.trim() || "",
+        resposta: ta.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  // Diálogo
+  document.querySelectorAll('.dlg-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Diálogo",
+        numero: idx + 1,
+        pergunta: "Fala " + (idx + 1),
+        resposta: inp.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  return respostas;
+}
+
+async function sendAnswers() {
+  const nameInput = document.getElementById('student-name-input');
+  const status = document.getElementById('send-status');
+  const btn = event.target;
+
+  const name = nameInput.value.trim() || STUDENT_NAME;
+  const respostas = collectAnswers();
+
+  if (respostas.length === 0) {
+    status.style.display = 'block';
+    status.style.color = '#e67e22';
+    status.textContent = '⚠️ Responda pelo menos um exercício antes de enviar!';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Enviando...';
+  status.style.display = 'none';
+
+  const now = new Date();
+  const payload = {
+    aluno: name,
+    aula: LESSON_DATE,
+    data: now.toLocaleDateString('pt-BR'),
+    hora: now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'}),
+    respostas: respostas
+  };
+
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+
+    btn.textContent = '✅ Enviado!';
+    btn.style.background = '#27ae60';
+    status.style.display = 'block';
+    status.style.color = '#27ae60';
+    status.innerHTML = '🎉 Respostas enviadas! Seu professor já pode ver tudo na planilha.';
+
+  } catch(err) {
+    btn.disabled = false;
+    btn.textContent = '📤 Enviar respostas';
+    status.style.display = 'block';
+    status.style.color = '#e74c3c';
+    status.textContent = '❌ Erro ao enviar. Tente novamente.';
+  }
+}
+
+function pickMC(btn){const item=btn.closest('.mc-q');if(item.dataset.done)return;item.dataset.done='1';const ans=item.dataset.answer,fb=item.querySelector('.feedback');item.querySelectorAll('.mc-btn').forEach(b=>{if(b.textContent.trim().startsWith(ans))b.classList.add('show-ok')});if(btn.textContent.trim().startsWith(ans)){btn.classList.add('ok');fb.className='feedback ok-msg';fb.innerHTML='🎉 Correto! Arrasou!';}else{btn.classList.add('no');fb.className='feedback err';fb.innerHTML='❌ Não foi dessa vez!<br>💡 <strong>Entenda:</strong> '+item.dataset.explain;}fb.style.display='block';saveAnswers();}
+function checkFill(){const inps=document.querySelectorAll('.fi-inp');let r=0,err=[];const normf=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=normf(i.value)===normf(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Frase '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong>. 💡 '+i.dataset.explain+'</div>');});document.getElementById('ff').innerHTML=err.join('');const s=document.getElementById('fs');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function checkTr(){const inps=document.querySelectorAll('.tr-inp');let r=0,err=[];const norm=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=norm(i.value)===norm(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Tradução '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong><br>💡 '+i.dataset.explain+'</div>');});document.getElementById('tf').innerHTML=err.join('');const s=document.getElementById('ts');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function toggleSample(btn){const s=btn.nextElementSibling;const o=s.style.display==='block';s.style.display=o?'none':'block';btn.textContent=o?'💡 Ver resposta modelo':'🙈 Esconder modelo';}
+function showMyAnswers(){
+  const respostas=collectAnswers();
+  const modal=document.getElementById('answers-modal');
+  const cont=document.getElementById('answers-content');
+  if(respostas.length===0){
+    cont.innerHTML='<div style="text-align:center;padding:40px;color:#888;font-size:15px">⚠️ Você ainda não respondeu nenhum exercício.</div>';
+  }else{
+    const secs={};
+    respostas.forEach(r=>{if(!secs[r.secao])secs[r.secao]=[];secs[r.secao].push(r);});
+    const icons={'Múltipla Escolha':'🎯','Complete as Frases':'✏️','Tradução':'🌎','Pergunta Aberta':'💬','Diálogo':'🎭'};
+    let html='';
+    Object.entries(secs).forEach(([secao,items])=>{
+      html+=`<div style="margin-bottom:24px"><div style="font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;color:#4a86e8;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #e8f0fe">${icons[secao]||'📝'} ${secao}</div>`;
+      items.forEach(r=>{
+        const bg=r.correto===true?'#edfce8':r.correto===false?'#fff0f5':'#f8f9ff';
+        const bdr=r.correto===true?'#7ac870':r.correto===false?'#ff80a8':'#c8d8ff';
+        const ic=r.correto===true?'✅':r.correto===false?'❌':'📝';
+        const pq=r.pergunta?r.pergunta.substring(0,80)+(r.pergunta.length>80?'...':''):'';
+        html+=`<div style="margin-bottom:10px;padding:12px 14px;background:${bg};border-left:4px solid ${bdr};border-radius:0 10px 10px 0"><div style="font-size:12px;color:#888;margin-bottom:4px">${ic} Questão ${r.numero}</div>${pq?'<div style="font-size:13px;color:#555;margin-bottom:6px;font-style:italic">'+pq+'</div>':''}<div style="font-size:15px;font-weight:700;color:#333">Sua resposta: ${r.resposta}</div></div>`;
+      });
+      html+='</div>';
+    });
+    const total=respostas.filter(r=>r.correto!==null).length;
+    const certas=respostas.filter(r=>r.correto===true).length;
+    if(total>0){
+      const pct=Math.round(certas/total*100);
+      const cor=pct>=70?'#7ac870':pct>=50?'#ffa060':'#ff80a8';
+      html='<div style="text-align:center;padding:16px;margin-bottom:20px;background:linear-gradient(135deg,#f8f9ff,#e8f0fe);border-radius:12px"><div style="font-size:36px;font-weight:900;color:'+cor+'">'+pct+'%</div><div style="font-size:14px;color:#666">'+certas+' de '+total+' corretas nos exercícios verificados</div></div>'+html;
+    }
+    cont.innerHTML=html;
+  }
+  modal.style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('answers-modal').style.display='none';
+  document.body.style.overflow='';
+}
+
+function toggleAK(){const b=document.getElementById('ak-body'),a=document.getElementById('ak-arr'),o=b.style.display==='block';b.style.display=o?'none':'block';a.style.transform=o?'':'rotate(180deg)';}
+
+// ── LOCAL STORAGE — salva e carrega respostas ──
+const STORAGE_KEY = ('exercicios_Paloma_24/06').split('/').join('-');
+
+function saveAnswers(){
+  const data={};
+  document.querySelectorAll('.fi-inp').forEach((el,i)=>{data['fi_'+i]=el.value;});
+  document.querySelectorAll('.tr-inp').forEach((el,i)=>{data['tr_'+i]=el.value;});
+  document.querySelectorAll('.oq-ta').forEach((el,i)=>{data['oq_'+i]=el.value;});
+  document.querySelectorAll('.dlg-inp').forEach((el,i)=>{data['dlg_'+i]=el.value;});
+  document.querySelectorAll('.mc-q').forEach((el,i)=>{
+    const sel=el.querySelector('.mc-btn.ok,.mc-btn.no');
+    if(sel){
+      data['mc_'+i+'_txt']=sel.textContent.trim();
+      data['mc_'+i+'_ok']=sel.classList.contains('ok');
+    }
+  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function loadAnswers(){
+  const raw=localStorage.getItem(STORAGE_KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    // Restore text fields
+    document.querySelectorAll('.fi-inp').forEach((el,i)=>{if(data['fi_'+i]!==undefined)el.value=data['fi_'+i];});
+    document.querySelectorAll('.tr-inp').forEach((el,i)=>{if(data['tr_'+i]!==undefined)el.value=data['tr_'+i];});
+    document.querySelectorAll('.oq-ta').forEach((el,i)=>{if(data['oq_'+i]!==undefined)el.value=data['oq_'+i];});
+    document.querySelectorAll('.dlg-inp').forEach((el,i)=>{if(data['dlg_'+i]!==undefined)el.value=data['dlg_'+i];});
+    // Restore MC buttons visually
+    document.querySelectorAll('.mc-q').forEach((el,i)=>{
+      const savedTxt=data['mc_'+i+'_txt'];
+      const savedOk=data['mc_'+i+'_ok'];
+      if(savedTxt!==undefined){
+        el.dataset.done='1';
+        const ans=el.dataset.answer;
+        el.querySelectorAll('.mc-btn').forEach(b=>{
+          if(b.textContent.trim()===savedTxt){
+            b.classList.add(savedOk?'ok':'no');
+          }
+          if(b.textContent.trim().startsWith(ans)){
+            b.classList.add('show-ok');
+          }
+        });
+        const fb=el.querySelector('.feedback');
+        if(fb){
+          fb.className='feedback '+(savedOk?'ok-msg':'err');
+          fb.innerHTML=savedOk?'🎉 Correto! Arrasou!':'❌ Não foi dessa vez! 💡 '+el.dataset.explain;
+          fb.style.display='block';
+        }
+      }
+    });
+    if(Object.keys(data).length>0){
+      const bar=document.getElementById('save-bar');
+      if(bar)bar.style.display='flex';
+    }
+  }catch(e){}
+}
+
+function clearSaved(){
+  if(confirm('Apagar todas as respostas salvas?')){
+    localStorage.removeItem(STORAGE_KEY);
+    document.querySelectorAll('.fi-inp,.tr-inp,.oq-ta,.dlg-inp').forEach(el=>el.value='');
+    const bar=document.getElementById('save-bar');
+    if(bar)bar.style.display='none';
+  }
+}
+
+// Auto-save ao digitar
+document.addEventListener('input', e=>{
+  if(e.target.matches('.fi-inp,.tr-inp,.oq-ta,.dlg-inp'))saveAnswers();
+});
+
+// Carrega ao abrir a página
+window.addEventListener('load', loadAnswers);
+</script>
+
+<!-- BARRA DE RESPOSTAS SALVAS -->
+<div id="save-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:10px 20px;font-size:13px;align-items:center;justify-content:space-between;gap:12px;z-index:999;box-shadow:0 -3px 12px rgba(0,0,0,0.3)">
+  <span>💾 Você tem respostas salvas neste dispositivo.</span>
+  <button onclick="clearSaved()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:5px 14px;border-radius:20px;cursor:pointer;font-size:12px;white-space:nowrap">🗑️ Apagar tudo</button>
+</div>
+
+</body></html>
