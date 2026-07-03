@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulário de Jiu-Jitsu em Inglês | English with Teacher Ciro</title>
+<style>
+  :root {
+    --navy: #0c1f3d;
+    --navy-deep: #071427;
+    --orange: #e8792c;
+    --orange-light: #ffb27a;
+    --paper: #f4f1ea;
+    --ink: #1c1c1c;
+    --mat-line: rgba(255,255,255,0.06);
+    --card-border: rgba(12,31,61,0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Tatame texture header */
+  header {
+    background: var(--navy);
+    background-image:
+      repeating-linear-gradient(0deg, var(--mat-line) 0px, var(--mat-line) 1px, transparent 1px, transparent 42px),
+      repeating-linear-gradient(90deg, var(--mat-line) 0px, var(--mat-line) 1px, transparent 1px, transparent 42px);
+    color: white;
+    padding: 40px 20px 34px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border: 2.5px solid var(--orange);
+    border-radius: 50%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    color: white;
+  }
+  .badge span { color: var(--orange); }
+
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: clamp(24px, 5vw, 34px);
+    margin: 0 0 8px;
+  }
+
+  header p.subtitle {
+    color: var(--orange-light);
+    font-size: 14px;
+    margin: 0 0 18px;
+    font-weight: 500;
+  }
+
+  .tip {
+    max-width: 560px;
+    margin: 0 auto;
+    background: rgba(232,121,44,0.12);
+    border: 1px solid rgba(232,121,44,0.35);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #f0dfc8;
+    text-align: left;
+  }
+
+  .tip strong { color: var(--orange-light); }
+
+  /* quick nav */
+  nav.jump {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--paper);
+    border-bottom: 1px solid var(--card-border);
+    padding: 10px 14px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav.jump::-webkit-scrollbar { display: none; }
+
+  nav.jump a {
+    flex: none;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--navy);
+    background: white;
+    border: 1px solid var(--card-border);
+    padding: 7px 13px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  nav.jump a:active { background: var(--orange); color: white; border-color: var(--orange); }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+
+  section.category {
+    margin-bottom: 14px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    background: white;
+    scroll-margin-top: 56px;
+  }
+
+  .cat-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .cat-number {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .cat-title {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--navy);
+  }
+  .cat-title small {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 0;
+    margin-top: 2px;
+  }
+
+  .chevron {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    color: var(--orange);
+    transition: transform 0.25s ease;
+  }
+  section.category.open .chevron { transform: rotate(180deg); }
+
+  .cat-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  section.category.open .cat-body { max-height: 3000px; }
+
+  .word-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border-top: 1px solid var(--card-border);
+  }
+
+  .speak-btn {
+    flex: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--orange);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.12s ease, background 0.12s ease;
+  }
+  .speak-btn svg { width: 17px; height: 17px; }
+  .speak-btn:active { transform: scale(0.9); background: var(--navy); }
+  .speak-btn.playing { background: var(--navy); }
+
+  .word-text { flex: 1; min-width: 0; }
+  .word-en {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--navy);
+  }
+  .word-pron {
+    font-size: 13px;
+    color: var(--orange);
+    font-style: italic;
+    margin-top: 1px;
+  }
+  .word-pt {
+    font-size: 13px;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 24px 16px 40px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  #voice-warning {
+    display: none;
+    max-width: 720px;
+    margin: 14px auto 0;
+    padding: 10px 16px;
+    background: #fff3e0;
+    border: 1px solid #ffcc80;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #8a5a00;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">CS<span>@</span></div>
+  <h1>Vocabulário de Jiu-Jitsu em Inglês</h1>
+  <p class="subtitle">Guia de sobrevivência para treinar nos Estados Unidos</p>
+  <div class="tip">
+    <strong>Dica de pronúncia:</strong> o "th" (como em "the") soa entre "d" e "f", com a língua entre os dentes. As pronúncias abaixo são aproximações em português — toque no alto-falante 🔊 pra ouvir a pronúncia real em inglês.
+  </div>
+</header>
+
+<div id="voice-warning">Seu navegador não suporta áudio de voz aqui. Tente abrir essa página no Chrome ou Safari.</div>
+
+<nav class="jump" id="jumpNav"></nav>
+
+<main id="main"></main>
+
+<footer>English with Teacher Ciro · @ciro_silveirajr</footer>
+
+<script>
+const DATA = [
+  {
+    title: "Vocabulário geral de treino",
+    subtitle: "Gym vocabulary",
+    items: [
+      ["Belt", "bélt", "Faixa"],
+      ["Rank / Stripe", "rênk / estráip", "Graduação / Grau"],
+      ["Mat", "mét", "Tatame"],
+      ["Roll", "rôul", "Rolar / treinar luta livre"],
+      ["Spar / Sparring", "spár / spárin", "Treino de luta (rolar)"],
+      ["Warm-up", "uórm-áp", "Aquecimento"],
+      ["Drill", "dríl", "Repetição de movimento"],
+      ["Partner", "pártner", "Parceiro de treino"],
+      ["Coach / Professor", "côutch", "Professor/técnico"],
+      ["Tap / Tap out", "tép / tép áut", "Bater (desistir)"],
+      ["Grip", "gríp", "Pegada"],
+      ["Guard", "gárd", "Guarda"],
+      ["Position", "pozíchen", "Posição"],
+      ["Submission", "sabmíchen", "Finalização"],
+      ["Escape", "eskêip", "Escapar/fugir de posição"],
+      ["Takedown", "têikdaun", "Queda/levada ao chão"],
+      ["Sweep", "suíp", "Raspagem/inversão"]
+    ]
+  },
+  {
+    title: "Aquecimento",
+    subtitle: "Warm-up",
+    items: [
+      ["Jumping jacks", "djámpin djéks", "Polichinelo"],
+      ["Squat", "eskuát", "Agachamento"],
+      ["Sit-up / Crunch", "sítáp / cránch", "Abdominal"],
+      ["Push-up", "púchap", "Flexão de braço"],
+      ["Forward roll", "fórwerd rôul", "Cambalhota / embolada pra frente"],
+      ["Backward roll", "békwerd rôul", "Cambalhota / embolada pra trás"],
+      ["Bridge", "brídj", "Ponte / \"quezinho\""],
+      ["Sprawl", "espról", "Esparral (defesa de queda)"],
+      ["Stretching", "estrétchin", "Alongamento"],
+      ["Jog / Jogging in place", "djóg / djóguin in pléis", "Correr / correr parado"],
+      ["High knees", "rái nís", "Elevação de joelhos"],
+      ["Lunge", "lándj", "Passada/afundo"],
+      ["Neck bridge", "nék brídj", "Ponte de pescoço"],
+      ["Shoulder roll", "chôulder rôul", "Rolamento de ombro"],
+      ["Cool down", "kúl dáun", "Volta à calma / desaquecimento"]
+    ]
+  },
+  {
+    title: "Posições básicas",
+    subtitle: "Basic positions",
+    items: [
+      ["Closed guard", "clôuzd gárd", "Guarda fechada"],
+      ["Open guard", "ôupen gárd", "Guarda aberta"],
+      ["Half guard", "réf gárd", "Meia guarda"],
+      ["Butterfly guard", "báterflai gárd", "Guarda borboleta"],
+      ["Spider guard", "spáider gárd", "Guarda aranha"],
+      ["De la Riva guard", "de la ríva gárd", "Guarda De La Riva"],
+      ["Mount", "máunt", "Montada"],
+      ["Back mount / Back control", "bék máunt / bék contrôul", "Pegada nas costas"],
+      ["Side control", "sáid contrôul", "100 kg / controle lateral"],
+      ["Knee on belly", "ní on béli", "Joelho na barriga"],
+      ["Turtle", "tártel", "Posição de tartaruga"],
+      ["North-south", "nórf-sáuf", "Norte-sul"],
+      ["Top position", "táp pozíchen", "Posição de cima"],
+      ["Bottom position", "bátom pozíchen", "Posição de baixo"]
+    ]
+  },
+  {
+    title: "Movimentos e ações",
+    subtitle: "Moves and actions",
+    items: [
+      ["Pass the guard", "pés dâ gárd", "Passar a guarda"],
+      ["Sweep", "suíp", "Raspar"],
+      ["Bridge", "brídj", "Fazer ponte (quezinho)"],
+      ["Shrimp / Shrimping", "chrímp / chrímpin", "Fugir de quadril"],
+      ["Frame", "fréim", "Fazer \"moldura\" com braços"],
+      ["Base", "béis", "Base/equilíbrio"],
+      ["Posture", "pásture", "Postura"],
+      ["Transition", "transíchen", "Transição"],
+      ["Grip fighting", "gríp fáitin", "Disputa de pegada"],
+      ["Underhook", "ánderrúk", "Gancho por dentro do braço"],
+      ["Overhook", "ôverrúk", "Gancho por fora do braço"],
+      ["Hip escape", "híp eskêip", "Fuga de quadril"],
+      ["Scramble", "escrémbl", "Bagunça/disputa rápida no chão"]
+    ]
+  },
+  {
+    title: "Finalizações",
+    subtitle: "Submissions",
+    items: [
+      ["Choke", "tchôuk", "Estrangulamento"],
+      ["Rear naked choke", "ríer nêikid tchôuk", "Mata-leão"],
+      ["Triangle", "tráiengol", "Triângulo"],
+      ["Guillotine", "guílotin", "Guilhotina"],
+      ["Armbar", "árm-bár", "Chave de braço (armlock)"],
+      ["Kimura", "kimúra", "Kimura"],
+      ["Americana", "amerikéna", "Americana"],
+      ["Omoplata", "ômoplára", "Omoplata"],
+      ["Ankle lock", "énkol lák", "Chave de tornozelo"],
+      ["Heel hook", "híl rúk", "Chave de calcanhar"],
+      ["Wristlock", "rístlák", "Chave de pulso"]
+    ]
+  },
+  {
+    title: "Frases e comandos usados no tatame",
+    subtitle: "Common phrases",
+    items: [
+      ["Let's roll!", "léts rôul", "Vamos rolar!"],
+      ["Tap if you feel it", "tép if iú fíl it", "Bate se sentir (a finalização)"],
+      ["Switch partners", "suítch pártners", "Trocar de parceiro"],
+      ["Go again", "gôu aguén", "Vai de novo"],
+      ["Nice job! / Good job!", "náis djáb / gud djáb", "Bom trabalho!"],
+      ["Watch out!", "uátch áut", "Cuidado!"],
+      ["Reset", "risét", "Voltar pra posição inicial"],
+      ["Slow roll", "slôu rôul", "Rolar mais devagar/leve"],
+      ["Line up!", "láin áp", "Formar fila/organizar"],
+      ["Bow in / Bow out", "báu in / báu áut", "Reverência na entrada/saída"],
+      ["Any questions?", "êni cuéstchens", "Alguma pergunta?"]
+    ]
+  }
+];
+
+const speakerIcon = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9v6h4l5 5V4L8 9H4z"/><path d="M16.5 12c0-1.5-.8-2.8-2-3.4v6.9c1.2-.7 2-2 2-3.5z"/><path d="M14.5 4.9v2.1c2.3.8 4 3 4 5.5s-1.7 4.7-4 5.5v2.1c3.4-.9 6-4 6-7.6s-2.6-6.7-6-7.6z"/></svg>`;
+
+const main = document.getElementById('main');
+const jumpNav = document.getElementById('jumpNav');
+let voices = [];
+
+function loadVoices() {
+  voices = window.speechSynthesis ? window.speechSynthesis.getVoices() : [];
+}
+if ('speechSynthesis' in window) {
+  loadVoices();
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+} else {
+  document.getElementById('voice-warning').style.display = 'block';
+}
+
+function speak(text, btn) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(text.replace(/\//g, ' or ').replace(/[()]/g, ''));
+  const enVoice = voices.find(v => v.lang === 'en-US') || voices.find(v => v.lang && v.lang.startsWith('en'));
+  if (enVoice) utter.voice = enVoice;
+  utter.lang = 'en-US';
+  utter.rate = 0.85;
+  document.querySelectorAll('.speak-btn.playing').forEach(b => b.classList.remove('playing'));
+  btn.classList.add('playing');
+  utter.onend = () => btn.classList.remove('playing');
+  window.speechSynthesis.speak(utter);
+}
+
+DATA.forEach((cat, i) => {
+  const id = 'cat-' + i;
+
+  const link = document.createElement('a');
+  link.href = '#' + id;
+  link.textContent = cat.title;
+  jumpNav.appendChild(link);
+
+  const section = document.createElement('section');
+  section.className = 'category' + (i === 0 ? ' open' : '');
+  section.id = id;
+
+  section.innerHTML = `
+    <button class="cat-header" data-target="${id}">
+      <span class="cat-number">${i + 1}</span>
+      <span class="cat-title">${cat.title}<small>${cat.subtitle}</small></span>
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </button>
+    <div class="cat-body">
+      ${cat.items.map(([en, pron, pt]) => `
+        <div class="word-row">
+          <button class="speak-btn" aria-label="Ouvir pronúncia de ${en}">${speakerIcon}</button>
+          <div class="word-text">
+            <div class="word-en">${en}</div>
+            <div class="word-pron">"${pron}"</div>
+            <div class="word-pt">${pt}</div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  main.appendChild(section);
+
+  section.querySelector('.cat-header').addEventListener('click', () => {
+    section.classList.toggle('open');
+  });
+
+  section.querySelectorAll('.word-row').forEach((row, idx) => {
+    const btn = row.querySelector('.speak-btn');
+    const enText = cat.items[idx][0];
+    btn.addEventListener('click', () => speak(enText, btn));
+  });
+});
+</script>
+
+</body>
+</html>
