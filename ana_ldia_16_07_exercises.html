@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Exercícios de Ana Lídia 🌟</title>
+
+<style>
+
+:root{--hp:#ff2d8f;--eb:#0055ff;--lime:#aaff00;--yel:#ffe600;--ora:#ff7a00;--pur:#8b00ff;--cya:#00e5ff;--bk:#000;--wh:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:#9900cc;background-image:radial-gradient(circle,#ffe600 1px,transparent 1px),radial-gradient(circle,#00e5ff 1px,transparent 1px);background-size:30px 30px,60px 60px;background-position:0 0,15px 15px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#ffe600;border-bottom:5px solid #000;text-align:center;overflow:hidden}
+.hs{background:repeating-linear-gradient(45deg,#ff2d8f,#ff2d8f 10px,#ffe600 10px,#ffe600 20px);height:14px;border-bottom:3px solid #000}
+.hi{padding:24px 20px 20px}
+.sr{font-size:22px;letter-spacing:6px;margin-bottom:4px}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:clamp(32px,8vw,64px);color:#000;text-shadow:4px 4px 0 #ff2d8f,7px 7px 0 #0055ff;line-height:1.1;margin-bottom:6px}
+.hsub{display:inline-block;background:#ff2d8f;color:#fff;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:clamp(13px,3vw,18px);padding:6px 20px;border:3px solid #000;border-radius:50px;box-shadow:3px 3px 0 #000;margin-top:6px}
+.hd{font-size:26px;margin-top:10px;letter-spacing:4px}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:4px solid #000;border-radius:16px;box-shadow:7px 7px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:4px solid #000}
+.sn{width:36px;height:36px;border-radius:50%;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:18px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:22px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#444;margin-bottom:18px;padding:8px 14px;border:2px dashed #000;border-radius:8px;background:#fffde7}
+.s1 .sh{background:#ff2d8f}.s1 .sn{background:#ffe600}.s1 .st{color:#fff}
+.s2 .sh{background:#0055ff}.s2 .sn{background:#00e5ff}.s2 .st{color:#fff}
+.s3 .sh{background:#aaff00}.s3 .sn{background:#ffe600}
+.s4 .sh{background:#ff7a00}.s4 .sn{background:#ffe600}.s4 .st{color:#fff}
+.s5 .sh{background:#8b00ff}.s5 .sn{background:#00e5ff}.s5 .st{color:#fff}
+.mc-btn{padding:10px 14px;border:3px solid #000;border-radius:10px;background:#f0f0f0;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:#ffe600;transform:translate(-1px,-1px)}
+.cbtn{margin-top:16px;padding:11px 28px;background:#ff2d8f;color:#fff;border:4px solid #000;border-radius:50px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 #000;transition:transform .1s}
+.cbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.ak-btn{width:100%;padding:16px 22px;background:#ffe600;color:#000;border:4px solid #000;border-radius:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}
+.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900;font-size:16px;color:#ff2d8f;margin-bottom:8px}
+.wig{text-align:center;font-size:20px;letter-spacing:4px;padding:6px 0}
+
+/* ── SHARED STYLES ── */
+/* GLOBAL: garantir contraste em todos os elementos interativos */
+.mc-btn{background:#fff!important;color:#111!important;font-weight:600!important}
+.mc-btn:hover{background:#f0f0f0!important;color:#111!important}
+.fi-inp{color:#111!important}
+.tr-inp{color:#111!important;background:#fff!important}
+.oq-ta{color:#111!important;background:#fff!important}
+.dlg-inp{color:#111!important;background:#fff!important}
+.tr-src{color:#222!important}
+.fi-row{color:#111!important}
+.oq-q{color:#111!important}
+:root{--hp:#ff2d8f;--eb:#0055ff;--lime:#aaff00;--yel:#ffe600;--ora:#ff7a00;--pur:#8b00ff;--cya:#00e5ff;--bk:#000;--wh:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:8px;font-size:13px;font-weight:700}
+.feedback.err{background:#fff176;border-color:#ff7a00;color:#5a2d00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp.ok{border-bottom-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.fi-inp.no{border-bottom-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff176;border:3px solid #ff7a00;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a2d00}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.tr-inp.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#d4edda;border:2px solid #1a7340;border-radius:8px;font-size:13px;color:#0d3d1f}
+.dlg-scenario{font-style:italic;font-weight:700;color:#555;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed #ff7a00;border-radius:8px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.score{display:none;margin-left:14px;font-size:15px;font-weight:700}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none}
+.ak-sec{margin-bottom:18px}.ak-sec:last-child{margin-bottom:0}
+.ak-item{padding:6px 0;border-bottom:1px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:#003366;background-image:radial-gradient(circle,#ffe600 1px,transparent 1px),radial-gradient(circle,#00e5ff 1px,transparent 1px);background-size:30px 30px,60px 60px;background-position:0 0,15px 15px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#ffe600;border-bottom:5px solid #000;text-align:center;overflow:hidden}
+.hs{background:repeating-linear-gradient(45deg,#ff2d8f,#ff2d8f 10px,#ffe600 10px,#ffe600 20px);height:14px;border-bottom:3px solid #000}
+.hi{padding:24px 20px 20px}
+.sr{font-size:22px;letter-spacing:6px;margin-bottom:4px}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(32px,8vw,64px);color:#000;text-shadow:4px 4px 0 #8b00ff,7px 7px 0 #0055ff;line-height:1.1;margin-bottom:6px}
+.hsub{display:inline-block;background:#8b00ff;color:#fff;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(13px,3vw,18px);padding:6px 20px;border:3px solid #000;border-radius:50px;box-shadow:3px 3px 0 #000;margin-top:6px}
+.hd{font-size:26px;margin-top:10px;letter-spacing:4px}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:4px solid #000;border-radius:16px;box-shadow:7px 7px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:4px solid #000}
+.sn{width:36px;height:36px;border-radius:50%;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:22px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#444;margin-bottom:18px;padding:8px 14px;border:2px dashed #000;border-radius:8px;background:#fffde7}
+.s1 .sh{background:#ff2d8f}.s1 .sn{background:var(--yel)}.s1 .st{color:#fff}
+.s2 .sh{background:#8b00ff}.s2 .sn{background:var(--cya)}.s2 .st{color:#fff}
+.s3 .sh{background:#00b894}.s3 .sn{background:var(--yel)}
+.s4 .sh{background:#ff7a00}.s4 .sn{background:var(--yel)}.s4 .st{color:#fff}
+.s5 .sh{background:#0055ff}.s5 .sn{background:var(--cya)}.s5 .st{color:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn{padding:10px 14px;border:3px solid #000;border-radius:10px;background:#f0f0f0;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:var(--yel);transform:translate(-1px,-1px)}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:10px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 #000}
+.feedback.err{background:#fff3cd;border-color:#d68910;color:#5a3e00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp{border:none;border-bottom:4px solid #000;background:var(--yel);font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:15px;font-weight:900;padding:2px 6px;outline:none;border-radius:4px 4px 0 0;transition:all .2s}
+.fi-inp.ok{border-bottom-color:#009900;background:#ccff99;color:#004400}
+.fi-inp.no{border-bottom-color:#c00;background:#ffcccc;color:#600}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff3cd;border:2px solid #d68910;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a3e00}
+.tr-card{margin-bottom:12px;padding:12px 14px;background:#f3f3ff;border:3px solid #000;border-radius:10px;box-shadow:3px 3px 0 #000}.tr-card:last-child{margin-bottom:0}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp{width:100%;border:3px solid #000;border-radius:8px;padding:8px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;background:#fff;outline:none}
+.tr-inp.ok{border-color:#009900;background:#ccff99;color:#004400}
+.tr-inp.no{border-color:#c00;background:#ffcccc;color:#600}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-ta{width:100%;border:3px solid #000;border-radius:10px;padding:10px 13px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;min-height:72px;resize:vertical;outline:none;background:#fff;box-shadow:3px 3px 0 #000}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#ccff99;border:3px solid #009900;border-radius:10px;font-size:13px;font-weight:700;color:#004400;box-shadow:3px 3px 0 #009900}
+.show-btn{margin-top:6px;background:var(--yel);border:3px solid #000;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:13px;font-weight:900;padding:4px 14px;border-radius:20px;box-shadow:2px 2px 0 #000}
+.show-btn:hover{background:var(--lime)}
+.dlg-scenario{font-style:italic;font-weight:700;color:#333;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed var(--ora);border-radius:10px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-spk{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:13px;min-width:82px;padding:5px 8px;border:3px solid #000;border-radius:20px;text-align:center;flex-shrink:0;margin-top:2px;box-shadow:2px 2px 0 #000}
+.spk-t{background:var(--eb);color:#fff}.spk-s{background:var(--hp);color:#fff}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.dlg-inp{flex:1;border:3px solid #000;border-radius:10px;padding:7px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;outline:none;background:#fff;box-shadow:2px 2px 0 #000}
+.dlg-inp:focus{border-color:var(--hp);background:#fff0f8}
+.cbtn{margin-top:16px;padding:11px 28px;background:var(--hp);color:#fff;border:4px solid #000;border-radius:50px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 #000;transition:transform .1s}
+.cbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.score{display:none;margin-left:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-btn{width:100%;padding:16px 22px;background:#aaff00;color:#000;border:4px solid #000;border-radius:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none;background:#fff;border:4px solid #000;border-top:none;border-radius:0 0 14px 14px;padding:22px;box-shadow:5px 5px 0 #000}
+.ak-sec{margin-bottom:18px}.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;color:var(--hp);margin-bottom:8px}
+.ak-item{padding:6px 0;border-bottom:2px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+.ak-ans{color:#009900;font-weight:900}
+.wig{text-align:center;font-size:20px;letter-spacing:4px;padding:6px 0}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+</style></head><body>
+<header>
+<div class="hs"></div>
+<div class="hi">
+<div class="sr">⭐ 🌈 ⭐ 🌈 ⭐</div>
+<h1>Exercícios<br>de Ana Lídia!</h1>
+<div class="hsub">
+  <div style="font-size:11px;letter-spacing:2px;opacity:0.8;margin-bottom:6px">📅 16/07 &nbsp;·&nbsp; Tópicos de estudo</div>
+  <div style="font-size:13px;line-height:1.8">· Auxiliares Modais (will, can, could, would, should)</div><div style="font-size:13px;line-height:1.8">· Futuro com WILL (I will travel tomorrow)</div><div style="font-size:13px;line-height:1.8">· Negação e Perguntas com Modais (won't, can't, couldn't, wouldn't, shouldn't)</div><div style="font-size:13px;line-height:1.8">· Vocabulário: acidentes e viagens (gas station, crash, brake, charge)</div><div style="font-size:13px;line-height:1.8">· Vocabulário geral (noise, behind, fault, brunette, blonde, uncle)</div>
+</div>
+<div class="hd">✏️ 📚 🎉 🗣️ 🏆</div>
+</div>
+<div class="hs"></div>
+</header>
+<main>
+<div class="sec s1"><div class="sh"><div class="sn">1</div><div class="st">Múltipla Escolha</div><div class="se">🎯</div></div>
+<div class="sb"><div class="si">👇 Escolha a alternativa correta e clique para descobrir!</div><div class="mc-q" data-answer="C" data-explain="WILL é o auxiliar usado para expressar ações futuras. As outras opções têm significados diferentes: can = poder, could = podia, would = iria."><div class="mc-text">1. Which sentence expresses the FUTURE?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) I can travel with you.</button><button class="mc-btn" onclick="pickMC(this)">B) I could travel with you.</button><button class="mc-btn" onclick="pickMC(this)">C) I will travel with you.</button><button class="mc-btn" onclick="pickMC(this)">D) I would travel with you.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="D" data-explain="'Charged' significa 'cobrou' (passado de 'to charge'). O mecânico cobrou trinta dólares pelo conserto."><div class="mc-text">2. The mechanic ___ me thirty dollars for the repair.</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) crashed</button><button class="mc-btn" onclick="pickMC(this)">B) braked</button><button class="mc-btn" onclick="pickMC(this)">C) stopped</button><button class="mc-btn" onclick="pickMC(this)">D) charged</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="SHOULDN'T (should not) é usado para dar recomendações negativas — algo que a pessoa não deveria fazer."><div class="mc-text">3. You ___ drive so fast near schools — it's dangerous!</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) should</button><button class="mc-btn" onclick="pickMC(this)">B) will</button><button class="mc-btn" onclick="pickMC(this)">C) shouldn't</button><button class="mc-btn" onclick="pickMC(this)">D) would</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="A" data-explain="Para negar com WILL, usamos WILL NOT ou a forma contraída WON'T antes do verbo principal. A ordem é: sujeito + won't + verbo."><div class="mc-text">4. What is the correct negative form of 'I will travel with you'?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) I won't travel with you.</button><button class="mc-btn" onclick="pickMC(this)">B) I not will travel with you.</button><button class="mc-btn" onclick="pickMC(this)">C) I will travel not with you.</button><button class="mc-btn" onclick="pickMC(this)">D) Not I will travel with you.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="'Noise' significa barulho. 'Fault' = culpa, 'behind' = atrás, 'uncle' = tio."><div class="mc-text">5. Which word means 'barulho' in English?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) fault</button><button class="mc-btn" onclick="pickMC(this)">B) behind</button><button class="mc-btn" onclick="pickMC(this)">C) noise</button><button class="mc-btn" onclick="pickMC(this)">D) uncle</button></div><div class="feedback"></div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s2"><div class="sh"><div class="sn">2</div><div class="st">Complete as Frases</div><div class="se">✏️</div></div>
+<div class="sb"><div class="si">📝 Preencha os espaços e clique em "Verificar"!</div><div class="fi-item"><div class="fi-row">1. I <input class="fi-inp" data-ans="will" data-explain="WILL é o auxiliar de futuro em inglês. 'I will travel' = 'Eu vou viajar / Eu viajarei'. Não se usa 'to' depois do auxiliar." style="width:80px" placeholder="___"> travel to Barretos in August.</div><div class="fi-hint">Use o auxiliar de FUTURO — *WILL*</div></div><div class="fi-item"><div class="fi-row">2. The car <input class="fi-inp" data-ans="crashed" data-explain="'To crash, crashed' = 'bater'. No passado simples usamos 'crashed'. 'Left side' = lado esquerdo." style="width:84px" placeholder="___"> into the truck on the left side of the road.</div><div class="fi-hint">O carro BATEU no caminhão — use o passado de 'to crash' — *CRASHED*</div></div><div class="fi-item"><div class="fi-row">3. You <input class="fi-inp" data-ans="shouldn't" data-explain="SHOULDN'T (should not) expressa uma recomendação negativa. 'It's not worth' = não vale a pena." style="width:108px" placeholder="___"> drive without a license — it's not worth the risk!</div><div class="fi-hint">Recomendação negativa: você NÃO DEVERIA dirigir sem carteira — *SHOULDN'T*</div></div><div class="fi-item"><div class="fi-row">4. The gas station is <input class="fi-inp" data-ans="on the left side" data-explain="'Left side' = lado esquerdo. A expressão completa é 'on the left side' (no lado esquerdo)." style="width:192px" placeholder="___"> of the highway.</div><div class="fi-hint">O posto de gasolina fica no LADO ESQUERDO da estrada — *LEFT SIDE*</div></div><div class="fi-item"><div class="fi-row">5. It was my <input class="fi-inp" data-ans="fault" data-explain="'Fault' = culpa. 'It was my fault' = 'Foi culpa minha'. Aqui também aparece 'crashed' (bateu) e 'gas station' (posto de gasolina)." style="width:80px" placeholder="___"> — I crashed the car near the gas station.</div><div class="fi-hint">Foi CULPA minha — use *FAULT*</div></div><div class="fi-item"><div class="fi-row">6. There was so much <input class="fi-inp" data-ans="noise" data-explain="'Noise' = barulho. 'Behind' = atrás. 'Couldn't' = não conseguia (negação de could no passado)." style="width:80px" placeholder="___"> behind the gas station that I couldn't sleep.</div><div class="fi-hint">Havia muito BARULHO atrás do posto — *NOISE*</div></div>
+<div id="ff" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkFill()">✅ Verificar</button><span id="fs" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s3"><div class="sh"><div class="sn">3</div><div class="st">Tradução</div><div class="se">🌎</div></div>
+<div class="sb"><div class="si">🔁 Traduza as frases! Atenção na direção.</div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Eu vou viajar para Barretos em agosto.</div><input class="tr-inp" data-ans="i will travel to barretos in august." data-explain="Use WILL para o futuro. 'Vou viajar' = 'will travel'. Lembre: auxiliar + verbo SEM 'to' — não se diz 'will to travel'." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Você deveria ir ao posto de gasolina.</div><input class="tr-inp" data-ans="you should go to the gas station." data-explain="SHOULD = devia / deveria (recomendação). 'Posto de gasolina' = 'gas station'. Verbo 'go' sem 'to' depois do auxiliar." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Não vale a pena reclamar do barulho.</div><input class="tr-inp" data-ans="it's not worth complaining about the noise." data-explain="'It's not worth' = não vale a pena. 'Barulho' = 'noise'. Após 'worth', o verbo termina em -ing: complaining." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; The car crashed behind the gas station.</div><input class="tr-inp" data-ans="o carro bateu atrás do posto de gasolina." data-explain="'Crashed' = bateu (passado de crash). 'Behind' = atrás. 'Gas station' = posto de gasolina." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; Can you travel with me?</div><input class="tr-inp" data-ans="você pode/consegue viajar comigo?" data-explain="CAN = poder ou conseguir. Em perguntas com auxiliar, invertemos a ordem: Can + you (sujeito) + verbo." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; I wouldn't travel without my uncle.</div><input class="tr-inp" data-ans="eu não viajaria sem o meu tio." data-explain="WOULDN'T (would not) = não iria / não viajaria. 'Uncle' = tio. 'Without' = sem." placeholder="Digite em português..."></div>
+<div id="tf" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="showTrAnswers()">💡 Possíveis Respostas</button></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s4"><div class="sh"><div class="sn">4</div><div class="st">Perguntas Abertas</div><div class="se">💬</div></div>
+<div class="sb"><div class="si">🖊️ Responda em inglês! Clique em "Ver modelo" para se inspirar.</div><div class="oq-item"><div class="oq-q">1. Will you travel somewhere this year? Where will you go? <button class="audio-btn" data-text="Will you travel somewhere this year? Where will you go?" onclick="speakText(this,this.dataset.text)" title="Ouvir a pergunta">🔊</button></div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">Yes, I will travel to São Paulo in December. I will visit my uncle and his family there. <button class="audio-btn" data-text="Yes, I will travel to São Paulo in December. I will visit my uncle and his family there." onclick="speakText(this,this.dataset.text)" title="Ouvir resposta modelo">🔊</button></div></div><div class="oq-item"><div class="oq-q">2. What should a driver do if their car stops near a gas station? <button class="audio-btn" data-text="What should a driver do if their car stops near a gas station?" onclick="speakText(this,this.dataset.text)" title="Ouvir a pergunta">🔊</button></div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">The driver should stop the car safely on the left side of the road and call for help. They shouldn't panic — it's not worth it. <button class="audio-btn" data-text="The driver should stop the car safely on the left side of the road and call for help. They shouldn&#39;t panic — it&#39;s not worth it." onclick="speakText(this,this.dataset.text)" title="Ouvir resposta modelo">🔊</button></div></div><div class="oq-item"><div class="oq-q">3. Can you drive a car? Could you drive before? Tell me about it. <button class="audio-btn" data-text="Can you drive a car? Could you drive before? Tell me about it." onclick="speakText(this,this.dataset.text)" title="Ouvir a pergunta">🔊</button></div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">Yes, I can drive a car. I could drive when I was eighteen. One time I crashed my car — but it was not my fault. There was too much noise on the road and I lost focus. <button class="audio-btn" data-text="Yes, I can drive a car. I could drive when I was eighteen. One time I crashed my car — but it was not my fault. There was too much noise on the road and I lost focus." onclick="speakText(this,this.dataset.text)" title="Ouvir resposta modelo">🔊</button></div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s5"><div class="sh"><div class="sn">5</div><div class="st">Diálogo &amp; Roleplay</div><div class="se">🎭</div></div>
+<div class="sb"><div class="si">🗣️ Complete as falas em inglês usando o vocabulário da aula!</div><div class="dlg-scenario">📍 Ana Lídia está conversando com o professor sobre uma viagem de carro que ela vai fazer em agosto.</div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Ana Lídia, will you travel this August? <button class="audio-btn" data-text="Ana Lídia, will you travel this August?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Ana Lídia</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">That sounds fun! Will you drive there or take a bus? <button class="audio-btn" data-text="That sounds fun! Will you drive there or take a bus?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Ana Lídia</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">You should be careful on the road. What would you do if your car stopped on the way? <button class="audio-btn" data-text="You should be careful on the road. What would you do if your car stopped on the way?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Ana Lídia</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Good thinking! Could you travel with your uncle or a friend? <button class="audio-btn" data-text="Good thinking! Could you travel with your uncle or a friend?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Ana Lídia</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div></div></div>
+<div class="ak-wrap">
+<button class="ak-btn" onclick="toggleAK()"><span>🏆 Gabarito Completo</span><span class="ak-arr" id="ak-arr">▼</span></button>
+<div class="ak-body" id="ak-body">
+<div class="ak-sec"><h4>🎯 Múltipla Escolha</h4><div class="ak-item">1. <span class="ak-ans">C) I will travel with you.</span></div><div class="ak-item">2. <span class="ak-ans">D) charged</span></div><div class="ak-item">3. <span class="ak-ans">C) shouldn't</span></div><div class="ak-item">4. <span class="ak-ans">A) I won't travel with you.</span></div><div class="ak-item">5. <span class="ak-ans">C) noise</span></div></div>
+<div class="ak-sec"><h4>✏️ Complete as Frases</h4><div class="ak-item">1. <span class="ak-ans">will</span></div><div class="ak-item">2. <span class="ak-ans">crashed</span></div><div class="ak-item">3. <span class="ak-ans">shouldn't</span></div><div class="ak-item">4. <span class="ak-ans">on the left side</span></div><div class="ak-item">5. <span class="ak-ans">fault</span></div><div class="ak-item">6. <span class="ak-ans">noise</span></div></div>
+<div class="ak-sec"><h4>🌎 Tradução</h4><div class="ak-item">1. <span class="ak-ans">I will travel to Barretos in August.</span></div><div class="ak-item">2. <span class="ak-ans">You should go to the gas station.</span></div><div class="ak-item">3. <span class="ak-ans">It's not worth complaining about the noise.</span></div><div class="ak-item">4. <span class="ak-ans">O carro bateu atrás do posto de gasolina.</span></div><div class="ak-item">5. <span class="ak-ans">Você pode/consegue viajar comigo?</span></div><div class="ak-item">6. <span class="ak-ans">Eu não viajaria sem o meu tio.</span></div></div>
+</div></div>
+</main>
+
+<!-- BOTÃO ENVIAR RESPOSTAS -->
+<div style="max-width:820px;margin:28px auto 0;padding:0 14px">
+  <div id="send-box" style="background:#fff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.08)">
+    <div style="font-size:15px;font-weight:600;margin-bottom:8px;color:#333">📬 Quando terminar, envie suas respostas para seu teacher favorito! 🍎</div>
+    <div style="font-size:13px;color:#888;margin-bottom:16px">Suas respostas serão salvas para revisão na próxima aula.</div>
+    <input id="student-name-input" type="text" placeholder="Digite seu nome antes de enviar..." 
+      style="width:100%;max-width:320px;border:2px solid #ddd;border-radius:8px;padding:10px 14px;font-size:15px;margin-bottom:12px;outline:none;display:block;margin-left:auto;margin-right:auto">
+    <button onclick="sendAnswers()" 
+      style="padding:12px 32px;background:#4a86e8;color:#fff;border:none;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(74,134,232,0.4);transition:all .2s">
+      📤 Enviar respostas
+    </button>
+    <div id="send-status" style="margin-top:12px;font-size:14px;display:none"></div>
+  </div>
+</div>
+
+<script>
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyjFqJGGsSfBgttYPMZapn6vLM4GsE57RMb5khimbqkzGhhINqu9AO4X6uBqOoT6rrThg/exec";
+const STUDENT_NAME = "Ana Lídia";
+const LESSON_DATE = "16/07";
+
+function collectAnswers() {
+  const respostas = [];
+  const now = new Date();
+
+  // Múltipla escolha
+  document.querySelectorAll('.mc-q').forEach((item, idx) => {
+    const selected = item.querySelector('.mc-btn.ok, .mc-btn.no');
+    if (selected) {
+      respostas.push({
+        secao: "Múltipla Escolha",
+        numero: idx + 1,
+        pergunta: item.querySelector('.mc-text')?.textContent?.trim() || "",
+        resposta: selected.textContent.trim(),
+        correto: selected.classList.contains('ok')
+      });
+    }
+  });
+
+  // Fill in the blanks
+  document.querySelectorAll('.fi-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Complete as Frases",
+        numero: idx + 1,
+        pergunta: inp.closest('.fi-row')?.textContent?.replace(inp.value, '___').trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Tradução
+  document.querySelectorAll('.tr-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Tradução",
+        numero: idx + 1,
+        pergunta: inp.closest('.tr-card')?.querySelector('.tr-src')?.textContent?.trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Perguntas abertas
+  document.querySelectorAll('.oq-ta').forEach((ta, idx) => {
+    if (ta.value.trim()) {
+      respostas.push({
+        secao: "Pergunta Aberta",
+        numero: idx + 1,
+        pergunta: ta.closest('.oq-item')?.querySelector('.oq-q')?.textContent?.trim() || "",
+        resposta: ta.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  // Diálogo
+  document.querySelectorAll('.dlg-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Diálogo",
+        numero: idx + 1,
+        pergunta: "Fala " + (idx + 1),
+        resposta: inp.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  return respostas;
+}
+
+async function sendAnswers() {
+  const nameInput = document.getElementById('student-name-input');
+  const status = document.getElementById('send-status');
+  const btn = event.target;
+
+  const name = nameInput.value.trim() || STUDENT_NAME;
+  const respostas = collectAnswers();
+
+  if (respostas.length === 0) {
+    status.style.display = 'block';
+    status.style.color = '#e67e22';
+    status.textContent = '⚠️ Responda pelo menos um exercício antes de enviar!';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Enviando...';
+  status.style.display = 'none';
+
+  const now = new Date();
+  const payload = {
+    aluno: name,
+    aula: LESSON_DATE,
+    data: now.toLocaleDateString('pt-BR'),
+    hora: now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'}),
+    respostas: respostas
+  };
+
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+
+    btn.textContent = '✅ Enviado!';
+    btn.style.background = '#27ae60';
+    status.style.display = 'block';
+    status.style.color = '#27ae60';
+    status.innerHTML = '🎉 Respostas enviadas! Seu professor já pode ver tudo na planilha.';
+
+  } catch(err) {
+    btn.disabled = false;
+    btn.textContent = '📤 Enviar respostas';
+    status.style.display = 'block';
+    status.style.color = '#e74c3c';
+    status.textContent = '❌ Erro ao enviar. Tente novamente.';
+  }
+}
+
+function pickMC(btn){const item=btn.closest('.mc-q');if(item.dataset.done)return;item.dataset.done='1';const ans=item.dataset.answer,fb=item.querySelector('.feedback');item.querySelectorAll('.mc-btn').forEach(b=>{if(b.textContent.trim().startsWith(ans))b.classList.add('show-ok')});if(btn.textContent.trim().startsWith(ans)){btn.classList.add('ok');fb.className='feedback ok-msg';fb.innerHTML='🎉 Correto! Arrasou!';}else{btn.classList.add('no');fb.className='feedback err';fb.innerHTML='❌ Não foi dessa vez!<br>💡 <strong>Entenda:</strong> '+item.dataset.explain;}fb.style.display='block';saveAnswers();}
+function checkFill(){const inps=document.querySelectorAll('.fi-inp');let r=0,err=[];const normf=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=normf(i.value)===normf(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Frase '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong>. 💡 '+i.dataset.explain+'</div>');});document.getElementById('ff').innerHTML=err.join('');const s=document.getElementById('fs');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function showTrAnswers(){
+  const inps=document.querySelectorAll('.tr-inp');
+  let html='';
+  inps.forEach((i,idx)=>{
+    if(!i.dataset.ans||!i.dataset.ans.trim())return;
+    html+='<div style="margin-bottom:10px;padding:10px 14px;background:#f0f7ff;border-left:4px solid #4a90d9;border-radius:0 8px 8px 0">'
+      +'<div style="font-size:12px;color:#888;margin-bottom:4px">Tradução '+(idx+1)+' — sugestão:</div>'
+      +'<div style="font-size:15px;font-weight:700;color:#1a7340">'+i.dataset.ans+'</div>'
+      +(i.dataset.explain?'<div style="font-size:12px;color:#555;margin-top:4px">💡 '+i.dataset.explain+'</div>':'')
+      +'</div>';
+  });
+  document.getElementById('tf').innerHTML=html||'<div style="color:#888;font-size:13px;padding:8px">Nenhuma sugestão disponível.</div>';
+}
+function toggleSample(btn){const s=btn.nextElementSibling;const o=s.style.display==='block';s.style.display=o?'none':'block';btn.textContent=o?'💡 Ver resposta modelo':'🙈 Esconder modelo';}
+function showMyAnswers(){
+  const respostas=collectAnswers();
+  const modal=document.getElementById('answers-modal');
+  const cont=document.getElementById('answers-content');
+  if(respostas.length===0){
+    cont.innerHTML='<div style="text-align:center;padding:40px;color:#888;font-size:15px">⚠️ Você ainda não respondeu nenhum exercício.</div>';
+  }else{
+    const secs={};
+    respostas.forEach(r=>{if(!secs[r.secao])secs[r.secao]=[];secs[r.secao].push(r);});
+    const icons={'Múltipla Escolha':'🎯','Complete as Frases':'✏️','Tradução':'🌎','Pergunta Aberta':'💬','Diálogo':'🎭'};
+    let html='';
+    Object.entries(secs).forEach(([secao,items])=>{
+      html+=`<div style="margin-bottom:24px"><div style="font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;color:#4a86e8;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #e8f0fe">${icons[secao]||'📝'} ${secao}</div>`;
+      items.forEach(r=>{
+        const bg=r.correto===true?'#edfce8':r.correto===false?'#fff0f5':'#f8f9ff';
+        const bdr=r.correto===true?'#7ac870':r.correto===false?'#ff80a8':'#c8d8ff';
+        const ic=r.correto===true?'✅':r.correto===false?'❌':'📝';
+        const pq=r.pergunta?r.pergunta.substring(0,80)+(r.pergunta.length>80?'...':''):'';
+        html+=`<div style="margin-bottom:10px;padding:12px 14px;background:${bg};border-left:4px solid ${bdr};border-radius:0 10px 10px 0"><div style="font-size:12px;color:#888;margin-bottom:4px">${ic} Questão ${r.numero}</div>${pq?'<div style="font-size:13px;color:#555;margin-bottom:6px;font-style:italic">'+pq+'</div>':''}<div style="font-size:15px;font-weight:700;color:#333">Sua resposta: ${r.resposta}</div></div>`;
+      });
+      html+='</div>';
+    });
+    const total=respostas.filter(r=>r.correto!==null).length;
+    const certas=respostas.filter(r=>r.correto===true).length;
+    if(total>0){
+      const pct=Math.round(certas/total*100);
+      const cor=pct>=70?'#7ac870':pct>=50?'#ffa060':'#ff80a8';
+      html='<div style="text-align:center;padding:16px;margin-bottom:20px;background:linear-gradient(135deg,#f8f9ff,#e8f0fe);border-radius:12px"><div style="font-size:36px;font-weight:900;color:'+cor+'">'+pct+'%</div><div style="font-size:14px;color:#666">'+certas+' de '+total+' corretas nos exercícios verificados</div></div>'+html;
+    }
+    cont.innerHTML=html;
+  }
+  modal.style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('answers-modal').style.display='none';
+  document.body.style.overflow='';
+}
+
+// ── AUDIO: Text-to-Speech em Inglês Americano ──
+let audioVoice = null;
+let audioUtterance = null;
+
+function initVoice(){
+  if(audioVoice) return;
+  const voices = speechSynthesis.getVoices();
+  const preferred = ['Samantha','Alex','Google US English','Microsoft Aria','Microsoft Jenny','Microsoft Guy'];
+  for(const name of preferred){
+    const v = voices.find(v => v.name.includes(name));
+    if(v){ audioVoice = v; return; }
+  }
+  audioVoice = voices.find(v => v.lang === 'en-US') || voices.find(v => v.lang.startsWith('en'));
+}
+speechSynthesis.onvoiceschanged = initVoice;
+initVoice();
+
+function speakText(btn, text){
+  // Support data-text attribute as fallback
+  if(!text && btn.dataset.text) text = btn.dataset.text;
+  speechSynthesis.cancel();
+  document.querySelectorAll('.audio-btn.playing').forEach(b => b.classList.remove('playing'));
+  initVoice();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US';
+  u.rate = 0.9;
+  u.pitch = 1;
+  if(audioVoice) u.voice = audioVoice;
+  u.onstart = () => btn.classList.add('playing');
+  u.onend = () => btn.classList.remove('playing');
+  u.onerror = () => btn.classList.remove('playing');
+  speechSynthesis.speak(u);
+}
+
+function toggleAK(){const b=document.getElementById('ak-body'),a=document.getElementById('ak-arr'),o=b.style.display==='block';b.style.display=o?'none':'block';a.style.transform=o?'':'rotate(180deg)';}
+
+// ── LOCAL STORAGE — salva e carrega respostas ──
+const STORAGE_KEY = ('exercicios_Ana Lídia_16/07').split('/').join('-');
+
+function saveAnswers(){
+  const data={};
+  document.querySelectorAll('.fi-inp').forEach((el,i)=>{data['fi_'+i]=el.value;});
+  document.querySelectorAll('.tr-inp').forEach((el,i)=>{data['tr_'+i]=el.value;});
+  document.querySelectorAll('.oq-ta').forEach((el,i)=>{data['oq_'+i]=el.value;});
+  document.querySelectorAll('.dlg-inp').forEach((el,i)=>{data['dlg_'+i]=el.value;});
+  document.querySelectorAll('.mc-q').forEach((el,i)=>{
+    const sel=el.querySelector('.mc-btn.ok,.mc-btn.no');
+    if(sel){
+      data['mc_'+i+'_txt']=sel.textContent.trim();
+      data['mc_'+i+'_ok']=sel.classList.contains('ok');
+    }
+  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function loadAnswers(){
+  const raw=localStorage.getItem(STORAGE_KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    // Restore text fields
+    document.querySelectorAll('.fi-inp').forEach((el,i)=>{if(data['fi_'+i]!==undefined)el.value=data['fi_'+i];});
+    document.querySelectorAll('.tr-inp').forEach((el,i)=>{if(data['tr_'+i]!==undefined)el.value=data['tr_'+i];});
+    document.querySelectorAll('.oq-ta').forEach((el,i)=>{if(data['oq_'+i]!==undefined)el.value=data['oq_'+i];});
+    document.querySelectorAll('.dlg-inp').forEach((el,i)=>{if(data['dlg_'+i]!==undefined)el.value=data['dlg_'+i];});
+    // Restore MC buttons visually
+    document.querySelectorAll('.mc-q').forEach((el,i)=>{
+      const savedTxt=data['mc_'+i+'_txt'];
+      const savedOk=data['mc_'+i+'_ok'];
+      if(savedTxt!==undefined){
+        el.dataset.done='1';
+        const ans=el.dataset.answer;
+        el.querySelectorAll('.mc-btn').forEach(b=>{
+          if(b.textContent.trim()===savedTxt){
+            b.classList.add(savedOk?'ok':'no');
+          }
+          if(b.textContent.trim().startsWith(ans)){
+            b.classList.add('show-ok');
+          }
+        });
+        const fb=el.querySelector('.feedback');
+        if(fb){
+          fb.className='feedback '+(savedOk?'ok-msg':'err');
+          fb.innerHTML=savedOk?'🎉 Correto! Arrasou!':'❌ Não foi dessa vez! 💡 '+el.dataset.explain;
+          fb.style.display='block';
+        }
+      }
+    });
+    if(Object.keys(data).length>0){
+      const bar=document.getElementById('save-bar');
+      if(bar)bar.style.display='flex';
+    }
+  }catch(e){}
+}
+
+function clearSaved(){
+  if(confirm('Apagar todas as respostas salvas?')){
+    localStorage.removeItem(STORAGE_KEY);
+    document.querySelectorAll('.fi-inp,.tr-inp,.oq-ta,.dlg-inp').forEach(el=>el.value='');
+    const bar=document.getElementById('save-bar');
+    if(bar)bar.style.display='none';
+  }
+}
+
+// Auto-save ao digitar
+document.addEventListener('input', e=>{
+  if(e.target.matches('.fi-inp,.tr-inp,.oq-ta,.dlg-inp'))saveAnswers();
+});
+
+// Carrega ao abrir a página
+window.addEventListener('load', loadAnswers);
+</script>
+
+<!-- BARRA DE RESPOSTAS SALVAS -->
+<div id="save-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:10px 20px;font-size:13px;align-items:center;justify-content:space-between;gap:12px;z-index:999;box-shadow:0 -3px 12px rgba(0,0,0,0.3)">
+  <span>💾 Você tem respostas salvas neste dispositivo.</span>
+  <button onclick="clearSaved()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:5px 14px;border-radius:20px;cursor:pointer;font-size:12px;white-space:nowrap">🗑️ Apagar tudo</button>
+</div>
+
+</body></html>
