@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Exercícios de Elisa 🌟</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f5f0e8;font-family:Georgia,'Times New Roman',serif;font-size:15px;padding-bottom:80px;background-image:url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")}
+header{background:#f5f0e8;border-bottom:4px double #1a1a1a;text-align:center;padding:30px 20px 24px;position:relative}
+header::before{content:'★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★';display:block;font-size:10px;letter-spacing:8px;color:#1a1a1a;margin-bottom:12px;opacity:0.5}
+.hs{display:none}
+.hi{padding:0}
+.sr{font-size:11px;letter-spacing:6px;text-transform:uppercase;color:#666;margin-bottom:4px;font-style:italic}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(36px,8vw,80px);color:#1a1a1a;line-height:1;margin-bottom:8px;font-weight:900;letter-spacing:-1px}
+.hsub{display:inline-block;background:#1a1a1a;color:#f5f0e8;font-family:Georgia, 'Times New Roman', serif;font-size:clamp(10px,2vw,13px);padding:5px 18px;margin-top:8px;font-style:italic;letter-spacing:1px}
+.hd{font-size:12px;margin-top:10px;letter-spacing:4px;color:#666;border-top:1px solid #999;padding-top:8px;text-transform:uppercase}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:1px solid #1a1a1a;overflow:hidden;box-shadow:3px 3px 0 #1a1a1a}
+.sh{display:flex;align-items:center;gap:14px;padding:10px 20px;border-bottom:2px solid #1a1a1a;background:#1a1a1a}
+.sn{width:32px;height:32px;border:2px solid #f5f0e8;display:flex;align-items:center;justify-content:center;font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:700;flex-shrink:0;color:#f5f0e8}
+.st{font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;color:#f5f0e8;font-style:italic}.se{font-size:20px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:12px;color:#555;margin-bottom:18px;padding:8px 14px;border-left:4px solid #1a1a1a;background:#f9f6f0;font-style:italic;line-height:1.7}
+.s1 .sh,.s2 .sh,.s3 .sh,.s4 .sh,.s5 .sh{background:#1a1a1a}
+.mc-btn{padding:10px 14px;border:1px solid #ccc;background:#fff;cursor:pointer;font-family:Georgia, 'Times New Roman', serif;font-size:13px;text-align:left;transition:all .15s;line-height:1.5}
+.mc-btn:hover{background:#f5f0e8;border-color:#1a1a1a}
+.cbtn{margin-top:16px;padding:10px 24px;background:#1a1a1a;color:#f5f0e8;border:2px solid #1a1a1a;font-family:Georgia,'Times New Roman',serif;font-size:14px;font-style:italic;cursor:pointer;letter-spacing:1px;transition:all .15s}
+.cbtn:hover{background:#333}
+.ak-btn{width:100%;padding:14px 20px;background:#1a1a1a;color:#f5f0e8;border:2px solid #1a1a1a;font-family:Georgia,'Times New Roman',serif;font-size:17px;font-style:italic;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .2s}
+.ak-btn:hover{background:#333}
+.ak-sec h4{font-family:Georgia,'Times New Roman',serif;font-size:16px;color:#1a1a1a;margin-bottom:8px;font-style:italic;border-bottom:1px solid #ccc;padding-bottom:4px}
+.fi-inp{border:none;border-bottom:2px solid #1a1a1a;background:transparent;font-family:Georgia, 'Times New Roman', serif;font-size:14px;padding:2px 6px;outline:none;color:#1a1a1a}
+.tr-card{background:#f9f6f0;border:1px solid #ccc;border-left:4px solid #1a1a1a;margin-bottom:10px;padding:12px 14px}
+.tr-inp{width:100%;border:1px solid #ccc;border-bottom:2px solid #1a1a1a;padding:7px 10px;font-family:Georgia, 'Times New Roman', serif;font-size:13px;background:#fff;outline:none}
+.oq-ta{width:100%;border:1px solid #ccc;padding:10px 12px;font-family:Georgia, 'Times New Roman', serif;font-size:13px;min-height:72px;resize:vertical;outline:none;background:#fff;line-height:1.7}
+.dlg-spk{font-family:Georgia,'Times New Roman',serif;font-size:11px;min-width:72px;padding:3px 8px;text-align:center;flex-shrink:0;margin-top:4px;font-style:italic}
+.spk-t{background:#1a1a1a;color:#f5f0e8}
+.spk-s{background:#f5f0e8;color:#1a1a1a;border:1px solid #1a1a1a}
+.dlg-inp{flex:1;border:none;border-bottom:1px solid #1a1a1a;padding:6px 8px;font-family:Georgia, 'Times New Roman', serif;font-size:13px;outline:none;background:transparent}
+.show-btn{margin-top:6px;background:none;border:none;cursor:pointer;font-family:Georgia, 'Times New Roman', serif;font-size:12px;color:#555;text-decoration:underline;font-style:italic}
+.ak-body{background:#f9f6f0;border:1px solid #1a1a1a;border-top:none;padding:20px}
+.ak-ans{color:#1a1a1a;font-weight:700;font-style:italic}
+.wig{text-align:center;font-size:11px;letter-spacing:10px;padding:10px 0;color:#999;text-transform:uppercase}
+
+/* ── SHARED STYLES ── */
+/* GLOBAL: garantir contraste em todos os elementos interativos */
+.mc-btn{background:#fff!important;color:#111!important;font-weight:600!important}
+.mc-btn:hover{background:#f0f0f0!important;color:#111!important}
+.fi-inp{color:#111!important}
+.tr-inp{color:#111!important;background:#fff!important}
+.oq-ta{color:#111!important;background:#fff!important}
+.dlg-inp{color:#111!important;background:#fff!important}
+.tr-src{color:#222!important}
+.fi-row{color:#111!important}
+.oq-q{color:#111!important}
+:root{--hp:#ff2d8f;--eb:#0055ff;--lime:#aaff00;--yel:#ffe600;--ora:#ff7a00;--pur:#8b00ff;--cya:#00e5ff;--bk:#000;--wh:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:8px;font-size:13px;font-weight:700}
+.feedback.err{background:#fff176;border-color:#ff7a00;color:#5a2d00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp.ok{border-bottom-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.fi-inp.no{border-bottom-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff176;border:3px solid #ff7a00;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a2d00}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.tr-inp.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#d4edda;border:2px solid #1a7340;border-radius:8px;font-size:13px;color:#0d3d1f}
+.dlg-scenario{font-style:italic;font-weight:700;color:#555;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed #ff7a00;border-radius:8px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.score{display:none;margin-left:14px;font-size:15px;font-weight:700}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none}
+.ak-sec{margin-bottom:18px}.ak-sec:last-child{margin-bottom:0}
+.ak-item{padding:6px 0;border-bottom:1px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background-color:#9900cc;background-image:radial-gradient(circle,#ffe600 1px,transparent 1px),radial-gradient(circle,#00e5ff 1px,transparent 1px);background-size:30px 30px,60px 60px;background-position:0 0,15px 15px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:16px;padding-bottom:80px}
+header{background:#ffe600;border-bottom:5px solid #000;text-align:center;overflow:hidden}
+.hs{background:repeating-linear-gradient(45deg,#ff2d8f,#ff2d8f 10px,#ffe600 10px,#ffe600 20px);height:14px;border-bottom:3px solid #000}
+.hi{padding:24px 20px 20px}
+.sr{font-size:22px;letter-spacing:6px;margin-bottom:4px}
+h1{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(32px,8vw,64px);color:#000;text-shadow:4px 4px 0 #ff2d8f,7px 7px 0 #0055ff;line-height:1.1;margin-bottom:6px}
+.hsub{display:inline-block;background:#ff2d8f;color:#fff;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:clamp(13px,3vw,18px);padding:6px 20px;border:3px solid #000;border-radius:50px;box-shadow:3px 3px 0 #000;margin-top:6px}
+.hd{font-size:26px;margin-top:10px;letter-spacing:4px}
+main{max-width:820px;margin:24px auto 0;padding:0 14px}
+.sec{margin-top:24px;background:#fff;border:4px solid #000;border-radius:16px;box-shadow:7px 7px 0 #000;overflow:hidden}
+.sh{display:flex;align-items:center;gap:14px;padding:14px 20px;border-bottom:4px solid #000}
+.sn{width:36px;height:36px;border-radius:50%;border:3px solid #000;display:flex;align-items:center;justify-content:center;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;flex-shrink:0;box-shadow:2px 2px 0 #000}
+.st{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:22px}.se{font-size:22px;margin-left:auto}
+.sb{padding:20px}
+.si{font-size:13px;color:#444;margin-bottom:18px;padding:8px 14px;border:2px dashed #000;border-radius:8px;background:#fffde7}
+.s1 .sh{background:#ff2d8f}.s1 .sn{background:var(--yel)}.s1 .st{color:#fff}
+.s2 .sh{background:#0055ff}.s2 .sn{background:var(--cya)}.s2 .st{color:#fff}
+.s3 .sh{background:#aaff00}.s3 .sn{background:var(--yel)}
+.s4 .sh{background:#ff7a00}.s4 .sn{background:var(--yel)}.s4 .st{color:#fff}
+.s5 .sh{background:#8b00ff}.s5 .sn{background:var(--cya)}.s5 .st{color:#fff}
+.mc-q{margin-bottom:26px}.mc-q:last-child{margin-bottom:0}
+.mc-text{font-weight:900;margin-bottom:10px;font-size:15px}
+.mc-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.mc-opts{grid-template-columns:1fr}}
+.mc-btn{padding:10px 14px;border:3px solid #000;border-radius:10px;background:#f0f0f0;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;box-shadow:3px 3px 0 #000;transition:transform .1s}
+.mc-btn:hover{background:var(--yel);transform:translate(-1px,-1px)}
+.mc-btn.ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.mc-btn.no{border-color:#a71d2a!important;background:#f8d7da!important;color:#5c0c11!important}
+.mc-btn.show-ok{border-color:#1a7340!important;background:#d4edda!important;color:#0d3d1f!important}
+.feedback{display:none;margin-top:10px;padding:10px 14px;border:3px solid #000;border-radius:10px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 #000}
+.feedback.err{background:#fff3cd;border-color:#d68910;color:#5a3e00}
+.feedback.ok-msg{background:#d4edda;border-color:#1a7340;color:#0d3d1f}
+.fi-item{margin-bottom:20px}.fi-item:last-child{margin-bottom:0}
+.fi-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:15px;font-weight:700}
+.fi-inp{border:none;border-bottom:4px solid #000;background:var(--yel);font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:15px;font-weight:900;padding:2px 6px;outline:none;border-radius:4px 4px 0 0;transition:all .2s}
+.fi-inp.ok{border-bottom-color:#009900;background:#ccff99;color:#004400}
+.fi-inp.no{border-bottom-color:#c00;background:#ffcccc;color:#600}
+.fi-hint{font-size:11px;color:#888;font-style:italic;margin-top:2px;font-weight:400}
+.fi-hint strong{color:#e67e22;font-style:normal;font-size:12px}
+.ferr{padding:8px 12px;background:#fff3cd;border:2px solid #d68910;border-radius:8px;margin-bottom:8px;font-size:13px;font-weight:700;color:#5a3e00}
+.tr-card{margin-bottom:12px;padding:12px 14px;background:#f3f3ff;border:3px solid #000;border-radius:10px;box-shadow:3px 3px 0 #000}.tr-card:last-child{margin-bottom:0}
+.tr-src{font-weight:900;font-size:14px;margin-bottom:8px}
+.tr-inp{width:100%;border:3px solid #000;border-radius:8px;padding:8px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;background:#fff;outline:none}
+.tr-inp.ok{border-color:#009900;background:#ccff99;color:#004400}
+.tr-inp.no{border-color:#c00;background:#ffcccc;color:#600}
+.oq-item{margin-bottom:22px}.oq-item:last-child{margin-bottom:0}
+.oq-q{font-weight:900;margin-bottom:8px;font-size:15px}
+.oq-ta{width:100%;border:3px solid #000;border-radius:10px;padding:10px 13px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;min-height:72px;resize:vertical;outline:none;background:#fff;box-shadow:3px 3px 0 #000}
+.oq-sample{display:none;margin-top:8px;padding:10px 12px;background:#ccff99;border:3px solid #009900;border-radius:10px;font-size:13px;font-weight:700;color:#004400;box-shadow:3px 3px 0 #009900}
+.show-btn{margin-top:6px;background:var(--yel);border:3px solid #000;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:13px;font-weight:900;padding:4px 14px;border-radius:20px;box-shadow:2px 2px 0 #000}
+.show-btn:hover{background:var(--lime)}
+.dlg-scenario{font-style:italic;font-weight:700;color:#333;font-size:13px;margin-bottom:18px;padding:10px 14px;border:3px dashed var(--ora);border-radius:10px;background:#fff9e6}
+.dlg-line{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.dlg-spk{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:13px;min-width:82px;padding:5px 8px;border:3px solid #000;border-radius:20px;text-align:center;flex-shrink:0;margin-top:2px;box-shadow:2px 2px 0 #000}
+.spk-t{background:var(--eb);color:#fff}.spk-s{background:var(--hp);color:#fff}
+.dlg-txt{flex:1;font-size:15px;font-weight:700;padding-top:5px}
+.dlg-inp{flex:1;border:3px solid #000;border-radius:10px;padding:7px 12px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;outline:none;background:#fff;box-shadow:2px 2px 0 #000}
+.dlg-inp:focus{border-color:var(--hp);background:#fff0f8}
+.cbtn{margin-top:16px;padding:11px 28px;background:var(--hp);color:#fff;border:4px solid #000;border-radius:50px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 #000;transition:transform .1s}
+.cbtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.score{display:none;margin-left:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px}
+.score.ok{color:#1a7340}.score.no{color:#a71d2a}
+.ak-wrap{margin-top:28px}
+.ak-btn{width:100%;padding:16px 22px;background:#ffe600;color:#000;border:4px solid #000;border-radius:14px;font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:5px 5px 0 #000;transition:transform .1s}
+.ak-btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #000}
+.ak-arr{transition:transform .3s}
+.ak-body{display:none;background:#fff;border:4px solid #000;border-top:none;border-radius:0 0 14px 14px;padding:22px;box-shadow:5px 5px 0 #000}
+.ak-sec{margin-bottom:18px}.ak-sec h4{font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:16px;color:var(--hp);margin-bottom:8px}
+.ak-item{padding:6px 0;border-bottom:2px dashed #ccc;font-size:14px;font-weight:700}.ak-item:last-child{border-bottom:none}
+.ak-ans{color:#009900;font-weight:900}
+.wig{text-align:center;font-size:20px;letter-spacing:4px;padding:6px 0}
+@media print{.cbtn,.ak-btn,.show-btn{display:none!important}}
+</style></head><body>
+<header>
+
+<div class="hi">
+<div class="sr">— — — — —</div>
+<h1>Exercícios<br>de Elisa!</h1>
+<div class="hsub">
+  <div style="font-size:11px;letter-spacing:2px;opacity:0.8;margin-bottom:6px">📅 21/07 &nbsp;·&nbsp; Tópicos de estudo</div>
+  <div style="font-size:13px;line-height:1.8">· Vocabulário temático (bring/brought, coin, chunks, pan, tray)</div><div style="font-size:13px;line-height:1.8">· Expressão de medo (I'm afraid of)</div><div style="font-size:13px;line-height:1.8">· Tempo decorrido com TAKE/TOOK (It took two hours)</div><div style="font-size:13px;line-height:1.8">· Remuneração (wage x salary)</div>
+</div>
+<div class="hd">Vol. I  ·  No. 1  ·  English Edition</div>
+</div>
+
+</header>
+<main>
+<div class="sec s1"><div class="sh"><div class="sn">1</div><div class="st">Múltipla Escolha</div><div class="se">🎯</div></div>
+<div class="sb"><div class="si">👇 Escolha a alternativa correta e clique para descobrir!</div><div class="mc-q" data-answer="B" data-explain="'Wage' se refere ao pagamento calculado por hora trabalhada. A opção B usa 'hourly wage' corretamente. As outras opções misturam 'wage' com contextos de salário fixo, que é 'salary'."><div class="mc-text">1. Which sentence uses 'wage' correctly?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Her annual wage is $60,000 a year.</button><button class="mc-btn" onclick="pickMC(this)">B) He earns a good hourly wage at the factory.</button><button class="mc-btn" onclick="pickMC(this)">C) The company paid her a wage of $5,000 a month.</button><button class="mc-btn" onclick="pickMC(this)">D) She received her wage once a year.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="D" data-explain="'Salary' é o valor fixo anual dividido em parcelas mensais. Como Ana tem um contrato anual com valor fixo, ela recebe um salário (salary), não um wage (que é pago por hora)."><div class="mc-text">2. Ana is a software engineer. She receives a fixed amount every month, based on a yearly contract. What does she receive?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) A wage</button><button class="mc-btn" onclick="pickMC(this)">B) A coin</button><button class="mc-btn" onclick="pickMC(this)">C) A chunk</button><button class="mc-btn" onclick="pickMC(this)">D) A salary</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="Quando algo 'demorou' ou 'levou' um determinado tempo, usamos TOOK (passado de TAKE). A estrutura correta é: It took [tempo] to [verbo base]. Nunca use 'spent', 'passed' ou 'lasted' nessa estrutura."><div class="mc-text">3. How do you say 'Levou três horas para assar o bolo' in English?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) It spent three hours to bake the cake.</button><button class="mc-btn" onclick="pickMC(this)">B) It passed three hours to bake the cake.</button><button class="mc-btn" onclick="pickMC(this)">C) It took three hours to bake the cake.</button><button class="mc-btn" onclick="pickMC(this)">D) It lasted three hours to bake the cake.</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="C" data-explain="'I'm afraid of' significa 'Eu tenho medo de'. É seguido de um substantivo ou verbo no gerúndio: I'm afraid of dogs / I'm afraid of flying."><div class="mc-text">4. What does 'I'm afraid of' mean?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Eu não gosto de</button><button class="mc-btn" onclick="pickMC(this)">B) Eu me lembro de</button><button class="mc-btn" onclick="pickMC(this)">C) Eu tenho medo de</button><button class="mc-btn" onclick="pickMC(this)">D) Eu preciso de</button></div><div class="feedback"></div></div><div class="mc-q" data-answer="D" data-explain="'Chunks' significa pedaços ou blocos de algo. 'Coin' = moeda, 'tray' = bandeja/travessa, 'pan' = forma de assar."><div class="mc-text">5. Which word means 'pedaços' in English?</div><div class="mc-opts"><button class="mc-btn" onclick="pickMC(this)">A) Coins</button><button class="mc-btn" onclick="pickMC(this)">B) Trays</button><button class="mc-btn" onclick="pickMC(this)">C) Pans</button><button class="mc-btn" onclick="pickMC(this)">D) Chunks</button></div><div class="feedback"></div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s2"><div class="sh"><div class="sn">2</div><div class="st">Complete as Frases</div><div class="se">✏️</div></div>
+<div class="sb"><div class="si">📝 Preencha os espaços e clique em "Verificar"!</div><div class="fi-item"><div class="fi-row">1. He earns a good hourly <input class="fi-inp" data-ans="wage" data-explain="'Wage' é o pagamento por hora. Diferente de 'salary', que é um valor fixo anual dividido mensalmente." style="width:80px" placeholder="___"> at the restaurant.</div><div class="fi-hint">Pagamento calculado por hora trabalhada — *WAGE*</div></div><div class="fi-item"><div class="fi-row">2. It <input class="fi-inp" data-ans="took" data-explain="Quando algo 'levou' ou 'demorou' um tempo, use TOOK. Estrutura: It took [tempo] to [verbo base]. Nunca traduza 'demorou' como 'delayed' aqui." style="width:80px" placeholder="___"> two hours to bake the whole cake.</div><div class="fi-hint">Passado do verbo TAKE, usado quando algo demorou certo tempo — *TOOK*</div></div><div class="fi-item"><div class="fi-row">3. She <input class="fi-inp" data-ans="brought" data-explain="'Brought' é o passado de 'bring' (trazer). Ela trouxe a bandeja para a mesa. Lembre: bring → brought → brought." style="width:84px" placeholder="___"> the tray to the table.</div><div class="fi-hint">Passado do verbo BRING (trazer) — *BROUGHT*</div></div><div class="fi-item"><div class="fi-row">4. I <input class="fi-inp" data-ans="am afraid of" data-explain="'I am afraid of' = 'Eu tenho medo de'. Depois dessa expressão, o verbo vem no gerúndio (-ing): afraid of speaking." style="width:144px" placeholder="___"> speaking in front of a large group.</div><div class="fi-hint">Expressão que significa 'ter medo de' — *AM AFRAID OF*</div></div><div class="fi-item"><div class="fi-row">5. Cut the chicken into <input class="fi-inp" data-ans="chunks" data-explain="'Chunks' = pedaços. 'Pan' = forma onde você coloca a comida para assar no forno." style="width:80px" placeholder="___"> before putting it in the pan.</div><div class="fi-hint">Pedaços grandes de algo — *CHUNKS*</div></div><div class="fi-item"><div class="fi-row">6. Her annual <input class="fi-inp" data-ans="salary" data-explain="'Salary' é o salário fixo anual. Diferente de 'wage', que é calculado por hora trabalhada." style="width:80px" placeholder="___"> is $60,000.</div><div class="fi-hint">Valor fixo anual, pago em parcelas mensais — *SALARY*</div></div>
+<div id="ff" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="checkFill()">✅ Verificar</button><span id="fs" class="score"></span></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s3"><div class="sh"><div class="sn">3</div><div class="st">Tradução</div><div class="se">🌎</div></div>
+<div class="sb"><div class="si">🔁 Traduza as frases! Atenção na direção.</div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Eu tenho medo de dirigir à noite.</div><input class="tr-inp" data-ans="i am afraid of driving at night." data-explain="Use 'I'm afraid of' + verbo com -ing (gerúndio). 'Dirigir' = drive → no gerúndio: driving. 'À noite' = at night." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; He earns a good hourly wage.</div><input class="tr-inp" data-ans="ele ganha um bom salário por hora." data-explain="'Earns' = ganha. 'Hourly' = por hora. 'Wage' = pagamento por hora. Note que 'hourly' se pronuncia 'AW-er-lee'." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; Levou dois dias para terminar o projeto.</div><input class="tr-inp" data-ans="it took two days to finish the project." data-explain="Quando algo 'levou' ou 'demorou' tempo, use TOOK (passado de TAKE). Estrutura: It took [tempo] to [verbo base]." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; Can you bring the tray to the kitchen?</div><input class="tr-inp" data-ans="você pode trazer a bandeja para a cozinha?" data-explain="'Bring' = trazer. 'Tray' = bandeja ou travessa. 'Kitchen' = cozinha. 'Can you...?' = forma educada de pedir algo." placeholder="Digite em português..."></div><div class="tr-card"><div class="tr-src">🇧🇷 → 🇺🇸 &nbsp; O salário anual dele é de 80 mil dólares.</div><input class="tr-inp" data-ans="his annual salary is $80,000." data-explain="'Annual' = anual. 'Salary' = salário fixo. Em inglês americano, o símbolo $ vem antes do número, sem espaço." placeholder="Digite em inglês..."></div><div class="tr-card"><div class="tr-src">🇺🇸 → 🇧🇷 &nbsp; She cut the bread into chunks and put it on the tray.</div><input class="tr-inp" data-ans="ela cortou o pão em pedaços e colocou na bandeja." data-explain="'Cut into chunks' = cortar em pedaços. 'Tray' = bandeja ou travessa. 'Put' é o passado irregular de 'put' (a forma não muda)." placeholder="Digite em português..."></div>
+<div id="tf" style="margin-top:12px"></div>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><button class="cbtn" onclick="showTrAnswers()">💡 Possíveis Respostas</button></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s4"><div class="sh"><div class="sn">4</div><div class="st">Perguntas Abertas</div><div class="se">💬</div></div>
+<div class="sb"><div class="si">🖊️ Responda em inglês! Clique em "Ver modelo" para se inspirar.</div><div class="oq-item"><div class="oq-q">1. What is the difference between a 'wage' and a 'salary'? Can you give one example of each? <button class="audio-btn" data-text="What is the difference between a &#39;wage&#39; and a &#39;salary&#39;? Can you give one example of each?" onclick="speakText(this,this.dataset.text)" title="Ouvir a pergunta">🔊</button></div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">A wage is hourly pay, like a waiter who earns $15 per hour. A salary is a fixed annual amount, like a teacher who earns $50,000 per year. <button class="audio-btn" data-text="A wage is hourly pay, like a waiter who earns $15 per hour. A salary is a fixed annual amount, like a teacher who earns $50,000 per year." onclick="speakText(this,this.dataset.text)" title="Ouvir resposta modelo">🔊</button></div></div><div class="oq-item"><div class="oq-q">2. What are you afraid of? Use 'I'm afraid of' at least twice in your answer. <button class="audio-btn" data-text="What are you afraid of? Use &#39;I&#39;m afraid of&#39; at least twice in your answer." onclick="speakText(this,this.dataset.text)" title="Ouvir a pergunta">🔊</button></div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">I'm afraid of spiders because they move very fast. I'm also afraid of flying, but I want to travel more, so I need to practice. <button class="audio-btn" data-text="I&#39;m afraid of spiders because they move very fast. I&#39;m also afraid of flying, but I want to travel more, so I need to practice." onclick="speakText(this,this.dataset.text)" title="Ouvir resposta modelo">🔊</button></div></div><div class="oq-item"><div class="oq-q">3. Think of something you did recently that took a long time. Describe it using 'It took...' <button class="audio-btn" data-text="Think of something you did recently that took a long time. Describe it using &#39;It took...&#39;" onclick="speakText(this,this.dataset.text)" title="Ouvir a pergunta">🔊</button></div><textarea class="oq-ta" placeholder="Escreva sua resposta em inglês..."></textarea><button class="show-btn" onclick="toggleSample(this)">💡 Ver resposta modelo</button><div class="oq-sample">Last week I cleaned my whole house. It took almost four hours. I was very tired after that, but it took only one hour to cook dinner. <button class="audio-btn" data-text="Last week I cleaned my whole house. It took almost four hours. I was very tired after that, but it took only one hour to cook dinner." onclick="speakText(this,this.dataset.text)" title="Ouvir resposta modelo">🔊</button></div></div></div></div>
+<div class="wig">〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️</div>
+<div class="sec s5"><div class="sh"><div class="sn">5</div><div class="st">Diálogo &amp; Roleplay</div><div class="se">🎭</div></div>
+<div class="sb"><div class="si">🗣️ Complete as falas em inglês usando o vocabulário da aula!</div><div class="dlg-scenario">📍 Elisa está conversando com o professor sobre um novo emprego que ela quer conseguir.</div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">Elisa, I heard you are looking for a new job! What kind of work are you interested in? <button class="audio-btn" data-text="Elisa, I heard you are looking for a new job! What kind of work are you interested in?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Elisa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">That sounds interesting! Do you prefer a job with a fixed salary or one that pays an hourly wage? <button class="audio-btn" data-text="That sounds interesting! Do you prefer a job with a fixed salary or one that pays an hourly wage?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Elisa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">I understand. Are you afraid of anything about starting a new job? <button class="audio-btn" data-text="I understand. Are you afraid of anything about starting a new job?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Elisa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div><div class="dlg-line"><div class="dlg-spk spk-t">Teacher</div><div class="dlg-txt">That is very normal! How long did it take you to find your last job? <button class="audio-btn" data-text="That is very normal! How long did it take you to find your last job?" onclick="speakText(this,this.dataset.text)" title="Ouvir">🔊</button></div></div><div class="dlg-line"><div class="dlg-spk spk-s">Elisa</div><div style="flex:1"><input class="dlg-inp" style="width:100%" placeholder="Escreva em inglês..."></div></div></div></div>
+<div class="ak-wrap">
+<button class="ak-btn" onclick="toggleAK()"><span>🏆 Gabarito Completo</span><span class="ak-arr" id="ak-arr">▼</span></button>
+<div class="ak-body" id="ak-body">
+<div class="ak-sec"><h4>🎯 Múltipla Escolha</h4><div class="ak-item">1. <span class="ak-ans">B) He earns a good hourly wage at the factory.</span></div><div class="ak-item">2. <span class="ak-ans">D) A salary</span></div><div class="ak-item">3. <span class="ak-ans">C) It took three hours to bake the cake.</span></div><div class="ak-item">4. <span class="ak-ans">C) Eu tenho medo de</span></div><div class="ak-item">5. <span class="ak-ans">D) Chunks</span></div></div>
+<div class="ak-sec"><h4>✏️ Complete as Frases</h4><div class="ak-item">1. <span class="ak-ans">wage</span></div><div class="ak-item">2. <span class="ak-ans">took</span></div><div class="ak-item">3. <span class="ak-ans">brought</span></div><div class="ak-item">4. <span class="ak-ans">am afraid of</span></div><div class="ak-item">5. <span class="ak-ans">chunks</span></div><div class="ak-item">6. <span class="ak-ans">salary</span></div></div>
+<div class="ak-sec"><h4>🌎 Tradução</h4><div class="ak-item">1. <span class="ak-ans">I am afraid of driving at night.</span></div><div class="ak-item">2. <span class="ak-ans">Ele ganha um bom salário por hora.</span></div><div class="ak-item">3. <span class="ak-ans">It took two days to finish the project.</span></div><div class="ak-item">4. <span class="ak-ans">Você pode trazer a bandeja para a cozinha?</span></div><div class="ak-item">5. <span class="ak-ans">His annual salary is $80,000.</span></div><div class="ak-item">6. <span class="ak-ans">Ela cortou o pão em pedaços e colocou na bandeja.</span></div></div>
+</div></div>
+</main>
+
+<!-- BOTÃO ENVIAR RESPOSTAS -->
+<div style="max-width:820px;margin:28px auto 0;padding:0 14px">
+  <div id="send-box" style="background:#fff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.08)">
+    <div style="font-size:15px;font-weight:600;margin-bottom:8px;color:#333">📬 Quando terminar, envie suas respostas para seu teacher favorito! 🍎</div>
+    <div style="font-size:13px;color:#888;margin-bottom:16px">Suas respostas serão salvas para revisão na próxima aula.</div>
+    <input id="student-name-input" type="text" placeholder="Digite seu nome antes de enviar..." 
+      style="width:100%;max-width:320px;border:2px solid #ddd;border-radius:8px;padding:10px 14px;font-size:15px;margin-bottom:12px;outline:none;display:block;margin-left:auto;margin-right:auto">
+    <button onclick="sendAnswers()" 
+      style="padding:12px 32px;background:#4a86e8;color:#fff;border:none;border-radius:50px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(74,134,232,0.4);transition:all .2s">
+      📤 Enviar respostas
+    </button>
+    <div id="send-status" style="margin-top:12px;font-size:14px;display:none"></div>
+  </div>
+</div>
+
+<script>
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyjFqJGGsSfBgttYPMZapn6vLM4GsE57RMb5khimbqkzGhhINqu9AO4X6uBqOoT6rrThg/exec";
+const STUDENT_NAME = "Elisa";
+const LESSON_DATE = "21/07";
+
+function collectAnswers() {
+  const respostas = [];
+  const now = new Date();
+
+  // Múltipla escolha
+  document.querySelectorAll('.mc-q').forEach((item, idx) => {
+    const selected = item.querySelector('.mc-btn.ok, .mc-btn.no');
+    if (selected) {
+      respostas.push({
+        secao: "Múltipla Escolha",
+        numero: idx + 1,
+        pergunta: item.querySelector('.mc-text')?.textContent?.trim() || "",
+        resposta: selected.textContent.trim(),
+        correto: selected.classList.contains('ok')
+      });
+    }
+  });
+
+  // Fill in the blanks
+  document.querySelectorAll('.fi-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Complete as Frases",
+        numero: idx + 1,
+        pergunta: inp.closest('.fi-row')?.textContent?.replace(inp.value, '___').trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Tradução
+  document.querySelectorAll('.tr-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Tradução",
+        numero: idx + 1,
+        pergunta: inp.closest('.tr-card')?.querySelector('.tr-src')?.textContent?.trim() || "",
+        resposta: inp.value.trim(),
+        correto: inp.classList.contains('ok')
+      });
+    }
+  });
+
+  // Perguntas abertas
+  document.querySelectorAll('.oq-ta').forEach((ta, idx) => {
+    if (ta.value.trim()) {
+      respostas.push({
+        secao: "Pergunta Aberta",
+        numero: idx + 1,
+        pergunta: ta.closest('.oq-item')?.querySelector('.oq-q')?.textContent?.trim() || "",
+        resposta: ta.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  // Diálogo
+  document.querySelectorAll('.dlg-inp').forEach((inp, idx) => {
+    if (inp.value.trim()) {
+      respostas.push({
+        secao: "Diálogo",
+        numero: idx + 1,
+        pergunta: "Fala " + (idx + 1),
+        resposta: inp.value.trim(),
+        correto: null
+      });
+    }
+  });
+
+  return respostas;
+}
+
+async function sendAnswers() {
+  const nameInput = document.getElementById('student-name-input');
+  const status = document.getElementById('send-status');
+  const btn = event.target;
+
+  const name = nameInput.value.trim() || STUDENT_NAME;
+  const respostas = collectAnswers();
+
+  if (respostas.length === 0) {
+    status.style.display = 'block';
+    status.style.color = '#e67e22';
+    status.textContent = '⚠️ Responda pelo menos um exercício antes de enviar!';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Enviando...';
+  status.style.display = 'none';
+
+  const now = new Date();
+  const payload = {
+    aluno: name,
+    aula: LESSON_DATE,
+    data: now.toLocaleDateString('pt-BR'),
+    hora: now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'}),
+    respostas: respostas
+  };
+
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload)
+    });
+
+    btn.textContent = '✅ Enviado!';
+    btn.style.background = '#27ae60';
+    status.style.display = 'block';
+    status.style.color = '#27ae60';
+    status.innerHTML = '🎉 Respostas enviadas! Seu professor já pode ver tudo na planilha.';
+
+  } catch(err) {
+    btn.disabled = false;
+    btn.textContent = '📤 Enviar respostas';
+    status.style.display = 'block';
+    status.style.color = '#e74c3c';
+    status.textContent = '❌ Erro ao enviar. Tente novamente.';
+  }
+}
+
+function pickMC(btn){const item=btn.closest('.mc-q');if(item.dataset.done)return;item.dataset.done='1';const ans=item.dataset.answer,fb=item.querySelector('.feedback');item.querySelectorAll('.mc-btn').forEach(b=>{if(b.textContent.trim().startsWith(ans))b.classList.add('show-ok')});if(btn.textContent.trim().startsWith(ans)){btn.classList.add('ok');fb.className='feedback ok-msg';fb.innerHTML='🎉 Correto! Arrasou!';}else{btn.classList.add('no');fb.className='feedback err';fb.innerHTML='❌ Não foi dessa vez!<br>💡 <strong>Entenda:</strong> '+item.dataset.explain;}fb.style.display='block';saveAnswers();}
+function checkFill(){const inps=document.querySelectorAll('.fi-inp');let r=0,err=[];const normf=v=>v.trim().toLowerCase().replace(/[.!?,;:]+$/,'').trim();inps.forEach((i,idx)=>{const ok=normf(i.value)===normf(i.dataset.ans);i.classList.toggle('ok',ok);i.classList.toggle('no',!ok);if(ok)r++;else if(i.value.trim())err.push('<div class="ferr">❌ <strong>Frase '+(idx+1)+':</strong> Correto: <strong>'+i.dataset.ans+'</strong>. 💡 '+i.dataset.explain+'</div>');});document.getElementById('ff').innerHTML=err.join('');const s=document.getElementById('fs');s.textContent=(r===inps.length?'🏆 ':'')+r+'/'+inps.length+' corretas!';s.className='score '+(r===inps.length?'ok':'no');s.style.display='inline';}
+function showTrAnswers(){
+  const inps=document.querySelectorAll('.tr-inp');
+  let html='';
+  inps.forEach((i,idx)=>{
+    if(!i.dataset.ans||!i.dataset.ans.trim())return;
+    html+='<div style="margin-bottom:10px;padding:10px 14px;background:#f0f7ff;border-left:4px solid #4a90d9;border-radius:0 8px 8px 0">'
+      +'<div style="font-size:12px;color:#888;margin-bottom:4px">Tradução '+(idx+1)+' — sugestão:</div>'
+      +'<div style="font-size:15px;font-weight:700;color:#1a7340">'+i.dataset.ans+'</div>'
+      +(i.dataset.explain?'<div style="font-size:12px;color:#555;margin-top:4px">💡 '+i.dataset.explain+'</div>':'')
+      +'</div>';
+  });
+  document.getElementById('tf').innerHTML=html||'<div style="color:#888;font-size:13px;padding:8px">Nenhuma sugestão disponível.</div>';
+}
+function toggleSample(btn){const s=btn.nextElementSibling;const o=s.style.display==='block';s.style.display=o?'none':'block';btn.textContent=o?'💡 Ver resposta modelo':'🙈 Esconder modelo';}
+function showMyAnswers(){
+  const respostas=collectAnswers();
+  const modal=document.getElementById('answers-modal');
+  const cont=document.getElementById('answers-content');
+  if(respostas.length===0){
+    cont.innerHTML='<div style="text-align:center;padding:40px;color:#888;font-size:15px">⚠️ Você ainda não respondeu nenhum exercício.</div>';
+  }else{
+    const secs={};
+    respostas.forEach(r=>{if(!secs[r.secao])secs[r.secao]=[];secs[r.secao].push(r);});
+    const icons={'Múltipla Escolha':'🎯','Complete as Frases':'✏️','Tradução':'🌎','Pergunta Aberta':'💬','Diálogo':'🎭'};
+    let html='';
+    Object.entries(secs).forEach(([secao,items])=>{
+      html+=`<div style="margin-bottom:24px"><div style="font-family:-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;font-weight:900'Arial Black',Arial,sans-serif;font-size:18px;color:#4a86e8;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #e8f0fe">${icons[secao]||'📝'} ${secao}</div>`;
+      items.forEach(r=>{
+        const bg=r.correto===true?'#edfce8':r.correto===false?'#fff0f5':'#f8f9ff';
+        const bdr=r.correto===true?'#7ac870':r.correto===false?'#ff80a8':'#c8d8ff';
+        const ic=r.correto===true?'✅':r.correto===false?'❌':'📝';
+        const pq=r.pergunta?r.pergunta.substring(0,80)+(r.pergunta.length>80?'...':''):'';
+        html+=`<div style="margin-bottom:10px;padding:12px 14px;background:${bg};border-left:4px solid ${bdr};border-radius:0 10px 10px 0"><div style="font-size:12px;color:#888;margin-bottom:4px">${ic} Questão ${r.numero}</div>${pq?'<div style="font-size:13px;color:#555;margin-bottom:6px;font-style:italic">'+pq+'</div>':''}<div style="font-size:15px;font-weight:700;color:#333">Sua resposta: ${r.resposta}</div></div>`;
+      });
+      html+='</div>';
+    });
+    const total=respostas.filter(r=>r.correto!==null).length;
+    const certas=respostas.filter(r=>r.correto===true).length;
+    if(total>0){
+      const pct=Math.round(certas/total*100);
+      const cor=pct>=70?'#7ac870':pct>=50?'#ffa060':'#ff80a8';
+      html='<div style="text-align:center;padding:16px;margin-bottom:20px;background:linear-gradient(135deg,#f8f9ff,#e8f0fe);border-radius:12px"><div style="font-size:36px;font-weight:900;color:'+cor+'">'+pct+'%</div><div style="font-size:14px;color:#666">'+certas+' de '+total+' corretas nos exercícios verificados</div></div>'+html;
+    }
+    cont.innerHTML=html;
+  }
+  modal.style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('answers-modal').style.display='none';
+  document.body.style.overflow='';
+}
+
+// ── AUDIO: Text-to-Speech em Inglês Americano ──
+let audioVoice = null;
+let audioUtterance = null;
+
+function initVoice(){
+  if(audioVoice) return;
+  const voices = speechSynthesis.getVoices();
+  const preferred = ['Samantha','Alex','Google US English','Microsoft Aria','Microsoft Jenny','Microsoft Guy'];
+  for(const name of preferred){
+    const v = voices.find(v => v.name.includes(name));
+    if(v){ audioVoice = v; return; }
+  }
+  audioVoice = voices.find(v => v.lang === 'en-US') || voices.find(v => v.lang.startsWith('en'));
+}
+speechSynthesis.onvoiceschanged = initVoice;
+initVoice();
+
+function speakText(btn, text){
+  // Support data-text attribute as fallback
+  if(!text && btn.dataset.text) text = btn.dataset.text;
+  speechSynthesis.cancel();
+  document.querySelectorAll('.audio-btn.playing').forEach(b => b.classList.remove('playing'));
+  initVoice();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US';
+  u.rate = 0.9;
+  u.pitch = 1;
+  if(audioVoice) u.voice = audioVoice;
+  u.onstart = () => btn.classList.add('playing');
+  u.onend = () => btn.classList.remove('playing');
+  u.onerror = () => btn.classList.remove('playing');
+  speechSynthesis.speak(u);
+}
+
+function toggleAK(){const b=document.getElementById('ak-body'),a=document.getElementById('ak-arr'),o=b.style.display==='block';b.style.display=o?'none':'block';a.style.transform=o?'':'rotate(180deg)';}
+
+// ── LOCAL STORAGE — salva e carrega respostas ──
+const STORAGE_KEY = ('exercicios_Elisa_21/07').split('/').join('-');
+
+function saveAnswers(){
+  const data={};
+  document.querySelectorAll('.fi-inp').forEach((el,i)=>{data['fi_'+i]=el.value;});
+  document.querySelectorAll('.tr-inp').forEach((el,i)=>{data['tr_'+i]=el.value;});
+  document.querySelectorAll('.oq-ta').forEach((el,i)=>{data['oq_'+i]=el.value;});
+  document.querySelectorAll('.dlg-inp').forEach((el,i)=>{data['dlg_'+i]=el.value;});
+  document.querySelectorAll('.mc-q').forEach((el,i)=>{
+    const sel=el.querySelector('.mc-btn.ok,.mc-btn.no');
+    if(sel){
+      data['mc_'+i+'_txt']=sel.textContent.trim();
+      data['mc_'+i+'_ok']=sel.classList.contains('ok');
+    }
+  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function loadAnswers(){
+  const raw=localStorage.getItem(STORAGE_KEY);
+  if(!raw)return;
+  try{
+    const data=JSON.parse(raw);
+    // Restore text fields
+    document.querySelectorAll('.fi-inp').forEach((el,i)=>{if(data['fi_'+i]!==undefined)el.value=data['fi_'+i];});
+    document.querySelectorAll('.tr-inp').forEach((el,i)=>{if(data['tr_'+i]!==undefined)el.value=data['tr_'+i];});
+    document.querySelectorAll('.oq-ta').forEach((el,i)=>{if(data['oq_'+i]!==undefined)el.value=data['oq_'+i];});
+    document.querySelectorAll('.dlg-inp').forEach((el,i)=>{if(data['dlg_'+i]!==undefined)el.value=data['dlg_'+i];});
+    // Restore MC buttons visually
+    document.querySelectorAll('.mc-q').forEach((el,i)=>{
+      const savedTxt=data['mc_'+i+'_txt'];
+      const savedOk=data['mc_'+i+'_ok'];
+      if(savedTxt!==undefined){
+        el.dataset.done='1';
+        const ans=el.dataset.answer;
+        el.querySelectorAll('.mc-btn').forEach(b=>{
+          if(b.textContent.trim()===savedTxt){
+            b.classList.add(savedOk?'ok':'no');
+          }
+          if(b.textContent.trim().startsWith(ans)){
+            b.classList.add('show-ok');
+          }
+        });
+        const fb=el.querySelector('.feedback');
+        if(fb){
+          fb.className='feedback '+(savedOk?'ok-msg':'err');
+          fb.innerHTML=savedOk?'🎉 Correto! Arrasou!':'❌ Não foi dessa vez! 💡 '+el.dataset.explain;
+          fb.style.display='block';
+        }
+      }
+    });
+    if(Object.keys(data).length>0){
+      const bar=document.getElementById('save-bar');
+      if(bar)bar.style.display='flex';
+    }
+  }catch(e){}
+}
+
+function clearSaved(){
+  if(confirm('Apagar todas as respostas salvas?')){
+    localStorage.removeItem(STORAGE_KEY);
+    document.querySelectorAll('.fi-inp,.tr-inp,.oq-ta,.dlg-inp').forEach(el=>el.value='');
+    const bar=document.getElementById('save-bar');
+    if(bar)bar.style.display='none';
+  }
+}
+
+// Auto-save ao digitar
+document.addEventListener('input', e=>{
+  if(e.target.matches('.fi-inp,.tr-inp,.oq-ta,.dlg-inp'))saveAnswers();
+});
+
+// Carrega ao abrir a página
+window.addEventListener('load', loadAnswers);
+</script>
+
+<!-- BARRA DE RESPOSTAS SALVAS -->
+<div id="save-bar" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:10px 20px;font-size:13px;align-items:center;justify-content:space-between;gap:12px;z-index:999;box-shadow:0 -3px 12px rgba(0,0,0,0.3)">
+  <span>💾 Você tem respostas salvas neste dispositivo.</span>
+  <button onclick="clearSaved()" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;padding:5px 14px;border-radius:20px;cursor:pointer;font-size:12px;white-space:nowrap">🗑️ Apagar tudo</button>
+</div>
+
+</body></html>
