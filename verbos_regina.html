@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verbos em Inglês — CS@ English</title>
+<style>
+  :root{
+    --navy:#1a2b4c;
+    --navy-light:#28406e;
+    --orange:#e8792f;
+    --orange-light:#f5a35f;
+    --bg:#f4f6fa;
+    --card:#ffffff;
+    --text:#22304a;
+    --muted:#6b7690;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    padding-bottom:60px;
+  }
+  header{
+    background:var(--navy);
+    padding:34px 20px 28px;
+    text-align:center;
+    color:#fff;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:56px;height:56px;
+    border-radius:50%;
+    background:var(--navy-light);
+    border:2px solid var(--orange);
+    font-weight:700;
+    font-size:16px;
+    margin-bottom:12px;
+  }
+  .badge span{color:var(--orange);}
+  header h1{
+    margin:0 0 6px;
+    font-size:1.5rem;
+    letter-spacing:.3px;
+  }
+  header p{
+    margin:0;
+    color:var(--orange-light);
+    font-size:.95rem;
+    font-weight:600;
+  }
+  .controls{
+    max-width:640px;
+    margin:20px auto 0;
+    padding:0 16px;
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .controls button{
+    background:var(--card);
+    border:1px solid #dde3ee;
+    color:var(--navy);
+    padding:9px 16px;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .controls button:active{transform:scale(.97);}
+  main{
+    max-width:640px;
+    margin:24px auto 0;
+    padding:0 16px;
+  }
+  .card{
+    background:var(--card);
+    border-radius:14px;
+    padding:16px 18px 15px;
+    margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(20,30,60,.08);
+  }
+  .top-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .word-info{flex:1;min-width:0;}
+  .en{
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--navy);
+  }
+  .en small{
+    font-weight:500;
+    color:var(--muted);
+    font-size:.8rem;
+  }
+  .pt{
+    color:var(--orange);
+    font-weight:600;
+    font-size:.92rem;
+    margin-top:2px;
+  }
+  .audio-group{
+    display:flex;
+    gap:8px;
+    flex-shrink:0;
+  }
+  .example{
+    margin-top:12px;
+    padding:10px 14px;
+    background:var(--bg);
+    border-left:3px solid var(--orange);
+    border-radius:0 8px 8px 0;
+  }
+  .example .ex-en{
+    font-size:.9rem;
+    color:var(--text);
+    font-style:italic;
+  }
+  .example .ex-pt{
+    font-size:.83rem;
+    color:var(--muted);
+    margin-top:3px;
+  }
+  .audio-btn{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:52px;height:52px;
+    border-radius:12px;
+    border:none;
+    cursor:pointer;
+    color:#fff;
+    font-size:.62rem;
+    font-weight:700;
+    letter-spacing:.3px;
+    transition:transform .1s;
+  }
+  .audio-btn:active{transform:scale(.92);}
+  .audio-btn.normal{background:var(--navy);}
+  .audio-btn.slow{background:var(--orange);}
+  .audio-btn svg{width:18px;height:18px;margin-bottom:2px;}
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.8rem;
+    margin-top:30px;
+  }
+  @media (max-width:400px){
+    .en{font-size:.98rem;}
+    .audio-btn{width:46px;height:46px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">CS<span>@</span></div>
+  <h1>Verbos em Inglês</h1>
+  <p>Toque para ouvir — velocidade normal ou devagar</p>
+</header>
+
+<div class="controls">
+  <button onclick="playAll('normal')">▶ Ouvir todos (normal)</button>
+  <button onclick="playAll('slow')">▶ Ouvir todos (devagar)</button>
+</div>
+
+<main id="list"></main>
+
+<footer>English with Teacher Ciro · CS@</footer>
+
+<script>
+const verbs = [
+  ["have","ter","réve","I have a dog.","Eu tenho um cachorro."],
+  ["need","precisar","","She needs some help.","Ela precisa de ajuda."],
+  ["want","querer","","I want a coffee.","Eu quero um café."],
+  ["work","trabalhar","","He works at a bank.","Ele trabalha em um banco."],
+  ["cook","cozinhar","","She cooks dinner every day.","Ela cozinha o jantar todos os dias."],
+  ["watch","assistir","uátch","We watch TV at night.","Nós assistimos TV à noite."],
+  ["travel","viajar","","They travel a lot.","Eles viajam muito."],
+  ["like","gostar","","I like pizza.","Eu gosto de pizza."],
+  ["drive","dirigir","","He drives to work.","Ele dirige para o trabalho."],
+  ["read","ler","","She reads a book every night.","Ela lê um livro todas as noites."],
+  ["kiss","beijar","","He kisses his wife every morning.","Ele beija a esposa toda manhã."],
+  ["fix","arrumar","","He fixes cars.","Ele conserta carros."],
+  ["study","estudar","istãdi","I study English every day.","Eu estudo inglês todos os dias."],
+  ["train","treinar","","She trains every morning.","Ela treina toda manhã."],
+  ["go","ir","","We go to school by bus.","Nós vamos para a escola de ônibus."],
+  ["check","verificar","","He checks his email every morning.","Ele verifica o e-mail toda manhã."],
+  ["walk","caminhar","","I walk to work.","Eu caminho para o trabalho."],
+  ["run","correr","","She runs in the park.","Ela corre no parque."],
+  ["write","escrever","","He writes letters to his friend.","Ele escreve cartas para o amigo."],
+  ["fish","pescar","","They fish on weekends.","Eles pescam nos fins de semana."],
+  ["teach","ensinar","","She teaches English.","Ela ensina inglês."],
+  ["sing","cantar","","He sings in the shower.","Ele canta no banho."],
+  ["play","jogar, brincar","","They play soccer on Saturdays.","Eles jogam futebol aos sábados."],
+  ["eat","comer","","We eat breakfast at seven.","Nós comemos café da manhã às sete."],
+  ["drink","beber","","I drink water every day.","Eu bebo água todos os dias."],
+  ["open","abrir","","She opens the window.","Ela abre a janela."],
+  ["close","fechar","","He closes the door.","Ele fecha a porta."],
+  ["love","amar","","I love my family.","Eu amo minha família."],
+  ["live","morar, viver","","They live in Brazil.","Eles moram no Brasil."],
+  ["find","encontrar","fáind","She always finds a solution.","Ela sempre encontra uma solução."],
+  ["know","saber, conhecer","","I know the answer.","Eu sei a resposta."],
+  ["think","pensar, achar","","He thinks it's a good idea.","Ele acha que é uma boa ideia."],
+  ["ask","perguntar","","She asks her teacher a question.","Ela pergunta algo para o professor."],
+  ["answer","responder","énsuer","He answers the question.","Ele responde a pergunta."],
+  ["talk","falar (com)","","They talk on the phone.","Eles falam ao telefone."],
+  ["paint","pintar","","She paints the wall.","Ela pinta a parede."]
+];
+
+const list = document.getElementById('list');
+
+verbs.forEach((v, i) => {
+  const [en, pt, phon, exEn, exPt] = v;
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="top-row">
+      <div class="word-info">
+        <div class="en">to ${en} ${phon ? `<small>(${phon})</small>` : ''}</div>
+        <div class="pt">${pt}</div>
+      </div>
+      <div class="audio-group">
+        <button class="audio-btn normal" onclick="speak('${en}', 'normal', this)" aria-label="Ouvir normal">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10H3z"/><path d="M16.5 12c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.74 2.5-2.26 2.5-4.03z"/></svg>
+          1x
+        </button>
+        <button class="audio-btn slow" onclick="speak('${en}', 'slow', this)" aria-label="Ouvir devagar">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10H3z"/><path d="M16.5 12c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.74 2.5-2.26 2.5-4.03z"/></svg>
+          0.6x
+        </button>
+      </div>
+    </div>
+    <div class="example">
+      <div class="ex-en">${exEn}</div>
+      <div class="ex-pt">${exPt}</div>
+    </div>
+  `;
+  list.appendChild(card);
+});
+
+function speak(word, speed, btn) {
+  if (!('speechSynthesis' in window)) {
+    alert('Seu navegador não suporta áudio. Tente no Chrome ou Safari.');
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance('to ' + word);
+  utter.lang = 'en-US';
+  utter.rate = speed === 'slow' ? 0.55 : 1;
+  utter.pitch = 1;
+
+  const voices = window.speechSynthesis.getVoices();
+  const enVoice = voices.find(v => v.lang === 'en-US') || voices.find(v => v.lang.startsWith('en'));
+  if (enVoice) utter.voice = enVoice;
+
+  if (btn) {
+    btn.style.opacity = '0.6';
+    utter.onend = () => { btn.style.opacity = '1'; };
+  }
+  window.speechSynthesis.speak(utter);
+}
+
+function playAll(speed) {
+  window.speechSynthesis.cancel();
+  let i = 0;
+  function next() {
+    if (i >= verbs.length) return;
+    const utter = new SpeechSynthesisUtterance('to ' + verbs[i][0]);
+    utter.lang = 'en-US';
+    utter.rate = speed === 'slow' ? 0.55 : 1;
+    const voices = window.speechSynthesis.getVoices();
+    const enVoice = voices.find(v => v.lang === 'en-US') || voices.find(v => v.lang.startsWith('en'));
+    if (enVoice) utter.voice = enVoice;
+    utter.onend = () => { i++; next(); };
+    window.speechSynthesis.speak(utter);
+  }
+  next();
+}
+
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.onvoiceschanged = () => {};
+}
+</script>
+
+</body>
+</html>
